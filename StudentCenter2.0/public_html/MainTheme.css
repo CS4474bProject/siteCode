@@ -14,3 +14,10 @@ body {
     color: white;
     background-color: rgb(80,39,132);
 }
+
+#ImageHeader{
+    background-image: url("logo2.jpg");
+    background-size: contain;
+    height:100px;
+    width:400px;
+}
