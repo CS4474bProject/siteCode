@@ -10,6 +10,7 @@ and open the template in the editor.
 
 
 body {
-    font-family: Helvetica-Neue;
+    font-family: HelveticaNeue;
+    color: white;
     background-color: rgb(80,39,132);
 }
