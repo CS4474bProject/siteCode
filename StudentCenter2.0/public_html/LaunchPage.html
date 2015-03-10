@@ -42,13 +42,17 @@ and open the template in the editor.
                     document.getElementById('b1').onmouseover = function() {
                         document.body.innerHTML = document.body.innerHTML.replace('Choose A Task...','Add / Remove, Special Permissions...');
                     };
+                    
+                    document.getElementById('b1').onmouseout = function() {
+                        document.body.innerHTML = document.body.innerHTML.replace('Add / Remove, Special Permissions...','Choose A Task...');
+                    };
  
                     document.getElementById('b2').onmouseover = function() {
-                        document.body.innerHTML = document.body.innerHTML.replace('Choose A Task...','Update Address, View Financial Statements...');
+                        document.body.innerHTML = document.body.innerHTML.replace('Update Address, View Financial Statements...','Choose A Task...');
                     };
                     
                     document.getElementById('b3').onmouseover = function() {
-                        document.body.innerHTML = document.body.innerHTML.replace('Choose A Task...','View Grade Report, Apply to graduate...');
+                        document.body.innerHTML = document.body.innerHTML.replace('View Grade Report, Apply to graduate...','Choose A Task...');
                     };
                 </script>
             </fieldset>
