@@ -23,3 +23,16 @@ body {
     height:100px;
     width:400px;
 }
+
+#TextHeader{
+    font-family: HelveticaNeue-Thin;
+    font-size: 24px;
+    text-align: center;
+}
+
+#Login{
+    margin-left:auto;
+    margin-right:auto;
+    display:table;
+    text-align: center;
+}
