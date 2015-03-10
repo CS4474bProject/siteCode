@@ -44,6 +44,13 @@ body {
     text-align: center;
 }
 
+#Frequents{
+    margin-left: auto;
+    margin-right:auto;
+    display:table;
+    text-align: center;
+}
+
 button {
    border: 1px solid #0a3c59;
    background: #633e9c;
