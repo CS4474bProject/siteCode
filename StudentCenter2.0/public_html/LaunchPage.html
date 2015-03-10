@@ -37,21 +37,21 @@ and open the template in the editor.
                     Grade Management
                 </button>
                 <hr>
+                Choose A Task...
                 <script language="javascript">
                     document.getElementById('b1').onmouseover = function() {
-                        document.write('Add / Remove Courses, View Special Permissions...');
+                        document.body.innerHTML = document.body.innerHTML.replace('Choose a task...','Add / Remove, Special Permissions...');
                     };
  
                     document.getElementById('b2').onmouseover = function() {
-                        document.write('Update Address, View Financial Statements...');
+                        document.body.innerHTML = document.body.innerHTML.replace('Choose a task...','Update Address, View Financial Statements...');
                     };
                     
                     document.getElementById('b3').onmouseover = function() {
-                        document.write('View Grade Report, Check Progression...');
+                        document.body.innerHTML = document.body.innerHTML.replace('Choose a task...','View Grade Report, Apply to graduate...');
                     };
                 </script>
             </fieldset>
-        </div>
-        
+        </div>  
     </body>
 </html>
