@@ -27,16 +27,31 @@ and open the template in the editor.
         <div id="MainActions">
             <fieldset>
                 <legend>What Do You Want To Do Today?</legend>
-                <button type="button" onclick="location.href='http://cs4474.muscedere.ca/courseManagement.html'">
+                <button type="button" id="b1" onclick="location.href='http://cs4474.muscedere.ca/courseManagement.html'">
                     Course Management
                 </button>
-                <button type="button" onclick="location.href='http://cs4474.muscedere.ca/studentManagement.html'">
+                <button type="button" id="b2" onclick="location.href='http://cs4474.muscedere.ca/studentManagement.html'">
                     Student Management
                 </button>
-                <button type="button" onclick="location.href='http://cs4474.muscedere.ca/gradeManagement.html'">
+                <button type="button" id="b3" onclick="location.href='http://cs4474.muscedere.ca/gradeManagement.html'">
                     Grade Management
                 </button>
+                <hr>
+                <script language="javascript">
+                    document.getElementById('b1').onmouseover = function() {
+                        document.write("Add / Remove Courses, View Special Permissions...");
+                    }
+ 
+                    document.getElementById('b2').onmouseover = function() {
+                        document.write("Update Address, View Financial Statements...");
+                    }
+                    
+                    document.getElementById('b3').onmouseover = function() {
+                        document.write("View Grade Report, Check Progression...");
+                    }
+                </script>
             </fieldset>
         </div>
+        
     </body>
 </html>
