@@ -91,3 +91,15 @@ button:active {
    background-image: -ms-linear-gradient(top, #633e9c 0%, #cad3d9 100%);
    color: #fff;
    }
+
+   #Tip1{
+       visibility: hidden;
+   }
+   
+   #Tip2{
+       visibility: hidden;
+   }
+   
+   #Tip3{
+       visibility: hidden;
+   }

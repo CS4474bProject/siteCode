@@ -27,34 +27,36 @@ and open the template in the editor.
         <div id="MainActions">
             <fieldset>
                 <legend>What Do You Want To Do Today?</legend>
-                <button type="button" id="b1" onclick="location.href='http://cs4474.muscedere.ca/courseManagement.html'">
+                <button type="button" id="b1" onclick="location.href='http://cs4474.muscedere.ca/courseManagement.html'" onMouseOver="div.show('Tip1')" onMouseOut="div.hide('Tip1')">
                     Course Management
                 </button>
-                <button type="button" id="b2" onclick="location.href='http://cs4474.muscedere.ca/studentManagement.html'">
+                <button type="button" id="b2" onclick="location.href='http://cs4474.muscedere.ca/studentManagement.html'" onMouseOver="div.show('Tip2')" onMouseOut="div.hide('Tip2')">
                     Student Management
                 </button>
-                <button type="button" id="b3" onclick="location.href='http://cs4474.muscedere.ca/gradeManagement.html'">
+                <button type="button" id="b3" onclick="location.href='http://cs4474.muscedere.ca/gradeManagement.html'" onMouseOver="div.show('Tip3')" onMouseOut="div.hide('Tip3')">
                     Grade Management
                 </button>
                 <hr>
-                Choose A Task...
-                <script language="javascript">
-                    document.getElementById('b1').onmouseover = function() {
-                        document.body.innerHTML = document.body.innerHTML.replace('Choose A Task...','Add / Remove, Special Permissions...');
+                <script type="text/javascript"><!--
+                    div = {
+                        show: function(elem) {
+			document.getElementById(elem).style.visibility = 'visible';
+                        },
+                        hide: function(elem) {
+                            document.getElementById(elem).style.visibility = 'hidden';
+                        }
                     };
-                    
-                    document.getElementById('b1').onmouseout = function() {
-                        document.body.innerHTML = document.body.innerHTML.replace('Add / Remove, Special Permissions...','Choose A Task...');
-                    };
- 
-                    document.getElementById('b2').onmouseover = function() {
-                        document.body.innerHTML = document.body.innerHTML.replace('Update Address, View Financial Statements...','Choose A Task...');
-                    };
-                    
-                    document.getElementById('b3').onmouseover = function() {
-                        document.body.innerHTML = document.body.innerHTML.replace('View Grade Report, Apply to graduate...','Choose A Task...');
-                    };
-                </script>
+-->             </script>
+                Choose a task...
+                <div id="Tip1">
+                Add/Remove Courses, View Special Permissions...
+                </div>
+                <div id="Tip2">
+                Update Address, View Financial Statements...    
+                </div>
+                <div id="Tip3">
+                View Grade Report, Apply to graduate...
+                </div>
             </fieldset>
         </div>  
     </body>
