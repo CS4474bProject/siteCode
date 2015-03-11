@@ -115,8 +115,13 @@ button:active {
        -webkit-border-radius: 8px;
         -moz-border-radius: 8px;
         border-radius: 8px;
-        background-color: white;
-        color: rgb(80,39,132);
+        background: #650894;
+        background: -webkit-gradient(linear, left top, left bottom, from(#ab30f2), to(#650894));
+        background: -webkit-linear-gradient(top, #ab30f2, #650894);
+        background: -moz-linear-gradient(top, #ab30f2, #650894);
+        background: -ms-linear-gradient(top, #ab30f2, #650894);
+        background: -o-linear-gradient(top, #ab30f2, #650894);
+        background-image: -ms-linear-gradient(top, #ab30f2 0%, #650894 100%);
    }
    
    legend{
