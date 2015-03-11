@@ -130,3 +130,7 @@ button:active {
        background-color: rgb(161,64,218);
        color:white;
    }
+   
+   input[type="image"]{
+       border:2px solid white;
+   }
