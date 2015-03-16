@@ -25,8 +25,13 @@ function authSuccess(uName){
     //We create a login cookie.
     document.cookie = 'username=' + uName + ';path=/';
     
+    //Check the auth cookie.
+    auth = getCookie('auth');
+    if (typeof auth === 'undefined')
+        auth = 'LaunchPage.html'
+    
     //We now redirect the page.
-    window.location.replace('LaunchPage.html');
+    window.location.replace(auth);
 }
 
 function results(data){
@@ -60,14 +65,25 @@ function verifyUser(){
     return false;
 }
 
+function notLoggedIn(){
+    path = getCookie('auth');
+    
+    if (typeof path !== 'undefined'){
+        errorMessage = 'You are not logged in!<br/>' +
+                       'Please log in below to continue..<br/></br>';
+               
+        //Displays the message.
+        $('div.error').html(errorMessage);
+    }
+}
 function isLoggedIn(pageURL){
     //We need to check if the username cookie exists.
     uname = getCookie('username');
-    alert(uname + " " + pageURL);
+
     //If it doesn't exist.
     if (uname === null || uname === "" || typeof uname === 'undefined'){
         //We need to create an error cookie and redirect.
         document.cookie = 'auth=' + pageURL + 'path=/;';
-        window.location.replace('LaunchPage.html');
+        window.location.replace('index.html');
     }
 }
