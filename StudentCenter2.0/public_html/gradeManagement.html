@@ -9,9 +9,17 @@ and open the template in the editor.
         <title>Western Student Center 2.0 - Grade Management</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script src="javascript/jquery.js"></script> 
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script src="javascript/cookies.js"></script>
+        <script src="javascript/authentication.js"></script>
+        
         <LINK REL=StyleSheet HREF="css/MainTheme.css" TYPE="text/css" MEDIA=screen>
     </head>
     <body>
+        <script>isLoggedIn(window.location.pathname);</script>
+        
         <div id="ImageHeader"></div>
         <hr/>
         <div id="TextHeader">
