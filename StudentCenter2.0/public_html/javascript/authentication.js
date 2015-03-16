@@ -63,7 +63,7 @@ function verifyUser(){
 function isLoggedIn(pageURL){
     //We need to check if the username cookie exists.
     uname = getCookie('username');
-    
+    alert(uname + " " + pageURL);
     //If it doesn't exist.
     if (uname === null || uname === "" || typeof uname === 'undefined'){
         //We need to create an error cookie and redirect.
