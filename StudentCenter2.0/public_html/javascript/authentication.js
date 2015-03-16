@@ -21,15 +21,19 @@ function authError(data){
     $( "#Login" ).effect( "shake" );
 }
 
-function authSuccess(){
+function authSuccess(uName){
+    //We create a login cookie.
+    document.cookie = 'username=' + uName + ';path=/';
     
+    //We now redirect the page.
+    window.location.replace('LaunchPage.html');
 }
 
 function results(data){
     if (data === 'error' || data === null){
         authError(data);
     } else {
-        authSuccess();
+        authSuccess(data);
     }
 }
 
@@ -48,7 +52,7 @@ function verifyUser(){
     $("#login_form").children('input[type=submit]').prop('disabled', true);
         
     //Runs HTML query.
-    sql = "SELECT * FROM User WHERE UserName = \"" + userName + "\" AND Password = \"" 
+    sql = "SELECT UserName FROM User WHERE UserName = \"" + userName + "\" AND Password = \"" 
             + password + "\";";
     result = runSQL(sql, results);
     
