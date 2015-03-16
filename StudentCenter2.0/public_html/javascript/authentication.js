@@ -59,3 +59,15 @@ function verifyUser(){
     //Prevent the page from reloading.
     return false;
 }
+
+function isLoggedIn(pageURL){
+    //We need to check if the username cookie exists.
+    uname = getCookie('username');
+    
+    //If it doesn't exist.
+    if (uname === null || uname === ""){
+        //We need to create an error cookie and redirect.
+        document.cookie = 'auth=' + pageURL + 'path=/;';
+        window.location.replace('LaunchPage.html');
+    }
+}

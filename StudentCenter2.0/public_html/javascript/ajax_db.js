@@ -13,7 +13,6 @@ function runSQL(sqlQuery, executeFunction){
         },
         success: function(data) {
             //Checks for success or not.
-            alert(data);
             if (data === "error" || data === null || data === "") {
                 executeFunction(null);
             } 
