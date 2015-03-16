@@ -26,6 +26,7 @@ function authSuccess(){
 }
 
 function results(data){
+    alert (results);
     if (data === 'error' || data === null){
         authError(data);
     } else {
