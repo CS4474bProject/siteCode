@@ -1,12 +1,15 @@
 <?php
     //First, we get the data.
-    //$query = $_POST['sql'];
-    
-    $query = 'SELECT * FROM Users;';
-    
+    $query = $_POST['sql'];
+
     //Next we run sqlite.
-    $db = new SQLite3('../database/data.db');
-    $results = $db->query($query);
+    $dir = 'sqlite:../database/data.db';
+    $db = new PDO($dir) or die("error");
     
-    echo $results;
+    //Generates JSON
+    foreach ($db->query($query) as $row) {
+	foreach ($row as $column) {
+            echo $column;
+        }
+    }
 ?>

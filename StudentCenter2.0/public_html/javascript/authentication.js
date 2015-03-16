@@ -14,9 +14,18 @@ function verifyUser(){
             + password + "\";";
     result = runSQL(sql);
     
-    alert(result);
+    //Check for errors.
+    if (result === null){
+        authError();
+    } else {
+        authSuccess();
+    }
 }
 
 function authError(){
     alert("BLAMO");
+}
+
+function authSuccess(){
+    alert("BLAMO2");
 }
