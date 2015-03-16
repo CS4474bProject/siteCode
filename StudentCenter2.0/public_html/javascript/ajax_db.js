@@ -10,6 +10,7 @@ function runSQL(sqlQuery, executeFunction){
         data: {sql : sqlQuery},
         url: '../php/sqlite.php',
         success: function(data) {
+            alert(data);
             //Checks for success or not.
             if (data === "error" || data === null) {
                 executeFunction(null);

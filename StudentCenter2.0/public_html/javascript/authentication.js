@@ -25,6 +25,9 @@ function verifyUser(){
         return;
     }
     
+    //Disables all the buttons.
+    $("#login_form").children('input[type=submit]').prop('disabled', true);
+        
     //Runs HTML query.
     sql = "SELECT * FROM User WHERE UserName = \"" + userName + "\" AND Password = \"" 
             + password + "\";";
