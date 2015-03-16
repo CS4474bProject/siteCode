@@ -10,9 +10,13 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="theme-color" content="#8A008A">
+        <script src="javascript/jquery.js"></script> 
+        <script src="javascript/ajax_db.js"></script>
         <LINK REL=StyleSheet HREF="css/MainTheme.css" TYPE="text/css" MEDIA=screen>
     </head>
     <body>
+        <script src="javascript/authentication.js"></script>
+        
         <div id="ImageHeader"></div>
         <hr>
         <div id="TextHeader">Western Student Center 2.0</div>
@@ -21,18 +25,18 @@ and open the template in the editor.
             
         </div>
         <div id="Login">
-            <form action="http://cs4474.muscedere.ca/LaunchPage.html" method="post">
+            <form onsubmit="verifyUser()">
                 <fieldset>
                 <legend>Sign In</legend>
                 <label>Username: </label>
                 <br/>
-                <input type="text"/>
+                <input id="username" type="text"/>
                 <br/>
                 <label>Password: </label>
                 <br/>
-                <input type="password"/>
+                <input id="password" type="password"/>
                 <br/>
-                <input type="submit" value="submit"/>
+                <input type="submit" value="Submit"/>
                 </fieldset>
             </form>
         </div>
