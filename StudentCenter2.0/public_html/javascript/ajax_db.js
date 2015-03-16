@@ -10,10 +10,12 @@ function runSQL(sqlQuery){
         data: {sql : sqlQuery},
         url: '../php/sqlite.php',
         success: function(data) {
+            //Checks for success or not.
+            if (data === "error") {
+                return null;
+            }
+            
             return data;
-        },
-        fail: function(data) {
-            return null;
         }
     });
 }
