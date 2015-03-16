@@ -1,0 +1,29 @@
+CREATE TABLE User(
+	UserName VARCHAR(15) NOT NULL,
+	Fname VARCHAR(15) NOT NULL,
+	Lname VARCHAR(30) NOT NULL,
+	Role INT NOT NULL,
+	Password VARCHAR(30) NOT NULL,
+	PRIMARY KEY(UserName),
+	FOREIGN KEY (Role)
+		REFERENCES Roles(RoleD)
+			ON DELETE SET DEFAULT
+			ON UPDATE CASCADE
+	);
+
+CREATE TABLE Role(
+	RoleID INT NOT NULL,
+	RoleName VARCHAR(30) NOT NULL,
+	PRIMARY KEY (RoleID)
+	);
+
+INSERT INTO Role VALUES
+	(0, "Undergrad"),
+	(1, "Graduate");
+	
+INSERT INTO User VALUES
+	("dhua3", "David", "Hua", 0, "pass1"),
+	("bmuscede", "Bryan", "Muscedere", 0, "pass2"),
+	("nrostaz", "Neda", "Rostamzadeh", 1, "pass3"),
+	("sabdul9", "Sheikh", "Abdullah", 1, "pass4"),
+	("shanley", "Spencer", "Hanley", 0, "pass5");
