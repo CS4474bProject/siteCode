@@ -28,7 +28,7 @@ function authSuccess(uName){
     //Check the auth cookie.
     auth = getCookie('auth');
     if (typeof auth === 'undefined')
-        auth = 'LaunchPage.html'
+        auth = 'LaunchPage.html';
     
     //We now redirect the page.
     window.location.replace(auth);
