@@ -3,6 +3,8 @@ function runSQL(sqlQuery, executeFunction){
     if (sqlQuery === "")
         return null;
     
+    alert(sqlQuery);
+    
     //Runs the AJAX query.
     $.ajax({
         type: "POST",
