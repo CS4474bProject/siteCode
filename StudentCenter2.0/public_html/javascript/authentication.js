@@ -65,7 +65,7 @@ function isLoggedIn(pageURL){
     uname = getCookie('username');
     
     //If it doesn't exist.
-    if (uname === null || uname === "" || typeof uname != 'undefined'){
+    if (uname === null || uname === "" || typeof uname === 'undefined'){
         //We need to create an error cookie and redirect.
         document.cookie = 'auth=' + pageURL + 'path=/;';
         window.location.replace('LaunchPage.html');
