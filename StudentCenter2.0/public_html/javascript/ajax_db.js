@@ -5,9 +5,9 @@ function runSQL(sqlQuery, executeFunction){
     
     //Runs the AJAX query.
     $.ajax({
-        type: "POST",
+        type: 'POST',
         url: '../php/sqlite.php',
-        dataType: "json",
+        dataType: 'html',
         data: {
             'sql': sqlQuery
         },
