@@ -67,8 +67,9 @@ function verifyUser(){
 
 function notLoggedIn(){
     path = getCookie('auth');
-    alert(path);
-    if (typeof path !== 'undefined'){
+    
+    if (typeof path != 'undefined'){
+        alert(path);
         errorMessage = 'You are not logged in!<br/>' +
                        'Please log in below to continue..<br/></br>';
                
