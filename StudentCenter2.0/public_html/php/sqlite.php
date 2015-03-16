@@ -13,8 +13,6 @@
     
     //Generates JSON
     foreach ($db->query($query) as $row) {
-        foreach ($row as $column) {
-            echo $column;
-        }
+        echo($row);
     }
 ?>

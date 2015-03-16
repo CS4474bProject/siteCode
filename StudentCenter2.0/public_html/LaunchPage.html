@@ -9,12 +9,21 @@ and open the template in the editor.
         <title>Western Student Center 2.0 - Action Page</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <script src="javascript/jquery.js"></script> 
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script src="javascript/cookies.js"></script>
+        
         <LINK REL=StyleSheet HREF="css/MainTheme.css" TYPE="text/css" MEDIA=screen>
     </head>
     <body>
         <div id="ImageHeader"></div>
         <hr>
-        <div id="TextHeader">Welcome, User X. Today is
+        <div id="TextHeader">Welcome,
+            <script language=javascript>
+                document.write(getCookie('username'));
+            </script>
+            . Today is
             <script language="javascript">
                 var today = new Date();
                 document.write(today.toDateString());
@@ -66,13 +75,13 @@ and open the template in the editor.
             <fieldset>
                 <legend>Your Frequent Tasks</legend>
                 &nbsp;
-                <input type="image" src="http://cs4474.muscedere.ca/schedule.png" alt="schedule"/>
+                <input type="image" src="http://cs4474.muscedere.ca/images/schedule.png" alt="schedule"/>
                 &nbsp;
-                <input type="image" src="http://cs4474.muscedere.ca/financial.png" alt="financial"/>
+                <input type="image" src="http://cs4474.muscedere.ca/images/financial.png" alt="financial"/>
                 &nbsp;
-                <input type="image" src="http://cs4474.muscedere.ca/address.png" alt="address"/>
+                <input type="image" src="http://cs4474.muscedere.ca/images/address.png" alt="address"/>
                 &nbsp;
-                <input type="image" src="http://cs4474.muscedere.ca/grades.png" alt="grades"/>
+                <input type="image" src="http://cs4474.muscedere.ca/images/grades.png" alt="grades"/>
                 &nbsp;
             </fieldset>
         </div>
