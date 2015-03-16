@@ -51,6 +51,11 @@ body {
     text-align: center;
 }
 
+div.error {
+    text-align: center;
+    color: red;
+}
+
 button {
    border: 1px solid #0a3c59;
    background: #633e9c;

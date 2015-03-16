@@ -10,7 +10,10 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="theme-color" content="#8A008A">
+        
         <script src="javascript/jquery.js"></script> 
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        
         <LINK REL=StyleSheet HREF="css/MainTheme.css" TYPE="text/css" MEDIA=screen>
     </head>
     <body>
@@ -28,6 +31,7 @@ and open the template in the editor.
             <form id="login_form" action="javascript:void(0);" onsubmit="verifyUser()">
                 <fieldset>
                 <legend>Sign In</legend>
+                <div id="error_text" class="error"></div>
                 <label>Username: </label>
                 <br/>
                 <input id="username" type="text"/>

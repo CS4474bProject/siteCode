@@ -1,14 +1,33 @@
-function authError(){
-    alert("BLAMO");
+function authError(data){
+    //Checks what type of error we have.
+    errorMessage = "";
+    
+    //We automatically clear the textbox for password.
+    $("#password").val("");
+    
+    //Checks what message to display.
+    if (data === 'error') {
+        errorMessage = 'A connection problem with Student Center has occurred.<br/>' +
+                       'Please contact ITS at (519) 661-3800 for help with your account.<br/></br>';
+    } else {
+        errorMessage = 'Your username and password are not correct.<br/>' +
+                       'Please try again.<br/><br/>';
+    }          
+    
+    //Displays the message.
+    $('div.error').html(errorMessage);
+    
+    //We want to shake the div.
+    $( "#Login" ).effect( "shake" );
 }
 
 function authSuccess(){
-    alert("BLAMO2");
+    
 }
 
 function results(data){
-    if (data === "error" || data === null){
-        authError();
+    if (data === 'error' || data === null){
+        authError(data);
     } else {
         authSuccess();
     }
