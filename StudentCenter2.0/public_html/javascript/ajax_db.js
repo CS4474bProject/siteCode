@@ -1,4 +1,4 @@
-function runSQL(sqlQuery){
+function runSQL(sqlQuery, executeFunction){
     //Checks to make sure sql is good.
     if (sqlQuery === "")
         return null;
@@ -11,11 +11,11 @@ function runSQL(sqlQuery){
         url: '../php/sqlite.php',
         success: function(data) {
             //Checks for success or not.
-            if (data === "error") {
-                return null;
-            }
+            if (data === "error" || data === null) {
+                executeFunction(null);
+            } 
             
-            return data;
+            executeFunction(data);
         }
     });
 }
