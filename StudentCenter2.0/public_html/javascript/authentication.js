@@ -69,7 +69,6 @@ function notLoggedIn(){
     path = getCookie('auth');
     
     if (window.path){
-        alert(path);
         errorMessage = 'You are not logged in!<br/>' +
                        'Please log in below to continue..<br/></br>';
                
