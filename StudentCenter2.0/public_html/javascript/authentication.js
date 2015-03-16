@@ -70,7 +70,7 @@ function notLoggedIn(){
     
     if (window.path){
         errorMessage = 'You are not logged in!<br/>' +
-                       'Please log in below to continue..<br/></br>';
+                       'Please log in below to continue.<br/></br>';
                
         //Displays the message.
         $('div.error').html(errorMessage);
