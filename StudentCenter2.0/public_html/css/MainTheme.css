@@ -192,17 +192,17 @@ and open the template in the editor.
         color: #fff;
    }
    
-   #Breadcrumb{
+   #Breadcrumbs{
         position:relative; 
         height:30px; 
         width:100%;
    }
    
-#Breadcrumb ul{position:relative; margin:0 5px 0 5px; padding:0; height:30px; background:url('../images/breadcrumbImage.png') 0px -30px repeat-x; }
-#Breadcrumb ul li{padding:0; margin:0; list-style:none; float:left; height:30px; display:inline;}
-#Breadcrumb ul li a{font:12px Arial, Helvetica, sans-serif; color:rgb(255,255,255); text-decoration:none; line-height:30px; display:block; background:url('breadcrumbImage.png') 100% -60px no-repeat; padding:0 17px 0 15px; }
-#Breadcrumb ul li a:hover {text-decoration:underline; color:rgb(255,255,255);}
-#Breadcrumb ul li a.active{background:none; color:rgb(255,255,255);}
-#Breadcrumb ul li a.active:hover {text-decoration:none;}
-#Breadcrumb .left{position:absolute; top:0px; left:0px; width:10px; height:30px; display:block; z-index:1; background:url('breadcrumbImage.png') 0% 0px no-repeat;}
-#Breadcrumb .right{position:absolute; top:0px; right:0px; width:10px; height:30px; display:block; z-index:1; background:url('breadcrumbImage.png') 100% -90px no-repeat; }
+#Breadcrumbs ul{position:relative; margin:0 5px 0 5px; padding:0; height:30px; background:url('../images/breadcrumbImage.png') 0px -30px repeat-x; }
+#Breadcrumbs ul li{padding:0; margin:0; list-style:none; float:left; height:30px; display:inline;}
+#Breadcrumbs ul li a{font:12px Arial, Helvetica, sans-serif; color:rgb(255,255,255); text-decoration:none; line-height:30px; display:block; background:url('breadcrumbImage.png') 100% -60px no-repeat; padding:0 17px 0 15px; }
+#Breadcrumbs ul li a:hover {text-decoration:underline; color:rgb(255,255,255);}
+#Breadcrumbs ul li a.active{background:none; color:rgb(255,255,255);}
+#Breadcrumbs ul li a.active:hover {text-decoration:none;}
+#Breadcrumbs .left{position:absolute; top:0px; left:0px; width:10px; height:30px; display:block; z-index:1; background:url('breadcrumbImage.png') 0% 0px no-repeat;}
+#Breadcrumbs .right{position:absolute; top:0px; right:0px; width:10px; height:30px; display:block; z-index:1; background:url('breadcrumbImage.png') 100% -90px no-repeat; }
