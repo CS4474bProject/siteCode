@@ -12,7 +12,8 @@ and open the template in the editor.
     body {
          font-family: HelveticaNeue;
          color: white;
-         background-color: rgb(80,39,132);
+         //background-color: rgb(80,39,132);
+         background-color: white;
     }
 
     #ImageHeader{
