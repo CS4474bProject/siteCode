@@ -23,6 +23,15 @@ and open the template in the editor.
          -o-background-size: cover;
          background-size: cover;
     }
+    
+    body image{
+        filter: blur(5px);
+// Browser Specific
+-webkit-filter: blur(5px);
+-moz-filter: blur(5px);
+-o-filter: blur(5px);
+-ms-filter: blur(5px);
+    }
 
     #ImageHeader{
         margin-left: auto;
