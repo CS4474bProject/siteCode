@@ -288,8 +288,8 @@ ul{
   border-left-color: #fff;
 }
 
-#breadcrumbs-one .current,
-#breadcrumbs-one .current:hover{
+#Breadcrumbs .current,
+#Breadcrumbs .current:hover{
   font-weight: bold;
   background: none;
 }
