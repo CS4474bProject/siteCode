@@ -14,7 +14,9 @@ and open the template in the editor.
          color: white;
          //background-color: rgb(80,39,132);
          background-color: white;
-         background-image: url("../images/crest.jpg")
+         background-image: url("../images/crest.jpg");
+         background-attachment: fixed;
+         background-position: center;
     }
 
     #ImageHeader{
