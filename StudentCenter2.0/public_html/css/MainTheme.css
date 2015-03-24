@@ -294,8 +294,3 @@ ul{
 #Breadcrumbs .current::before{
   content: normal;  
 }
-
-fieldset{
-    float:left;
-    display: block;
-}
