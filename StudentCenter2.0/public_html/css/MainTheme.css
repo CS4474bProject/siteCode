@@ -296,5 +296,5 @@ ul{
 }
 
 table{
-    float:left;
+    display: inline-block;
 }
