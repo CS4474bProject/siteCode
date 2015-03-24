@@ -135,6 +135,10 @@ and open the template in the editor.
         visibility: hidden;
    }
    
+   #Tip4{
+        visibility: hidden;
+   }
+   
    fieldset{
         -webkit-border-radius: 8px;
         -moz-border-radius: 8px;
