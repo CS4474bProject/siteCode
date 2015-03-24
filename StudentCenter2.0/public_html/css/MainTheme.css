@@ -226,6 +226,7 @@ ul{
   overflow: hidden;
   width: 100%;
   position: fixed;
+  bottom:0px;
 }
 
 #Breadcrumbs li{
