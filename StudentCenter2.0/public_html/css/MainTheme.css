@@ -213,7 +213,7 @@ ul{
   background: #eee;
   border-width: 1px;
   border-style: solid;
-  border-color: #f5f5f5 #e5e5e5 #850a85;
+  border-color: #f5f5f5 #e5e5e5 #ccc;
   border-radius: 5px;
   box-shadow: 0 0 2px rgba(0,0,0,.2);
   overflow: hidden;
@@ -232,7 +232,7 @@ ul{
   position: relative;
   text-shadow: 0 1px 0 rgba(255,255,255,.5);
   background-color: #ddd;
-  background-image: linear-gradient(to right, #f5f5f5, #850a85);  
+  background-image: linear-gradient(to right, #f5f5f5, #ddd);  
 }
 
 #Breadcrumbs li:first-child a{
