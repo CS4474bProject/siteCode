@@ -294,3 +294,7 @@ ul{
 #Breadcrumbs .current::before{
   content: normal;  
 }
+
+table{
+    float:left;
+}
