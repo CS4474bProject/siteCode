@@ -234,7 +234,7 @@ ul{
 }
 
 #Breadcrumbs a{
-  padding: .7em 1em .7em 2em;
+  padding: 0em 1em .7em 2em;
   float: left;
   text-decoration: none;
   color: #444;
