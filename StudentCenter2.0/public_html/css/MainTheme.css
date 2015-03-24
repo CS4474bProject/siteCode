@@ -297,4 +297,5 @@ ul{
 
 fieldset{
     float:left;
+    display: block;
 }
