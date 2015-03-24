@@ -18,6 +18,10 @@ and open the template in the editor.
          background-repeat: no-repeat;
          background-attachment: fixed;
          background-position: center;
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -o-background-size: cover;
+         background-size: cover;
     }
 
     #ImageHeader{
