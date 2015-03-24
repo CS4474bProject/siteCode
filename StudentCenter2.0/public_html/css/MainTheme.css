@@ -295,6 +295,6 @@ ul{
   content: normal;  
 }
 
-table{
-    display: inline-block;
+fieldset{
+    float:left;
 }
