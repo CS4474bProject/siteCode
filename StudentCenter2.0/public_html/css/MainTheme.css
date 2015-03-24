@@ -29,6 +29,7 @@ and open the template in the editor.
         font-family: HelveticaNeue-Thin;
         font-size: 24px;
         text-align: center;
+        color: rgb(80,39,132);
     }
 
     #Login{
