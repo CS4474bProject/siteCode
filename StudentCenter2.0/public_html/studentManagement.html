@@ -38,15 +38,13 @@ and open the template in the editor.
         <div id="TaskChoices">
             <fieldset>
                 <legend>Choose An Option Below</legend>
-                &nbsp;
-                <input type="image" src="http://cs4474.muscedere.ca/images/schedule.png" alt="schedule"/>
-                &nbsp;
-                <input type="image" src="http://cs4474.muscedere.ca/images/financial.png" alt="financial"/>
-                &nbsp;
-                <input type="image" src="http://cs4474.muscedere.ca/images/address.png" alt="address"/>
-                &nbsp;
-                <input type="image" src="http://cs4474.muscedere.ca/images/grades.png" alt="grades"/>
-                &nbsp;
+                <table border="0">
+                    <tr>
+                        <td align="center"><input type="image" src="http://cs4474.muscedere.ca/images/demographics.png" alt="browse" onclick="parent.location='http://cs4474.muscedere.ca/demographics.html'"/><br/>My Demographics</td>
+                        <td align="center"><input type="image" src="http://cs4474.muscedere.ca/images/academics.png" alt="enrollment" onclick="parent.location='http://cs4474.muscedere.ca/academics.html'"/><br/>My Academics</td>
+                        <td align="center"><input type="image" src="http://cs4474.muscedere.ca/images/contact.png" alt="schedule" onclick="parent.location='http://cs4474.muscedere.ca/contactInfo.html'"/><br/>My Contact Info</td>
+                    </tr>
+                </table>
             </fieldset>
         </div>
     </body>
