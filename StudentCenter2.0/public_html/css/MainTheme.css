@@ -230,6 +230,7 @@ ul{
   overflow: hidden;
   width: 100%;
   position: fixed;
+  position: relative;
   bottom:0px;
 }
 
