@@ -320,9 +320,8 @@ ul{
 }
 
 #logout{
-    width: 100%;
-    height: 100%;
     position: absolute;
+    float:right;
     top: 0;
     right: 0;
 }
