@@ -1,4 +1,93 @@
-fgdfgf
-<!-- 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
---> 
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Western Student Center 2.0 - Action Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <script src="javascript/jquery.js"></script> 
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script src="javascript/cookies.js"></script>
+        <script src="javascript/authentication.js"></script>
+        <script src="javascript/tooltip_show.js"></script>
+        
+        <LINK REL=StyleSheet HREF="css/MainTheme.css" TYPE="text/css" MEDIA=screen>
+    </head>
+    <body>
+        <script>isLoggedIn(window.location.pathname);</script>
+        <div id="ImageHeader"></div>
+        <hr>
+        <div id="TextHeader">Welcome,
+            <script language=javascript>
+                document.write(getCookie('username'));
+            </script>. Today is
+            <script language="javascript">
+                var today = new Date();
+                document.write(today.toDateString());
+            </script>
+        </div>
+        <hr>
+        <div id="NavBar">
+            
+        </div>
+        <br/>
+        <div id="MainActions">
+            <fieldset>
+                <legend>What Do You Want To Do Today?</legend>
+                <button type="button" 
+                        id="b1" 
+                        onclick="location.href='http://cs4474.muscedere.ca/courseManagement.html'" 
+                        onMouseOver="elementShow('Tip', 'Add/Remove Courses, View Special Permissions...');" 
+                        onMouseOut="elementHide('Tip')">
+                    Course Management
+                </button>
+                <button type="button" 
+                        id="b2" 
+                        onclick="location.href='http://cs4474.muscedere.ca/studentManagement.html'" 
+                        onMouseOver="elementShow('Tip', 'Add/Remove Courses, View Special Permissions...');" 
+                        onMouseOut="elementHide('Tip')">
+                    Student Management
+                </button>
+                <button type="button" 
+                        id="b3" 
+                        onclick="location.href='http://cs4474.muscedere.ca/gradeManagement.html'" 
+                        onMouseOver="elementShow('Tip', 'Add/Remove Courses, View Special Permissions...');" 
+                        onMouseOut="elementHide('Tip')">
+                    Grade Management
+                </button>
+                <button type="button" 
+                        id="b4" 
+                        onclick="location.href='http://cs4474.muscedere.ca/financialManagement.html'" 
+                        onMouseOver="elementShow('Tip', 'Add/Remove Courses, View Special Permissions...');" 
+                        onMouseOut="elementHide('Tip')">
+                    Financial Management
+                </button>
+                <hr>
+                Choose a task...
+                <div id="Tip">&nbsp;&nbsp;        
+                </div>
+            </fieldset>
+        </div> 
+        <br/>
+        <br/>
+        <div id="Frequents">
+            <fieldset>
+                <legend>Your Frequent Tasks</legend>
+                &nbsp;
+                <input type="image" src="http://cs4474.muscedere.ca/images/schedule.png" alt="schedule"/>
+                &nbsp;
+                <input type="image" src="http://cs4474.muscedere.ca/images/financial.png" alt="financial"/>
+                &nbsp;
+                <input type="image" src="http://cs4474.muscedere.ca/images/address.png" alt="address"/>
+                &nbsp;
+                <input type="image" src="http://cs4474.muscedere.ca/images/grades.png" alt="grades"/>
+                &nbsp;
+            </fieldset>
+        </div>
+    </body>
+</html>
