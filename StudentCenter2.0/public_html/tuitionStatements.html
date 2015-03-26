@@ -18,6 +18,22 @@ and open the template in the editor.
         <LINK REL=StyleSheet HREF="css/MainTheme.css" TYPE="text/css" MEDIA=screen>
     </head>
     <body>
-        <div>TODO write content</div>
+        <script>isLoggedIn(window.location.pathname);</script>
+        
+        <div id="ImageHeader"></div>
+        <hr/>
+        <div id="TextHeader">
+            Financial Management - My Statements
+        </div>
+        <hr/>
+        <div id="Breadcrumbs">
+        <uL>
+            <li><a href="http://cs4474.muscedere.ca/LaunchPage.html">Launch Page</a></li>
+            <li><a href="http://cs4474.muscedere.ca/financialManagement.html">Financial Management</a></li>
+            <li><a class="current">My Statements</a></li>
+        </uL>
+            <div id="logout"><button type="button" class="logoutBtn" onclick="location.href='http://cs4474.muscedere.ca/index.html'">Logout</button></div>
+        </div>
+        This will be the tuition statement page...
     </body>
 </html>
