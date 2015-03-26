@@ -14,6 +14,7 @@ and open the template in the editor.
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <script src="javascript/cookies.js"></script>
         <script src="javascript/authentication.js"></script>
+        <script src="javascript/tooltip_show.js"></script>
         
         <LINK REL=StyleSheet HREF="css/MainTheme.css" TYPE="text/css" MEDIA=screen>
     </head>
@@ -38,41 +39,37 @@ and open the template in the editor.
         <div id="MainActions">
             <fieldset>
                 <legend>What Do You Want To Do Today?</legend>
-                <button type="button" id="b1" onclick="location.href='http://cs4474.muscedere.ca/courseManagement.html'" onMouseOver="div.show('Tip1')" onMouseOut="div.hide('Tip1')">
+                <button type="button" 
+                        id="b1" 
+                        onclick="location.href='http://cs4474.muscedere.ca/courseManagement.html'" 
+                        onMouseOver="elementShow('Tip', 'Add/Remove Courses, View Special Permissions...');" 
+                        onMouseOut="elementHide('Tip')">
                     Course Management
                 </button>
-                <button type="button" id="b2" onclick="location.href='http://cs4474.muscedere.ca/studentManagement.html'" onMouseOver="div.show('Tip2')" onMouseOut="div.hide('Tip2')">
+                <button type="button" 
+                        id="b2" 
+                        onclick="location.href='http://cs4474.muscedere.ca/studentManagement.html'" 
+                        onMouseOver="elementShow('Tip', 'Add/Remove Courses, View Special Permissions...');" 
+                        onMouseOut="elementHide('Tip')">
                     Student Management
                 </button>
-                <button type="button" id="b3" onclick="location.href='http://cs4474.muscedere.ca/gradeManagement.html'" onMouseOver="div.show('Tip3')" onMouseOut="div.hide('Tip3')">
+                <button type="button" 
+                        id="b3" 
+                        onclick="location.href='http://cs4474.muscedere.ca/gradeManagement.html'" 
+                        onMouseOver="elementShow('Tip', 'Add/Remove Courses, View Special Permissions...');" 
+                        onMouseOut="elementHide('Tip')">
                     Grade Management
                 </button>
-                <button type="button" id="b4" onclick="location.href='http://cs4474.muscedere.ca/financialManagement.html'" onMouseOver="div.show('Tip4')" onMouseOut="div.hide('Tip4')">
+                <button type="button" 
+                        id="b4" 
+                        onclick="location.href='http://cs4474.muscedere.ca/financialManagement.html'" 
+                        onMouseOver="elementShow('Tip', 'Add/Remove Courses, View Special Permissions...');" 
+                        onMouseOut="elementHide('Tip')">
                     Financial Management
                 </button>
                 <hr>
-                <script type="text/javascript">
-                    div = {
-                        show: function(elem) {
-			document.getElementById(elem).style.visibility = 'visible';
-                        },
-                        hide: function(elem) {
-                            document.getElementById(elem).style.visibility = 'hidden';
-                        }
-                    };
-                </script>
                 Choose a task...
-                <div id="Tip1">
-                Add/Remove Courses, View Special Permissions...
-                </div>
-                <div id="Tip2">
-                Update Address, Apply for graduation...    
-                </div>
-                <div id="Tip3">
-                View Grade Report, transcript...
-                </div>
-                <div id="Tip4">
-                View statements, scholarships, bursaries...
+                <div id="Tip">              
                 </div>
             </fieldset>
         </div> 
