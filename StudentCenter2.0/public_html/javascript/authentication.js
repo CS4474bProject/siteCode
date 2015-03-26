@@ -23,7 +23,7 @@ function authError(data){
 
 function authSuccess(uName){
     //We create a login cookie.
-    document.cookie = 'username=' + uName + ';path=/';
+    document.cookie = 'username=' + uName + '; path=/';
     
     //Check the auth cookie.
     auth = getCookie('auth');
@@ -88,7 +88,13 @@ function isLoggedIn(pageURL){
     //If it doesn't exist.
     if (uname === null || uname === "" || typeof uname === 'undefined'){
         //We need to create an error cookie and redirect.
-        document.cookie = 'auth=' + pageURL + ';path=/;';
+        document.cookie = 'auth=' + pageURL + '; path=/;';
         window.location.replace('index.html');
     }
+}
+function logout(){
+    //We replace the cookie with ""
+    document.cookie = 'username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    
+    window.location.replace('index.html');
 }
