@@ -1,12 +1,9 @@
 function elementShow(elementID, elementMessage){
     //Sets the tip text.
-    $( '#' + elementID ).html(elementMessage);
-    
-    //Shows the div element.
-    document.getElementById(elementID).style.visibility = 'visible';
+    $( '.' + elementID ).html(elementMessage);
 }
 
 function elementHide(elementID){
-    //Hides the element.
-    document.getElementById(elementID).style.visibility = 'hidden';
+    //Sets the tip back to default.
+    $( '.' + elementID ).html("test");
 }
