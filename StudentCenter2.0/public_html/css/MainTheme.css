@@ -40,6 +40,13 @@ and open the template in the editor.
         color: rgb(80,39,132);
     }
 
+    #FrequentLinks{
+        margin-left: auto;
+        margin-right:auto;
+        display:table;
+        text-align: center;
+    }
+    
     #Login{
         margin-left:auto;
         margin-right:auto;
@@ -123,6 +130,30 @@ and open the template in the editor.
         color: #fff;
    }
    
+   table.Services {
+       width: 100%;
+       table-layout: fixed;
+       text-align: center;
+   }
+   
+   table.Services tr td {
+       padding: 0.25em;
+   }
+   
+   table.Services tr td a:link {
+       
+   }
+   table.Services tr td a:hover {
+       
+   }
+   table.Services tr td a:visited {
+       
+   }
+   
+   input.LoginInput{
+       margin-bottom: 0.5em;
+   }
+
    button.logoutBtn{
         border: 1px solid #0a3c59;
         background: #633e9c;
@@ -173,23 +204,20 @@ and open the template in the editor.
         color: #fff;
    }
 
-   #Tip1{
+   #Tip{
         visibility: hidden;
    }
    
-   #Tip2{
-        visibility: hidden;
-   }
-   
-   #Tip3{
-        visibility: hidden;
-   }
-   
-   #Tip4{
-        visibility: hidden;
-   }
-   
-   fieldset{
+    #FrequentLinks{
+        padding: 1em;
+        width: 80vw;
+        margin-left: auto;
+        margin-right:auto;
+        display:table;
+        text-align: center;
+    }
+    
+    fieldset{
         -webkit-border-radius: 8px;
         -moz-border-radius: 8px;
         border-radius: 8px;
