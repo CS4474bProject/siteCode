@@ -5,5 +5,5 @@ function elementShow(elementID, elementMessage){
 
 function elementHide(elementID){
     //Sets the tip back to default.
-    $( '.' + elementID ).html("test");
+    $( '.' + elementID ).html("Select a task above.");
 }
