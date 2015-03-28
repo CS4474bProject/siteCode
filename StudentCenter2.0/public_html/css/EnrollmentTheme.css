@@ -1,0 +1,23 @@
+@import "MainTheme.css";
+
+#schedule {
+    table-layout: fixed;
+}
+
+#schedule, th, td {
+   border: 1px solid black;
+}
+
+#schedule th{
+    text-align: center;
+    font-weight: bold;    
+}
+
+#schedule td{
+    text-align: center;
+    width: 5.5em;
+}
+
+#schedule td[id^='ID']{
+    text-align: right !important;
+}
