@@ -141,13 +141,13 @@ and open the template in the editor.
    }
    
    table.Services tr td a:link {
-       
+       color: white;
    }
    table.Services tr td a:hover {
-       
+       color: wheat !important;
    }
    table.Services tr td a:visited {
-       
+       color: #ccc;
    }
    
    input.LoginInput{
@@ -210,7 +210,7 @@ and open the template in the editor.
    
     #FrequentLinks{
         padding: 1em;
-        width: 80vw;
+        width: 60vw;
         margin-left: auto;
         margin-right:auto;
         display:table;
