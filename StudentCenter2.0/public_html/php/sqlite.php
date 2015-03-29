@@ -14,6 +14,6 @@
     
     //Generates array for row.
     while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
-        print_r($row);
+        echo json_encode($row);
     }
 ?>
