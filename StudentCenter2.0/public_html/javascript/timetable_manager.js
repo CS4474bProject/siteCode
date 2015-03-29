@@ -8,7 +8,7 @@ function getCourses(){
 }
 
 function receiveCourses(data){
-    alert(data[0]);
+    alert(data[1]);
     alert(data[0]['CourseNum']);
     //Generate the buttons.
     lastNum = 0;
