@@ -37,15 +37,13 @@ function receiveCourses(data){
         diff = endTime - startTime;
         duration = Math.floor(diff / 1000 / 60 / 60) + 
                    (Math.floor(diff / 1000 / 60) / 60);
-        alert(duration);
         
         //Creates the element name.
         divID = element['DayOfWeek'] + element['StartTime'].split(':')[0] + 
-                element['StartTime'].split(':')[1].substring(0, 1);
+                element['StartTime'].split(':')[1].substring(0, 2);
         if (element['StartTime'].split(':')[1].substring(2, 3) === "pm")
             divID += "p";
         
-        alert(divID);
         //Checks if the last course was also a time.
         if (lastNum === element['CourseNum']){
             $( '#' + lastNum ).attr('onClick', $( '#' + lastNum ).attr('onClick') +
