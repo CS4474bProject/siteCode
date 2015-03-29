@@ -11,9 +11,10 @@
     //Next we run sqlite.
     $dir = 'sqlite:../database/data.db';
     $db = new PDO($dir) or die("error");
+    $results = $db->query($query);
     
-    //Generates JSON
-    foreach ($db->query($query) as $row) {
-        echo json_encode($row[0]);
+    //Generates array for row.
+    while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
+        print_r($row);
     }
 ?>
