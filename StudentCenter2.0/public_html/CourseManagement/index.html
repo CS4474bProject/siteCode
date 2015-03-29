@@ -18,13 +18,28 @@ and open the template in the editor.
         <script src="javascript/main.js"></script>
         
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <!--
         <script> 
         $(window).load(function(){
             
                 $("#TaskChoices").animate({opacity: 1}, 3000);
                
         });
-        </script> 
+        </script> -->
+        
+        <script>$(document).ready(function(){
+    // to fade in on page load
+    $("body").css("display", "none");
+    $("body").fadeIn(400); 
+    // to fade out before redirect
+    $('a').click(function(e){
+        redirect = $(this).attr('href');
+        e.preventDefault();
+        $('body').fadeOut(400, function(){
+            document.location.href = redirect
+        });
+    });
+})</script>
         
         <LINK REL=StyleSheet HREF="../css/MainTheme.css" TYPE="text/css" MEDIA=screen>
     </head>
