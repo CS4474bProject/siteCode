@@ -1,7 +1,10 @@
 @import "MainTheme.css";
 
 #timetable {
+    display: table;
+    text-align: center;
     color: black;
+    width: 60vw;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     border-radius: 8px;
