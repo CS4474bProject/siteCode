@@ -17,22 +17,16 @@ and open the template in the editor.
         <script src="javascript/cookies.js"></script>
         <script src="javascript/authentication.js"></script>
         <script src="javascript/loader.js"></script>
-        
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="javascript/main.js"></script>
         <LINK REL=StyleSheet HREF="css/MainTheme.css" TYPE="text/css" MEDIA=screen>
     </head>
     <body>        
+        <section id="holder">
         <div id="ImageHeader"></div>
         <hr>
         <div id="TextHeader">Western Student Center 2.0</div>
         <hr>
-        <div class="m-scene" id="main">
-  <div class="m-header scene_element scene_element--fadein">
-    Just a test
-  </div>
-  <div class="m-page scene_element scene_element--fadeinup">
-    ANother Test
-  </div>
-</div>
         <div id="Login">
             <form id="login_form" action="javascript:void(0);" onsubmit="verifyUser()">
                 <fieldset>
@@ -56,5 +50,6 @@ and open the template in the editor.
         <div id="FrequentLinks">
         </div>
        <script>notLoggedIn();</script>
+        </section>
     </body>
 </html>
