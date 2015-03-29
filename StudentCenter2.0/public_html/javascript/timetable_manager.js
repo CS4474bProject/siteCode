@@ -51,7 +51,7 @@ function receiveCourses(data){
         } else {
             $( '#buttons' ).html($( '#buttons' ).html() + 
                     '<button type="button" id="' + element['CourseNum'] +
-                    '" onclick=\'addCourse("' + element['CourseName'] + '","' + element['Subject'] + '", "' + element['CourseCode'] + '", "SSC-2028", ' + element['Semester'] + ', "' + divID + '", ' + element['DayOfWeek'] + ', ' + duration + ');\'>' +
+                    '" onclick=\'addCourse("' + element['CourseName'] + '","' + element['Subject'] + '", "' + element['CourseCode'] + '", "SSC-2028", ' + element['Semester'] + ', "' + divID + '", "' + element['DayOfWeek'] + '", ' + duration + ');\'>' +
                     element['CourseName'] + '</button>');
             lastNum = element['CourseNum'];
         }
