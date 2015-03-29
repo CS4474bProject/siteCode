@@ -398,7 +398,7 @@ ul{
 //CSS content for animating page transitions :)
 
 #holder {
-	//width: 900px;
+	width: 900px;
 	margin-right: auto;
 	margin-left: auto;
 	opacity: 0;
