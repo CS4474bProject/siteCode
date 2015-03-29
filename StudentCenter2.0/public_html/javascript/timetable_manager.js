@@ -17,21 +17,21 @@ function receiveCourses(data){
         //Manages time elements.
         end = 0;
         start = 0;
-        if (element['EndTime'].split(':')[1].substring(2, 3) === "pm" &&
+        if (element['EndTime'].split(':')[1].substring(2, 4) === "pm" &&
                 element['EndTime'].split(':')[0] !== '12')
             end = element['EndTime'].split(':')[0] + 12;
         else
             end = element['EndTime'].split(':')[0];
-        if (element['StartTime'].split(':')[1].substring(2, 3) === "pm" &&
+        if (element['StartTime'].split(':')[1].substring(2, 4) === "pm" &&
                 element['StartTime'].split(':')[0] !== '12')
             start = element['StartTime'].split(':')[0] + 12;
         else
             start = element['StartTime'].split(':')[0];
         
         startTime = new Date(2000, 0, 1, start, 
-            element['StartTime'].split(':')[1].substring(0,1));
+            element['StartTime'].split(':')[1].substring(0,2));
         endTime = new Date(2000, 0, 1, end, 
-            element['EndTime'].split(':')[1].substring(0,1));
+            element['EndTime'].split(':')[1].substring(0,2));
         
         //Gets the difference between the time.
         diff = endTime - startTime;
@@ -39,9 +39,9 @@ function receiveCourses(data){
                    (Math.floor(diff / 1000 / 60) / 60);
         
         //Creates the element name.
-        divID = element['DayOfWeek'] + element['StartTime'].split(':')[0] + 
+        divID = element['StartTime'].split(':')[0] + 
                 element['StartTime'].split(':')[1].substring(0, 2);
-        if (element['StartTime'].split(':')[1].substring(2, 3) === "pm")
+        if (element['StartTime'].split(':')[1].substring(2, 4) === "pm")
             divID += "p";
         
         //Checks if the last course was also a time.
