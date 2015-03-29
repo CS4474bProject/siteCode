@@ -14,10 +14,10 @@ and open the template in the editor.
         <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
         <script src="../javascript/cookies.js"></script>
         <script src="../javascript/authentication.js"></script>
+        <script src="../javascript/ajax_db.js"></script>
         <script src="../javascript/timetable_manager.js"></script>
        
         <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>
             $(document).ready(function(){
             // to fade in on page load
@@ -37,7 +37,7 @@ and open the template in the editor.
         <link rel="prefetch" href="http://cs4474.muscedere.ca/LaunchPage.html" />
         <LINK REL=StyleSheet HREF="../css/EnrollmentTheme.css" TYPE="text/css" MEDIA=screen>
     </head>
-    <body>
+    <body onload="getCourses();">
         <script>isLoggedIn(window.location.pathname);</script>
         
         <div id="ImageHeader"></div>
@@ -55,10 +55,13 @@ and open the template in the editor.
             <div id="logout"><button type="button" class="logoutBtn" onclick="location.href='http://cs4474.muscedere.ca/index.html'">Logout</button></div>
         </div>
         
+        <div id="buttons"></div>
         <button type="button" 
                 onclick='addCourse("Introduction to Political Science",
                                    "Polisci", "1000A", "SSC-2028", 1, "230p", "Mon", 2);'>
             Click Here</button>
+        
+        
         <div id="timetable"></div>
     </body>
 </html>

@@ -1,9 +1,15 @@
 $(function(){
       $("#timetable").load("timetable.html"); 
 });
-$(document).ready(function(){
-      $("#lol").tooltip();
-});
+
+function getCourses(){
+    //We load in all the courses.
+    runSQL("SELECT * FROM Courses INNER JOIN Date ON Courses.CourseNum = Date.CourseNum;", receiveCourses);
+}
+
+function receiveCourses(data){
+   alert(data); 
+}
 
 function addCourse(name, subCode, code, classroom, semester, startTime, day, len){
     //First, we get the first time element.
