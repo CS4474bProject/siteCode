@@ -396,20 +396,3 @@ ul{
 }
 
 //CSS content for animating page transitions :)
-
-#holder {
-	width: 900px;
-	margin-right: auto;
-	margin-left: auto;
-	opacity: 0;
-	transition: opacity .125s ease-in-out;
- 	-moz-transition: opacity .125s ease-in-out;
- 	-webkit-transition: opacity .125s ease-in-out;
-}
-
-#holder.visible {
-	opacity: 1;
-	transition: opacity .25s ease-in-out;
- 	-moz-transition: opacity .25s ease-in-out;
- 	-webkit-transition: opacity .25s ease-in-out;
-}

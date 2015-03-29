@@ -16,12 +16,29 @@ and open the template in the editor.
         <script src="javascript/authentication.js"></script>
         <script src="javascript/tooltip_show.js"></script>
         <script src="javascript/loader.js"></script>
-        <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
-        <script src="javascript/main.js"></script>
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        
+        <script>
+            $(document).ready(function(){
+            // to fade in on page load
+            $("body").css("display", "none");
+            $("body").fadeIn(600); 
+            // to fade out before redirect
+            $('a').click(function(e){
+                redirect = $(this).attr('href');
+                e.preventDefault();
+                $('body').fadeOut(400, function(){
+                    window.location = redirect;
+                });
+            });
+            });
+        </script>
+        
         <LINK REL=StyleSheet HREF="css/MainTheme.css" TYPE="text/css" MEDIA=screen>
     </head>
     <body>
-        <section id="holder">
+        
         <script>isLoggedIn(window.location.pathname);</script>
         <div id="ImageHeader"></div>
         <hr>
@@ -110,6 +127,5 @@ and open the template in the editor.
         </uL>
             <div id="logout"><button type="button" class="logoutBtn" onclick="location.href='http://cs4474.muscedere.ca/index.html'">Logout</button></div>
         </div>
-        </section>
     </body>
 </html>
