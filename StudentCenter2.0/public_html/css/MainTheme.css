@@ -9,6 +9,7 @@ and open the template in the editor.
 */
 
 html{
+    background-color: rgb(202,202,202);
     background-image: url("../images/gray.jpg");
          background-repeat: no-repeat;
          background-attachment: fixed;
