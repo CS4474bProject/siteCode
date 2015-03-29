@@ -397,49 +397,19 @@ ul{
 
 //CSS content for animating page transitions :)
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+#holder {
+	//width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+	opacity: 0;
+	transition: opacity .125s ease-in-out;
+ 	-moz-transition: opacity .125s ease-in-out;
+ 	-webkit-transition: opacity .125s ease-in-out;
 }
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-
-  100% {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-.m-scene {
-  /** Basic styles for an animated element */
-  .scene_element {
-    animation-duration: 0.25s;
-    transition-timing-function: ease-in;
-    animation-fill-mode: both;
-
-  }
-
-  /** An element that fades in */
-  .scene_element--fadein {
-    animation-name: fadeIn;
-  }
-
-  /** An element that fades in and slides up */
-  .scene_element--fadeinup {
-    animation-name: fadeInUp;
-  }
-
-  /** An element that fades in and slides from the right */
-  .scene_element--fadeinright {
-    animation-name: fadeInRight;
-  }
+#holder.visible {
+	opacity: 1;
+	transition: opacity .25s ease-in-out;
+ 	-moz-transition: opacity .25s ease-in-out;
+ 	-webkit-transition: opacity .25s ease-in-out;
 }
