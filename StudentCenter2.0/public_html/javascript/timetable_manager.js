@@ -17,11 +17,11 @@ function receiveCourses(data){
         //Manages time elements.
         end = 0;
         start = 0;
-        if (element['EndTime'].split(':')[0] > 12)
+        if (element['EndTime'].split(':')[1].substring(2, 3) === "pm")
             end = element['EndTime'].split(':')[0] + 12;
         else
             end = element['EndTime'].split(':')[0];
-        if (element['StartTime'].split(':')[0] > 12)
+        if (element['StartTime'].split(':')[1].substring(2, 3) === "pm")
             start = element['StartTime'].split(':')[0] + 12;
         else
             start = element['StartTime'].split(':')[0];
