@@ -27,7 +27,6 @@ function receiveCourses(data){
             start = element['StartTime'].split(':')[0] + 12;
         else
             start = element['StartTime'].split(':')[0];
-        alert(start + ":" + end);
         
         startTime = new Date(2000, 0, 1, start, 
             element['StartTime'].split(':')[1].substring(0,1));
@@ -40,14 +39,21 @@ function receiveCourses(data){
                    (Math.floor(diff / 1000 / 60) / 60);
         alert(duration);
         
+        //Creates the element name.
+        divID = element['DayOfWeek'] + element['StartTime'].split(':')[0] + 
+                element['StartTime'].split(':')[1].substring(0, 1);
+        if (element['StartTime'].split(':')[1].substring(2, 3) === "pm")
+            divID += "p";
+        
+        alert(divID);
         //Checks if the last course was also a time.
         if (lastNum === element['CourseNum']){
             $( '#' + lastNum ).attr('onClick', $( '#' + lastNum ).attr('onClick') +
-                    'addCourse("' + element['CourseName'] + '","' + element['Subject'] + '", "' + element['CourseCode'] + '", "SSC-2028", ' + element['Semester'] + ', "230p", ' + element['DayOfWeek'] + ', 2);');
+                    'addCourse("' + element['CourseName'] + '","' + element['Subject'] + '", "' + element['CourseCode'] + '", "SSC-2028", ' + element['Semester'] + ', "230p", ' + element['DayOfWeek'] + ', ' + duration + ');');
         } else {
             $( '#buttons' ).html($( '#buttons' ).html() + 
                     '<button type="button" id="' + element['CourseNum'] +
-                    '" onclick=\'addCourse("' + element['CourseName'] + '","' + element['Subject'] + '", "' + element['CourseCode'] + '", "SSC-2028", ' + element['Semester'] + ', "230p", ' + element['DayOfWeek'] + ', 2);\'>' +
+                    '" onclick=\'addCourse("' + element['CourseName'] + '","' + element['Subject'] + '", "' + element['CourseCode'] + '", "SSC-2028", ' + element['Semester'] + ', "230p", ' + element['DayOfWeek'] + ', ' + duration + ');\'>' +
                     element['CourseName'] + '</button>');
             lastNum = element['CourseNum'];
         }
