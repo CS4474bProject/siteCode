@@ -47,11 +47,11 @@ function receiveCourses(data){
         //Checks if the last course was also a time.
         if (lastNum === element['CourseNum']){
             $( '#' + lastNum ).attr('onClick', $( '#' + lastNum ).attr('onClick') +
-                    'addCourse("' + element['CourseName'] + '","' + element['Subject'] + '", "' + element['CourseCode'] + '", "SSC-2028", ' + element['Semester'] + ', "230p", ' + element['DayOfWeek'] + ', ' + duration + ');');
+                    'addCourse("' + element['CourseName'] + '","' + element['Subject'] + '", "' + element['CourseCode'] + '", "SSC-2028", ' + element['Semester'] + ', "' + divID + '", "' + element['DayOfWeek'] + '", ' + duration + ');');
         } else {
             $( '#buttons' ).html($( '#buttons' ).html() + 
                     '<button type="button" id="' + element['CourseNum'] +
-                    '" onclick=\'addCourse("' + element['CourseName'] + '","' + element['Subject'] + '", "' + element['CourseCode'] + '", "SSC-2028", ' + element['Semester'] + ', "230p", ' + element['DayOfWeek'] + ', ' + duration + ');\'>' +
+                    '" onclick=\'addCourse("' + element['CourseName'] + '","' + element['Subject'] + '", "' + element['CourseCode'] + '", "SSC-2028", ' + element['Semester'] + ', "' + divID + '", ' + element['DayOfWeek'] + ', ' + duration + ');\'>' +
                     element['CourseName'] + '</button>');
             lastNum = element['CourseNum'];
         }
