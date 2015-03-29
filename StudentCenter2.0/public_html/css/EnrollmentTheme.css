@@ -1,5 +1,14 @@
 @import "MainTheme.css";
 
+#timetable {
+    color: black;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    background: white;
+}
+
+//Schedule CSS Theme
 #schedule {
     table-layout: fixed;
 }
