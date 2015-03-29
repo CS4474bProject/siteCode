@@ -9,7 +9,7 @@ and open the template in the editor.
         <title>Western Student Center 2.0 - Student Management</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+        <meta http-equiv=”Page-Enter” content=”blendtrans(duration=2.0)”>
         <script src="../javascript/jquery.js"></script> 
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
         <script src="../javascript/cookies.js"></script>
@@ -21,18 +21,21 @@ and open the template in the editor.
             $(document).ready(function(){
             // to fade in on page load
             $("body").css("display", "none");
-            $("body").fadeIn(600); 
+            $("body").fadeIn(500); 
             // to fade out before redirect
             $('a').click(function(e){
                 redirect = $(this).attr('href');
                 e.preventDefault();
                 $('body').fadeOut(400, function(){
-                    document.location.href = redirect
+                    window.location = redirect;
                 });
             });
             });
         </script>
-        
+        <link rel="prefetch" href="http://cs4474.muscedere.ca/StudentManagement/academics.html" />
+        <link rel="prefetch" href="http://cs4474.muscedere.ca/StudentManagement/contactInfo.html" />
+        <link rel="prefetch" href="http://cs4474.muscedere.ca/StudentManagement/demographics.html" />
+        <link rel="prefetch" href="http://cs4474.muscedere.ca/LaunchPage.html" />
         <LINK REL=StyleSheet HREF="../css/MainTheme.css" TYPE="text/css" MEDIA=screen>
     </head>
     <body>

@@ -8,12 +8,9 @@ and open the template in the editor.
     Author     : Spencer
 */
 
-
     body {
          font-family: HelveticaNeue;
          color: white;
-         //background-color: rgb(80,39,132);
-         background-color: white;
          background-image: url("../images/gray.jpg");
          background-repeat: no-repeat;
          background-attachment: fixed;

@@ -21,18 +21,20 @@ and open the template in the editor.
             $(document).ready(function(){
             // to fade in on page load
             $("body").css("display", "none");
-            $("body").fadeIn(400); 
+            $("body").fadeIn(500); 
             // to fade out before redirect
             $('a').click(function(e){
                 redirect = $(this).attr('href');
                 e.preventDefault();
                 $('body').fadeOut(400, function(){
-                    document.location.href = redirect
+                    window.location = redirect;
                 });
             });
-            })
+            });
         </script>
-        
+        <link rel="prefetch" href="http://cs4474.muscedere.ca/GradeManagement/gradeReporter.html" />
+        <link rel="prefetch" href="http://cs4474.muscedere.ca/GradeManagement/transcript.html" />
+        <link rel="prefetch" href="http://cs4474.muscedere.ca/LaunchPage.html" />
         <LINK REL=StyleSheet HREF="../css/MainTheme.css" TYPE="text/css" MEDIA=screen>
     </head>
     <body>
