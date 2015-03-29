@@ -9,6 +9,7 @@ function getCourses(){
 
 function receiveCourses(data){
     //Generate the buttons.
+    alert("hi");
     lastNum = 0;
     for (i = 0; i < data.length; i++){
         //Gets the last array element.
