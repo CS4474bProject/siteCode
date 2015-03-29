@@ -9,7 +9,6 @@ function getCourses(){
 
 function receiveCourses(data){
     //Generate the buttons.
-    alert("hi");
     lastNum = 0;
     for (i = 0; i < data.length; i++){
         //Gets the last array element.
@@ -34,7 +33,7 @@ function receiveCourses(data){
         //Gets the difference between the time.
         diff = endTime - startTime;
         duration = Math.floor(diff / 1000 / 60 / 60) + 
-                   (Math.floor(msec / 1000 / 60) / 60);
+                   (Math.floor(diff / 1000 / 60) / 60);
         alert(duration);
         
         //Checks if the last course was also a time.
