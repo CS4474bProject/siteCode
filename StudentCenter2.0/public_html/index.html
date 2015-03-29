@@ -24,7 +24,7 @@ and open the template in the editor.
             $(document).ready(function(){
             // to fade in on page load
             $("body").css("display", "none");
-            $("body").fadeIn(400); 
+            $("body").fadeIn(600); 
             // to fade out before redirect
             $('a').click(function(e){
                 redirect = $(this).attr('href');
@@ -33,7 +33,7 @@ and open the template in the editor.
                     window.location = redirect;
                 });
             });
-            })
+            });
         </script>
         
         <LINK REL=StyleSheet HREF="css/MainTheme.css" TYPE="text/css" MEDIA=screen>
