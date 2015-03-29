@@ -26,7 +26,7 @@ and open the template in the editor.
             $("body").css("display", "none");
             $("body").fadeIn(500); 
             // to fade out before redirect
-            $('button').click(function(e){
+            $('a').click(function(e){
                 redirect = $(this).attr('href');
                 e.preventDefault();
                 $('body').fadeOut(400, function(){
