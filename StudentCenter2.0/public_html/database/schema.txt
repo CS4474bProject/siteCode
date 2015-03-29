@@ -19,7 +19,7 @@ CREATE TABLE Role(
 
 CREATE TABLE Courses(
 	CourseNum INT NOT NULL,
-	CouseCode VARCHAR(15) NOT NULL,
+	CourseCode VARCHAR(15) NOT NULL,
 	Subject VARCHAR(30) NOT NULL,
 	CourseName VARCHAR(30) NOT NULL,
 	Semester INT NOT NULL,
