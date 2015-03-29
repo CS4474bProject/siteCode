@@ -14,6 +14,6 @@
     
     //Generates JSON
     foreach ($db->query($query) as $row) {
-        echo($row);
+        echo json_encode($row[0]);
     }
 ?>
