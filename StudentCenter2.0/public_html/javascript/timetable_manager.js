@@ -1,8 +1,11 @@
 $(function(){
       $("#timetable").load("timetable.html"); 
 });
+$(document).ready(function(){
+      $("#lol").tooltip();
+});
 
-function addCourse(name, code, semester, startTime, endTime, day, len){
+function addCourse(name, subCode, code, classroom, semester, startTime, day, len){
     //First, we get the first time element.
     elementCode = '#';
     if (semester === 2) elementCode += 2;
@@ -33,4 +36,15 @@ function addCourse(name, code, semester, startTime, endTime, day, len){
     startCell.attr('rowspan', len / 0.5);
     
     //Add in information to table.
+    startCell.html('<div class="name">' + subCode +
+                   '</div><div class="code">' + code +
+                   '<div class="classroom">' + classroom +
+                   '</div>');
+           
+    //Adds the tooltip attribute.
+    startCell.attr('title', name);
+    
+    $(function() {
+            $('#' + startCell.attr('id')).tooltip();
+    });
 }
