@@ -1,6 +1,6 @@
 <?php
     //First, we get the data.
-    $query = $_POST['sql'];
+    $query = $_GET['sql'];
     
     //Ensures we don't have error.
     if ($query == ""){
@@ -13,6 +13,6 @@
     
     //Generates JSON
     foreach ($db->query($query) as $row) {
-        echo($row[0]);
+        echo($row);
     }
 ?>
