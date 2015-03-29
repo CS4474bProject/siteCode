@@ -1,7 +1,6 @@
 <?php
     //First, we get the data.
-    $query = "SELECT * FROM Courses INNER JOIN Date ON Courses.CourseNum = Date.CourseNum;"; 
-            //$_GET['sql'];
+    $query = $_POST['sql'];
     
     //Ensures we don't have error.
     if ($query == ""){
@@ -15,6 +14,6 @@
     
     //Generates array for row.
     while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
-        json_encode($row);
+        print_r($row);
     }
 ?>
