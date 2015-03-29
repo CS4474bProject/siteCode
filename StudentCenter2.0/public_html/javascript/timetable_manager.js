@@ -8,7 +8,25 @@ function getCourses(){
 }
 
 function receiveCourses(data){
-   alert(data); 
+    alert(data);
+   
+    //Generate the buttons.
+    lastNum = 0;
+    for (i = 0; i < data.length; i++){
+        //Gets the last array element.
+        element = data[i];
+       
+        //Checks if the last course was also a time.
+        if (lastNum === element['Course Num']){
+            $( '#' + lastNum ).attr('onClick', $( '#' + lastNum ).attr('onClick') +
+                    'addCourse("Introduction to Political Science", "Polisci", "1000A", "SSC-2028", 1, "230p", "Mon", 2);');
+        } else {
+            $( '#buttons' ).html($( '#buttons' ).html() + 
+                    '<button type="button" id="' + element['Course Num'] +
+                    '" onclick=\'addCourse("Introduction to Political Science","Polisci", "1000A", "SSC-2028", 1, "230p", "Mon", 2);\'>');
+            lastNum = element['Course Num'];
+        }
+   }
 }
 
 function addCourse(name, subCode, code, classroom, semester, startTime, day, len){
