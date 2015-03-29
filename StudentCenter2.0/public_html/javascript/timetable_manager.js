@@ -17,14 +17,14 @@ function receiveCourses(data){
         element = data[i];
        
         //Checks if the last course was also a time.
-        if (lastNum === element['Course Num']){
+        if (lastNum === element['CourseNum']){
             $( '#' + lastNum ).attr('onClick', $( '#' + lastNum ).attr('onClick') +
                     'addCourse("Introduction to Political Science", "Polisci", "1000A", "SSC-2028", 1, "230p", "Mon", 2);');
         } else {
             $( '#buttons' ).html($( '#buttons' ).html() + 
-                    '<button type="button" id="' + element['Course Num'] +
+                    '<button type="button" id="' + element['CourseNum'] +
                     '" onclick=\'addCourse("Introduction to Political Science","Polisci", "1000A", "SSC-2028", 1, "230p", "Mon", 2);\'>');
-            lastNum = element['Course Num'];
+            lastNum = element['CourseNum'];
         }
    }
 }
