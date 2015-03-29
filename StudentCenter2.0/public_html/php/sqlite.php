@@ -10,7 +10,7 @@
     
     //Next we run sqlite.
     $dir = 'sqlite:../database/data.db';
-    $db = new PDO($dir) or die("error");
+    $db = new SQLite3($dir) or die("error");
     $results = $db->query($query);
     
     //Generates array for row.
