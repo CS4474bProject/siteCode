@@ -27,6 +27,8 @@ function receiveCourses(data){
             start = element['StartTime'].split(':')[0] + 12;
         else
             start = element['StartTime'].split(':')[0];
+        alert(start + ":" + end);
+        
         startTime = new Date(2000, 0, 1, start, 
             element['StartTime'].split(':')[1].substring(0,1));
         endTime = new Date(2000, 0, 1, end, 
