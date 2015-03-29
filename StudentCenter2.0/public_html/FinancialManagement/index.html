@@ -21,12 +21,12 @@ and open the template in the editor.
             $(document).ready(function(){
             // to fade in on page load
             $("body").css("display", "none");
-            $("body").fadeIn(200); 
+            $("body").fadeIn(2000); 
             // to fade out before redirect
             $('a').click(function(e){
                 redirect = $(this).attr('href');
                 e.preventDefault();
-                $('body').fadeOut(200, function(){
+                $('body').fadeOut(1000, function(){
                     window.location = redirect;
                 });
             });
