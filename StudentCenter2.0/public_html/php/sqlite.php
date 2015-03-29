@@ -13,8 +13,12 @@
     $results = $db->query($query);
     
     //Generates array for row.
+    $data = array();
+    $i = 0;
     while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
-        echo json_encode($row);
-        return;
+        $data[$i] = $row;
+        $i = $i + 1;
     }
+    
+    echo json_encode($data);
 ?>
