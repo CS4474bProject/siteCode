@@ -17,6 +17,28 @@ CREATE TABLE Role(
 	PRIMARY KEY (RoleID)
 	);
 
+CREATE TABLE Courses(
+	CourseNum INT NOT NULL,
+	CouseCode VARCHAR(15) NOT NULL,
+	Subject VARCHAR(30) NOT NULL,
+	CourseName VARCHAR(30) NOT NULL,
+	Semester INT NOT NULL,
+	PRIMARY KEY (CourseNum)
+);
+
+CREATE TABLE Date(
+	DateID INT NOT NULL,
+	CourseNum INT NOT NULL,
+	DayOfWeek VARCHAR(30) NOT NULL,
+	StartTime VARCHAR(30),
+	EndTime VARCHAR(30),
+	PRIMARY KEY (DateID),
+	FOREIGN KEY (CourseNum)
+		REFERENCES Courses(CourseNum)
+			ON DELETE CASCADE
+			ON UPDATE CASCADE
+);
+
 INSERT INTO Role VALUES
 	(0, "Undergrad"),
 	(1, "Graduate");
@@ -27,3 +49,24 @@ INSERT INTO User VALUES
 	("nrostaz", "Neda", "Rostamzadeh", 1, "pass3"),
 	("sabdul9", "Sheikh", "Abdullah", 1, "pass4"),
 	("shanley", "Spencer", "Hanley", 0, "pass5");
+
+INSERT INTO Courses VALUES
+	(32445, "1026A", "CompSci", "Introduction to Computer Science", 1),
+	(356, "1027B", "CompSci", "Computer Science Part 2", 2),
+	(8567, "1000A", "PoliSci", "Political Science: An Objective View", 1),
+	(3287, "2100A", "Classics", "Etymology in Greek and Latin", 1),
+	(1234, "3465B", "English", "The Many Faces of Shakespeare", 2),
+	(643, "1001A", "Biology", "Biology: An Introduction", 1),
+	(5322, "4474A", "CompSci", "Human-Computer Interaction", 1);
+	
+INSERT INTO Date VALUES
+	(1, 32445, "Mon", "2:00pm", "3:00pm"),
+	(2, 32445, "Wed", "1:30pm", "3:30pm"),
+	(3, 356, "Tues", "10:00am", "11:00am"),
+	(4, 356, "Fri", "9:00am", "10:00am"),
+	(5, 8567, "Tues", "2:00pm", "5:00pm"),
+	(6, 3287, "Thurs", "12:30pm", "3:30pm"),
+	(7, 1234, "Fri", "11:30am", "12:30pm"),
+	(8, 643, "Tues", "1:00pm", "3:00pm"),
+	(9, 643, "Thurs", "1:00pm", "3:00pm"),
+	(10, 5322, "Mon", "2:30pm", "5:30pm");
