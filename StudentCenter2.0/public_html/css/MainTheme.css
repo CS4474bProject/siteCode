@@ -10,20 +10,12 @@ and open the template in the editor.
 
 html{
     background-color: rgb(202,202,202);
-    background-image: url("../images/gray.jpg");
-         background-repeat: no-repeat;
-         background-attachment: fixed;
-         background-position: center;
-         -webkit-background-size: cover;
-         -moz-background-size: cover;
-         -o-background-size: cover;
-         background-size: cover;
 }
 
     body {
          font-family: HelveticaNeue;
          color: white;
-         //background-color: rgb(80,39,132);
+         background-color: rgb(202,202,202);
          background-image: url("../images/gray.jpg");
          background-repeat: no-repeat;
          background-attachment: fixed;
