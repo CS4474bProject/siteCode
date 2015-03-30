@@ -79,6 +79,13 @@ and open the template in the editor.
         display:table;
         text-align: center;
     }
+    
+    #demographicsInput{
+        margin-left: auto;
+        margin-right:auto;
+        display:table;
+        text-align: center;
+    }
 
     div.error {
         text-align: center;
