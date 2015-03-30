@@ -20,6 +20,12 @@
     float: right;
     width: 50%;
 }
+#courses {
+    margin: 0 auto;    
+}
+#courses th, #courses td {
+    min-width: 100px;
+}
 
 //Schedule CSS Theme
 #schedule {
