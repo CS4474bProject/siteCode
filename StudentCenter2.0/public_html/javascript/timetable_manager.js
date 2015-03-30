@@ -12,6 +12,22 @@ function loadCourseData(){
     runSQL("SELECT Subject FROM Courses GROUP BY Subject;", receiveSubjects);
 }
 
+function searchCourses(){
+    //We search for the courses.
+    sql = "SELECT * FROM Courses INNER JOIN Date ON Courses.CourseNum = Date.CoursseNum";
+    if ($('#SubjectName').find(":selected").text() !== "All Courses"){
+        sql += " WHERE Subject = \"" + $('#SubjectName').find(":selected").text() + "\"";
+    }
+    sql = " LIKE \"" + $('#CourseName').val(); + "%\";";
+    
+    //Runs the SQL.
+    runSQL(sql, populateCourses);
+}
+
+function populateCourses(data){
+    alert(data);
+}
+
 function receiveSubjects(data){
     //Loops through each of the subjects.
     for (i = 0; i < data.length; i++){
