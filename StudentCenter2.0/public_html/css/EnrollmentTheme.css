@@ -17,9 +17,11 @@ body {
 }
 
 //Enrollment CSS
-
 #courses {
     margin: 0 auto;    
+}
+#SubjectName{
+    width:100px;
 }
 #courses th, #courses td {
     min-width: 75px;
