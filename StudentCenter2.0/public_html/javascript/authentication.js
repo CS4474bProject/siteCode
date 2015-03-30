@@ -94,14 +94,9 @@ function isAlreadyIn(){
     uname = getCookie('username');
     
     //Check if it exists.
-    if (uname !== null || uname !== "" || typeof uname !== 'undefined'){
-        //We go to the auth page, if it exists.
-        auth = getCookie('auth');
-        if (uname === null || uname === "" || typeof uname === 'undefined'){
-            window.location.replace('http://cs4474.muscedere.ca/LaunchPage.html');
-        } else {
-            window.location.replace(auth);
-        }
+    if (uname !== null && uname !== "" && typeof uname !== 'undefined'){
+        //We go to the main page.
+        window.location.replace('http://cs4474.muscedere.ca/LaunchPage.html');
     }
 }
 function logout(){
