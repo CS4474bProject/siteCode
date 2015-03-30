@@ -24,8 +24,8 @@ function authError(data){
 function authSuccess(data){
     //We create a login cookie.
     alert(data[0]['UserName']);
-    document.cookie = 'username=' + data[0]['UserName'] + '; path=/;';
-    document.cookie = 'name=' + data[0]['FirstName'] + '; path=/;';
+    document.cookie = 'username=' + data[0]['UserName'] + '; path=/';
+    document.cookie = 'name=' + data[0]['FirstName'] + '; path=/';
     
     //Check the auth cookie.
     auth = getCookie('auth');
@@ -33,7 +33,6 @@ function authSuccess(data){
         auth = 'LaunchPage.html';
     
     //We now redirect the page.
-    document.cookie = 'username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
     window.location.replace(auth);
 }
 
