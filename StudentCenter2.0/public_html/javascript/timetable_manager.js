@@ -7,6 +7,23 @@ function getCourses(){
     runSQL("SELECT * FROM Courses INNER JOIN Date ON Courses.CourseNum = Date.CourseNum;", receiveCourses);
 }
 
+function loadCourseData(){
+    //We get the subjects.
+    runSQL("SELECT Subject FROM Courses GROUP BY Subject;", receiveSubjects());
+}
+
+function receiveSubjects(data){
+    //Loops through each of the subjects.
+    for (i = 0; i < data.length; i++){
+        element = data[i];
+        
+        //Adds in the option.
+        $( '#SubjectName' ).html(
+                $( '#SubjectName' ).html + '<option id="' + element['Subject'] + '">' +
+                element['Subject'] + '</option>');
+    }
+}
+
 function receiveCourses(data){
     //Generate the buttons.
     lastNum = 0;

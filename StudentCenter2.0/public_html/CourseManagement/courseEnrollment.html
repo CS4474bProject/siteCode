@@ -37,7 +37,7 @@ and open the template in the editor.
         <link rel="prefetch" href="http://cs4474.muscedere.ca/LaunchPage.html" />
         <LINK REL=StyleSheet HREF="../css/EnrollmentTheme.css" TYPE="text/css" MEDIA=screen>
     </head>
-    <body onload="getCourses();">
+    <body onload="loadCourseData();">
         <script>isLoggedIn(window.location.pathname);</script>
         
         <div id="ImageHeader"></div>
@@ -55,7 +55,18 @@ and open the template in the editor.
             <div id="logout"><button type="button" class="logoutBtn" onclick="location.href='http://cs4474.muscedere.ca/index.html'">Logout</button></div>
         </div>
        
-        <div id="searchPanel"></div>
+        <div id="searchPanel">
+            <fieldset>
+                <label>Course Search:</label>
+                <input id="CourseName" class="Search" type="text"
+                       placeholder="Enter Course Name or ID" />
+                <br>
+                <label>Subject Name:</label>
+                <select id="SubjectName">
+                    <option>All Subjects</option>
+                </select>
+            </fieldset>
+        </div>
         <div id="resultsPanel"></div>
         
         <div id="buttons"></div>
