@@ -19,9 +19,12 @@ function searchForCourses(){
     sql = "SELECT * FROM Courses INNER JOIN Date ON Courses.CourseNum = Date.CourseNum";
     if (!(subject === "All Subjects")){
         sql += " WHERE Subject = \"" + subject + "\"";
+    } else {
+        sql += " WHERE";
     }
-    sql += " LIKE \"" + $('#CourseName').val() + "%\";";
-    alert(sql);
+    sql += " CourseName LIKE \"" + $('#CourseName').val() + "%\" OR" +
+           " CourseCode LIKE \"" + $('#CourseName').val() + "%\";";
+   
     //Runs the SQL.
     runSQL(sql, populateCourses);
 }
