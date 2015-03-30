@@ -21,12 +21,11 @@ function searchForCourses(){
     if (!(subject === "All Subjects")){
         sql += " WHERE Subject = \"" + subject + "\" AND (";
     } else {
-        sql += " WHERE";
+        sql += " WHERE (";
     }
     sql += " CourseName LIKE \"" + $('#CourseName').val() + "%\" OR" +
            " CourseCode LIKE \"" + $('#CourseName').val() + "%\");";
    
-   alert(sql);
     //Runs the SQL.
     runSQL(sql, populateCourses);
 }
