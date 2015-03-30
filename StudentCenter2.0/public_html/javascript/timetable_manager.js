@@ -14,7 +14,7 @@ function loadCourseData(){
 
 function searchForCourses(){
     //We search for the courses.
-    sql = "SELECT * FROM Courses INNER JOIN Date ON Courses.CourseNum = Date.CoursseNum";
+    sql = "SELECT * FROM Courses INNER JOIN Date ON Courses.CourseNum = Date.CourseNum";
     if ($('#SubjectName').find(":selected").text() !== "All Courses"){
         sql += " WHERE Subject = \"" + $('#SubjectName').find(":selected").text() + "\"";
     }
