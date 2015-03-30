@@ -21,6 +21,14 @@ and open the template in the editor.
          background-size: cover;
          padding-bottom: 50px;
     }
+    
+    #verticalBar{
+        border-left:1px solid rgb(80,39,132);
+        height:80px;
+        position:absolute;
+        right:250px;
+        top:10px;
+    }
 
     #ImageHeader{
         margin-left: auto;
