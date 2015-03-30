@@ -30,10 +30,6 @@ function searchForCourses(){
 }
 
 function populateCourses(data){
-    //If error, we handle it.
-    if (data === "error")
-        return;
-    
     //Creates the table.
     subjectTable = $( '#courses' );
     subjectTable.html('<tr>' +
@@ -44,16 +40,27 @@ function populateCourses(data){
                     '<th>Options</th>' +
                 '</tr>');
         
+    //If error, we handle it.
+    if (data === "error")
+        return;
+        
     //Loop through each of the courses.
     for (i = 0; i < data.length; i++){
         element = data[i];
+        
+        if (element['CourseNum'] === data[i-1]['CourseNum']){
+            $( '#' + element['CourseNum'] + 'Date' ).append('<br>' + element['DayOfWeek'] + ', ' + 
+                    element['StartTime'] + ' - ' + element['EndTime']);
+            continue;
+        }           
         
         subjectTable.append('<tr>' + 
                 '<td>' + element['CourseCode'] + '</td>' +
                 '<td>' + element['CourseName'] + '</td>' +
                 '<td>' + element['Subject'] + '</td>' +
-                '<td>' + element['CourseCode'] + '</td>' +
-                '<td>hello' + //generateButton(data) + '</td>' +
+                '<td id="' + element['CourseNum'] + 'Date>' + element['DayOfWeek'] + ', ' + 
+                    element['StartTime'] + ' - ' + element['EndTime'] + '</td>' +
+                '<td id="' + element['CourseNum'] + 'Button"></td>' +
                 '</tr>');
     }
 }
@@ -70,7 +77,7 @@ function receiveSubjects(data){
     }
 }
 
-function receiveCourses(data){
+function generateButton(data){
     //Generate the buttons.
     lastNum = 0;
     for (i = 0; i < data.length; i++){
