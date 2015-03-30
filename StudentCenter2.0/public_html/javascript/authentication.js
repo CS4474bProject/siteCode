@@ -23,7 +23,11 @@ function authError(data){
 
 function authSuccess(data){
     //We create a login cookie.
-    alert(data[0]);
+    if (typeof data[0] === 'undefined') {
+        authError("");
+        return;
+    }
+    
     document.cookie = 'username=' + data[0]['UserName'] + '; path=/';
     document.cookie = 'name=' + data[0]['Fname'] + '; path=/';
     
