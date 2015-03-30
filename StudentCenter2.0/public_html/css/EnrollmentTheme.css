@@ -16,17 +16,6 @@
     width: 40vw !important;
 }
 
-#courses {
-    margin: 0 auto;    
-}
-#courses th, #courses td {
-    min-width: 75px;
-    text-align: center;
-}
-.name, .date {
-    min-width: 150px !important;
-}
-
 //Schedule CSS Theme
 #schedule {
     table-layout: fixed;
