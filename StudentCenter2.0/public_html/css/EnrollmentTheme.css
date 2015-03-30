@@ -33,7 +33,10 @@ body {
 #schedule {
     table-layout: fixed;
 }
-
+#Spacer {
+    border-top-style: none !important;
+    border-bottom-style: none !important;
+}
 #schedule, th, td {
    border: 1px solid black;
 }
