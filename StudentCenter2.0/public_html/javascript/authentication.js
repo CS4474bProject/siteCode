@@ -23,9 +23,8 @@ function authError(data){
 
 function authSuccess(data){
     //We create a login cookie.
-    alert(data[0]);
     document.cookie = 'username=' + data[0]['UserName'] + '; path=/';
-    document.cookie = 'name=' + data[0]['FName'] + '; path=/';
+    document.cookie = 'name=' + data[0]['Fname'] + '; path=/';
     
     //Check the auth cookie.
     auth = getCookie('auth');
@@ -60,7 +59,7 @@ function verifyUser(){
     $("#login_form").children('input[type=submit]').prop('disabled', true);
         
     //Runs HTML query.
-    sql = "SELECT UserName, FName FROM User WHERE UserName = \"" + userName + "\" AND Password = \"" 
+    sql = "SELECT UserName, Fname FROM User WHERE UserName = \"" + userName + "\" AND Password = \"" 
             + password + "\";";
     result = runSQL(sql, results);
     
@@ -93,6 +92,8 @@ function isLoggedIn(pageURL){
 function logout(){
     //We replace the cookie with ""
     document.cookie = 'username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    document.cookie = 'name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    document.cookie = 'auth=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
     
     window.location.replace('index.html');
 }
