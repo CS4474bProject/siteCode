@@ -23,7 +23,7 @@ and open the template in the editor.
     }
     
     #verticalBar{
-        border-left:1px solid rgb(80,39,132);
+        border-left:1px solid rgb(0,0,0);
         height:auto;
         position:relative;
     }
