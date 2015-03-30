@@ -18,8 +18,8 @@ function searchForCourses(){
     if ($('#SubjectName').find(":selected").text() !== "All Courses"){
         sql += " WHERE Subject = \"" + $('#SubjectName').find(":selected").text() + "\"";
     }
-    sql += " LIKE \"" + $('#CourseName').val(); + "%\";";
-    alert(sql);
+    sql += " LIKE \"" + $('#CourseName').val() + "%\";";
+
     //Runs the SQL.
     runSQL(sql, populateCourses);
 }
