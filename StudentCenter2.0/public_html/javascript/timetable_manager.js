@@ -13,14 +13,16 @@ function loadCourseData(){
 }
 
 function searchForCourses(){
+    subject = $('#SubjectName').find(":selected").text();
+    alert(subject);
+    
     //We search for the courses.
     sql = "SELECT * FROM Courses INNER JOIN Date ON Courses.CourseNum = Date.CourseNum";
-    if ($('#SubjectName').find(":selected").text() !== "All Courses"){
+    if (subject !== "All Courses"){
         sql += " WHERE Subject = \"" + $('#SubjectName').find(":selected").text() + "\"";
     }
     sql += " LIKE \"" + $('#CourseName').val() + "%\";";
 
-    alert(sql);
     //Runs the SQL.
     runSQL(sql, populateCourses);
 }
