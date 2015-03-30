@@ -20,6 +20,9 @@ body {
 #enrollFieldset {
     width: 40vw !important;
 }
+.Search {
+    width: 10vw;
+}
 
 //Schedule CSS Theme
 #schedule {
