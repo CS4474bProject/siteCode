@@ -15,6 +15,14 @@ function loadCourseData(){
 function searchForCourses(){
     subject = $('#SubjectName').find(":selected").text();
     if ($('#CourseName').val() === "") {
+        subjectTable = $( '#courses' );
+        subjectTable.html('<tr>' +
+                    '<th>Course Code</th>' +
+                    '<th class=\"name\">Course Name</th>' +
+                    '<th>Subject</th>' +
+                    '<th class=\"date\">Date</th>' +
+                    '<th>Options</th>' +
+                '</tr>');
         $('#results').html("Please search above to see courses.");
         return;
     }
