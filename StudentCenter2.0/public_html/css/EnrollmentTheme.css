@@ -11,6 +11,16 @@
     background: white;
 }
 
+//Enrollment CSS
+#searchPanel {
+    float: left;
+    width: 50%;
+}
+#resultsPanel {
+    float: right;
+    width: 50%;
+}
+
 //Schedule CSS Theme
 #schedule {
     table-layout: fixed;

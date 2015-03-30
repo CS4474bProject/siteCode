@@ -55,33 +55,33 @@ and open the template in the editor.
             <div id="logout"><button type="button" class="logoutBtn" onclick="location.href='http://cs4474.muscedere.ca/index.html'">Logout</button></div>
         </div>
        
-        <div id="searchPanel">
+        <div id="main">
             <fieldset>
-                <label>Course Search:</label>
-                <input id="CourseName" class="Search" type="text"
-                       onkeyup='searchForCourses();'
-                       placeholder="Enter Course Name or ID" />
-                <br>
-                <label>Subject Name:</label>
-                <select id="SubjectName">
-                    <option>All Subjects</option>
-                </select>
+                <div id="searchPanel">
+                    <label>Course Search:</label>
+                        <input id="CourseName" class="Search" type="text"
+                               onkeyup='searchForCourses();'
+                               placeholder="Enter Course Name or ID" />
+                        <br>
+                        <label>Subject Name:</label>
+                        <select id="SubjectName">
+                            <option>All Subjects</option>
+                        </select>
+                </div>
+                <div id="resultsPanel">
+                    <table id="courses">
+                        <tr>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                            <th>Subject</th>
+                            <th>Date</th>
+                            <th>Options</th>
+                        </tr>
+                    </table>
+                </div>
             </fieldset>
         </div>
-        <div id="resultsPanel">
-            <table id="courses">
-                <tr>
-                    <th>Course Code</th>
-                    <th>Course Name</th>
-                    <th>Subject</th>
-                    <th>Date</th>
-                    <th>Options</th>
-                </tr>
-            </table>
-        </div>
         
-        <div id="buttons"></div>
-       
         <div id="timetable"></div>
     </body>
 </html>
