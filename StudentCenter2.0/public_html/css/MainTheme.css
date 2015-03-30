@@ -88,6 +88,18 @@ and open the template in the editor.
         text-align: center;
     }
     
+    #contactContent{
+        
+    }
+    
+    #contactInput{
+        width:800px;
+        margin-left: auto;
+        margin-right:auto;
+        display:table;
+        text-align: center;
+    }
+    
     label {
         display: block;
         width: 10em;
