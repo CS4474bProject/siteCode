@@ -12,14 +12,10 @@
 }
 
 //Enrollment CSS
-#searchPanel {
-    float: left;
-    width: 50%;
+#enrollFieldset {
+    width: 40vw !important;
 }
-#resultsPanel {
-    float: right;
-    width: 50%;
-}
+
 #courses {
     margin: 0 auto;    
 }
