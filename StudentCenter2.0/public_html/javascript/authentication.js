@@ -23,6 +23,7 @@ function authError(data){
 
 function authSuccess(data){
     //We create a login cookie.
+    alert(data[0]);
     document.cookie = 'username=' + data[0]['UserName'] + '; path=/';
     document.cookie = 'name=' + data[0]['Fname'] + '; path=/';
     
@@ -38,7 +39,7 @@ function authSuccess(data){
 
 function results(data){
     alert(data);
-    if (data === 'error' || data === null || data === "" || typeof data === 'undefined' ){
+    if (data === 'error' || data === null || data === ""){
         authError(data);
     } else {
         authSuccess(data);
