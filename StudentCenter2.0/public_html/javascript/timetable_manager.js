@@ -14,7 +14,9 @@ function loadCourseData(){
 
 function searchForCourses(){
     subject = $('#SubjectName').find(":selected").text();
-    if (subject === "") populateCourses("error");
+    if ($('#CourseName').val() === "") {
+        populateCourses("none");
+    }
     
     //We search for the courses.
     sql = "SELECT * FROM Courses INNER JOIN Date ON Courses.CourseNum = Date.CourseNum";
@@ -42,9 +44,13 @@ function populateCourses(data){
                 '</tr>');
         
     //If error, we handle it.
-    if (data === "error")
+    if (data === "error" || data.length === 0){
+        $('#results').html("No courses were found.");
         return;
-        
+    } else if (data === "none"){
+        $('#results').html("Please search above to see courses.");
+        return;
+    }
     //Loop through each of the courses.
     for (i = 0; i < data.length; i++){
         element = data[i];
