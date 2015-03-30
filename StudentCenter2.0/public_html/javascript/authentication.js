@@ -69,6 +69,7 @@ function verifyUser(){
 
 function notLoggedIn(){
     path = getCookie('auth');
+    status = getCookie('logout');
     
     if (window.path){
         errorMessage = 'You are not logged in!<br/>' +
@@ -76,7 +77,16 @@ function notLoggedIn(){
                
         //Displays the message.
         $('div.error').html(errorMessage);
-    }
+    } else if (status === '1'){
+        errorMessage = 'You have successfully logged out!<br/>' +
+                       'Thanks for using Student Center.';
+               
+        //Displays the message.
+        $('div.error').html(errorMessage);
+        $('div.error').css('color', 'white');
+        
+        document.cookie = 'logout=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    } 
 }
 function isLoggedIn(pageURL){
     //We need to check if the username cookie exists.
@@ -104,6 +114,7 @@ function logout(){
     document.cookie = 'username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
     document.cookie = 'name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
     document.cookie = 'auth=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    doucment.cookie = 'logout=1; path=/;';
     
     window.location.replace('http://cs4474.muscedere.ca/index.html');
 }
