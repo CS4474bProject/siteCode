@@ -81,6 +81,7 @@ and open the template in the editor.
     }
     
     #demographicsInput{
+        width:2200px;
         margin-left: auto;
         margin-right:auto;
         display:table;
