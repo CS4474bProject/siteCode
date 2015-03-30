@@ -59,7 +59,7 @@ function verifyUser(){
     $("#login_form").children('input[type=submit]').prop('disabled', true);
         
     //Runs HTML query.
-    sql = "SELECT UserName, FirstName FROM User WHERE UserName = \"" + userName + "\" AND Password = \"" 
+    sql = "SELECT UserName, FName FROM User WHERE UserName = \"" + userName + "\" AND Password = \"" 
             + password + "\";";
     result = runSQL(sql, results);
     
