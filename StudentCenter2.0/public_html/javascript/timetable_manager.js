@@ -19,12 +19,12 @@ function receiveCourses(data){
         start = 0;
         if (element['EndTime'].split(':')[1].substring(2, 4) === "pm" &&
                 element['EndTime'].split(':')[0] !== '12')
-            end = element['EndTime'].split(':')[0] + 12;
+            end = parseInt(element['EndTime'].split(':')[0]) + 12;
         else
             end = element['EndTime'].split(':')[0];
         if (element['StartTime'].split(':')[1].substring(2, 4) === "pm" &&
                 element['StartTime'].split(':')[0] !== '12')
-            start = element['StartTime'].split(':')[0] + 12;
+            start = parseInt(element['StartTime'].split(':')[0]) + 12;
         else
             start = element['StartTime'].split(':')[0];
         alert(start + ":" + element['EndTime'].split(':')[1].substring(0,2));
