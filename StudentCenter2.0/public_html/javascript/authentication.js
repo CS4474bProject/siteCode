@@ -37,7 +37,8 @@ function authSuccess(data){
 }
 
 function results(data){
-    if (data === 'error' || data === null || data === ""){
+    alert(data);
+    if (data === 'error' || data === null || data === "" || typeof data === 'undefined' ){
         authError(data);
     } else {
         authSuccess(data);
