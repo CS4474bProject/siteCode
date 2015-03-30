@@ -121,7 +121,7 @@ function generateButtons(data){
         
         //Checks if the last course was also a time.
         if (lastNum === element['CourseNum']){
-            $( '#' + element['CourseNum'] + "inButton" ).attr('onClick', $( '#' + lastNum ).attr('onClick') +
+            $( '#' + element['CourseNum'] + "inButton" ).attr('onClick', $( '#' + element['CourseNum'] + "inButton" ).attr('onClick') +
                     'addCourse("' + element['CourseName'] + '","' + element['Subject'] + '", "' + element['CourseCode'] + '", "SSC-2028", ' + element['Semester'] + ', "' + divID + '", "' + element['DayOfWeek'] + '", ' + duration + ');');
         } else {
             $( '#' + element['CourseNum'] + "Button" ).html(
