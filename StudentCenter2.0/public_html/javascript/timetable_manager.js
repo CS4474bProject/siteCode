@@ -9,7 +9,7 @@ function getCourses(){
 
 function loadCourseData(){
     //We get the subjects.
-    runSQL("SELECT Subject FROM Courses GROUP BY Subject;", receiveSubjects());
+    runSQL("SELECT Subject FROM Courses GROUP BY Subject;", receiveSubjects);
 }
 
 function receiveSubjects(data){
