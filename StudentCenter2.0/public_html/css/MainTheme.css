@@ -323,6 +323,10 @@ and open the template in the editor.
         color: #fff;
    }
    
+   input[type="text"]{
+       width: 40px;
+   }
+   
 
 ul{
   margin: 0;
