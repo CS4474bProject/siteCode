@@ -37,6 +37,13 @@ and open the template in the editor.
         text-align: center;
         color: rgb(80,39,132);
     }
+    
+    #demographicsContent{
+        font-family: HelveticaNeue-Thin;
+        font-size: 16px;
+        text-align: center;
+        color: rgb(80,39,132);
+    }
 
     #FrequentLinks{
         margin-left: auto;
