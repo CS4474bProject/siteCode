@@ -27,8 +27,7 @@ function receiveCourses(data){
             start = parseInt(element['StartTime'].split(':')[0]) + 12;
         else
             start = element['StartTime'].split(':')[0];
-        alert(start + ":" + element['StartTime'].split(':')[1].substring(0,2));
-        alert(end + ":" + element['EndTime'].split(':')[1].substring(0,2));
+
         startTime = new Date(2000, 0, 1, start, 
             element['StartTime'].split(':')[1].substring(0,2));
         endTime = new Date(2000, 0, 1, end, 
@@ -36,8 +35,9 @@ function receiveCourses(data){
         
         //Gets the difference between the time.
         diff = endTime - startTime;
-        duration = Math.floor(diff / 1000 / 60 / 60) + 
-                   (Math.floor(diff / 1000 / 60) / 60);
+        duration = Math.floor(diff / 1000 / 60 / 60);
+        diff -= duration * 1000 * 60 * 60;
+        duration += Math.floor(diff / 1000 / 60);
         
         //Creates the element name.
         divID = element['StartTime'].split(':')[0] + 
