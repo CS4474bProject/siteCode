@@ -34,9 +34,9 @@ function populateCourses(data){
     subjectTable = $( '#courses' );
     subjectTable.html('<tr>' +
                     '<th>Course Code</th>' +
-                    '<th>Course Name</th>' +
+                    '<th class=\"name\">Course Name</th>' +
                     '<th>Subject</th>' +
-                    '<th>Date</th>' +
+                    '<th class=\"date\">Date</th>' +
                     '<th>Options</th>' +
                 '</tr>');
         
@@ -57,9 +57,9 @@ function populateCourses(data){
         
         subjectTable.append('<tr>' + 
                 '<td>' + element['CourseCode'] + '</td>' +
-                '<td>' + element['CourseName'] + '</td>' +
+                '<td class=\"name\">' + element['CourseName'] + '</td>' +
                 '<td>' + element['Subject'] + '</td>' +
-                '<td id="' + element['CourseNum'] + 'Date">' + element['DayOfWeek'] + ', ' + 
+                '<td class=\"date\" id="' + element['CourseNum'] + 'Date">' + element['DayOfWeek'] + ', ' + 
                     element['StartTime'] + ' - ' + element['EndTime'] + '</td>' +
                 '<td id="' + element['CourseNum'] + 'Button"></td>' +
                 '</tr>');
