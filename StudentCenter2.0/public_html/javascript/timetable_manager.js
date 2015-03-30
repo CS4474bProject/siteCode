@@ -18,7 +18,7 @@ function searchForCourses(){
     
     //We search for the courses.
     sql = "SELECT * FROM Courses INNER JOIN Date ON Courses.CourseNum = Date.CourseNum";
-    if (subject !== "All Courses"){
+    if (subject === "All Subjects"){
         sql += " WHERE Subject = \"" + $('#SubjectName').find(":selected").text() + "\"";
     }
     sql += " LIKE \"" + $('#CourseName').val() + "%\";";
