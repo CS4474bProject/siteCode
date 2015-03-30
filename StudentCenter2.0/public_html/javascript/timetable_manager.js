@@ -59,7 +59,7 @@ function populateCourses(data){
                 '<td>' + element['CourseCode'] + '</td>' +
                 '<td>' + element['CourseName'] + '</td>' +
                 '<td>' + element['Subject'] + '</td>' +
-                '<td id="' + element['CourseNum'] + 'Date>' + element['DayOfWeek'] + ', ' + 
+                '<td id="' + element['CourseNum'] + 'Date">' + element['DayOfWeek'] + ', ' + 
                     element['StartTime'] + ' - ' + element['EndTime'] + '</td>' +
                 '<td id="' + element['CourseNum'] + 'Button"></td>' +
                 '</tr>');
