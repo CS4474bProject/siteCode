@@ -64,6 +64,9 @@ function populateCourses(data){
                 '<td id="' + element['CourseNum'] + 'Button"></td>' +
                 '</tr>');
     }
+    
+    //Generates the buttons.
+    generateButtons(data);
 }
 
 function receiveSubjects(data){
@@ -78,7 +81,7 @@ function receiveSubjects(data){
     }
 }
 
-function generateButton(data){
+function generateButtons(data){
     //Generate the buttons.
     lastNum = 0;
     for (i = 0; i < data.length; i++){
@@ -118,13 +121,13 @@ function generateButton(data){
         
         //Checks if the last course was also a time.
         if (lastNum === element['CourseNum']){
-            $( '#' + lastNum ).attr('onClick', $( '#' + lastNum ).attr('onClick') +
+            $( '#' + element['CourseNum'] + "Button" ).attr('onClick', $( '#' + lastNum ).attr('onClick') +
                     'addCourse("' + element['CourseName'] + '","' + element['Subject'] + '", "' + element['CourseCode'] + '", "SSC-2028", ' + element['Semester'] + ', "' + divID + '", "' + element['DayOfWeek'] + '", ' + duration + ');');
         } else {
-            $( '#buttons' ).html($( '#buttons' ).html() + 
+            $( '#' + element['CourseNum'] + "Button" ).html(
                     '<button type="button" id="' + element['CourseNum'] +
                     '" onclick=\'addCourse("' + element['CourseName'] + '","' + element['Subject'] + '", "' + element['CourseCode'] + '", "SSC-2028", ' + element['Semester'] + ', "' + divID + '", "' + element['DayOfWeek'] + '", ' + duration + ');\'>' +
-                    element['CourseName'] + '</button>');
+                    'Enroll</button>');
             lastNum = element['CourseNum'];
         }
    }
