@@ -20,6 +20,7 @@ function searchForCourses(){
     }
     sql += " LIKE \"" + $('#CourseName').val() + "%\";";
 
+    alert(sql);
     //Runs the SQL.
     runSQL(sql, populateCourses);
 }
