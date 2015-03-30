@@ -114,7 +114,7 @@ function logout(){
     document.cookie = 'username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
     document.cookie = 'name=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
     document.cookie = 'auth=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-    doucment.cookie = 'logout=1; path=/;';
+    document.cookie = 'logout=1; path=/;';
     
     window.location.replace('http://cs4474.muscedere.ca/index.html');
 }
