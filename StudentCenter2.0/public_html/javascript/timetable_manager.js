@@ -18,8 +18,8 @@ function receiveSubjects(data){
         element = data[i];
         
         //Adds in the option.
-        $( '#SubjectName' ).html(
-                $( '#SubjectName' ).html + '<option id="' + element['Subject'] + '">' +
+        $( '#SubjectName' ).append(
+                '<option id="' + element['Subject'] + '">' +
                 element['Subject'] + '</option>');
     }
 }
