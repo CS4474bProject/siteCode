@@ -15,7 +15,8 @@ function loadCourseData(){
 function searchForCourses(){
     subject = $('#SubjectName').find(":selected").text();
     if ($('#CourseName').val() === "") {
-        populateCourses("none");
+        $('#results').html("Please search above to see courses.");
+        return;
     }
     
     //We search for the courses.
@@ -46,9 +47,6 @@ function populateCourses(data){
     //If error, we handle it.
     if (data === "error" || data.length === 0){
         $('#results').html("No courses were found.");
-        return;
-    } else if (data === "none"){
-        $('#results').html("Please search above to see courses.");
         return;
     } else {
         $('#results').html("");
