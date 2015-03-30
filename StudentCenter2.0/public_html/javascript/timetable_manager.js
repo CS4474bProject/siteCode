@@ -26,6 +26,7 @@ function searchForCourses(){
     sql += " CourseName LIKE \"" + $('#CourseName').val() + "%\" OR" +
            " CourseCode LIKE \"" + $('#CourseName').val() + "%\");";
    
+   alert(sql);
     //Runs the SQL.
     runSQL(sql, populateCourses);
 }
