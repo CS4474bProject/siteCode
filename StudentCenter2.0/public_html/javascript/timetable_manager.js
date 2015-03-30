@@ -50,7 +50,10 @@ function populateCourses(data){
     } else if (data === "none"){
         $('#results').html("Please search above to see courses.");
         return;
+    } else {
+        $('#results').html("");
     }
+    
     //Loop through each of the courses.
     for (i = 0; i < data.length; i++){
         element = data[i];
