@@ -30,7 +30,32 @@ function searchForCourses(){
 }
 
 function populateCourses(data){
-    alert(data);
+    //If error, we handle it.
+    if (data === "error")
+        return;
+    
+    //Creates the table.
+    subjectTable = $( '#courses' );
+    subjectTable.html('<tr>' +
+                    '<th>Course Code</th>' +
+                    '<th>Course Name</th>' +
+                    '<th>Subject</th>' +
+                    '<th>Date</th>' +
+                    '<th>Options</th>' +
+                '</tr>');
+        
+    //Loop through each of the courses.
+    for (i = 0; i < data.length; i++){
+        element = data[i];
+        
+        subjectTable.append('<tr>' + 
+                '<td>' + element['CourseCode'] + '</td>' +
+                '<td>' + element['CourseName'] + '</td>' +
+                '<td>' + element['Subject'] + '</td>' +
+                '<td>' + element['CourseCode'] + '</td>' +
+                '<td>hello' + //generateButton(data) + '</td>' +
+                '</tr>');
+    }
 }
 
 function receiveSubjects(data){
