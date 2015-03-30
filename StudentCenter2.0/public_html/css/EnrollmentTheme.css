@@ -17,11 +17,9 @@ body {
 }
 
 //Enrollment CSS
-#enrollFieldset {
-    width: 40vw !important;
-}
 .Search {
-    width: 10vw;
+    size: 20vw;
+    width: 20vw;
 }
 #courses {
     margin: 0 auto;    
