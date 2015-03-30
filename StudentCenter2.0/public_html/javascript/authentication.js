@@ -21,9 +21,10 @@ function authError(data){
     $( "#Login" ).effect( "shake" );
 }
 
-function authSuccess(uName){
+function authSuccess(data){
     //We create a login cookie.
-    document.cookie = 'username=' + uName + '; path=/';
+    document.cookie = 'username=' + data[0]['UserName'] + '; path=/';
+    document.cookie = 'name=' + data[0]['FirstName'] + '; path=/';
     
     //Check the auth cookie.
     auth = getCookie('auth');
@@ -31,11 +32,12 @@ function authSuccess(uName){
         auth = 'LaunchPage.html';
     
     //We now redirect the page.
+    document.cookie = 'username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
     window.location.replace(auth);
 }
 
 function results(data){
-    if (data === 'error' || data === null){
+    if (data === 'error' || data === null || data === ""){
         authError(data);
     } else {
         authSuccess(data);
@@ -47,11 +49,6 @@ function verifyUser(){
     userName = $("#username").val();
     password = $("#password").val();
     
-    //Override
-    if (userName === "master"){
-        authSuccess("master");
-    }
-    
     //Check for empty.
     if (userName === "" || password === "") {
         authError();
@@ -62,7 +59,7 @@ function verifyUser(){
     $("#login_form").children('input[type=submit]').prop('disabled', true);
         
     //Runs HTML query.
-    sql = "SELECT UserName FROM User WHERE UserName = \"" + userName + "\" AND Password = \"" 
+    sql = "SELECT UserName, FirstName FROM User WHERE UserName = \"" + userName + "\" AND Password = \"" 
             + password + "\";";
     result = runSQL(sql, results);
     
