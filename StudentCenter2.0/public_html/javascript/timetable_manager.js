@@ -12,7 +12,7 @@ function loadCourseData(){
     runSQL("SELECT Subject FROM Courses GROUP BY Subject;", receiveSubjects);
 }
 
-function searchCourses(){
+function searchForCourses(){
     //We search for the courses.
     sql = "SELECT * FROM Courses INNER JOIN Date ON Courses.CourseNum = Date.CoursseNum";
     if ($('#SubjectName').find(":selected").text() !== "All Courses"){
