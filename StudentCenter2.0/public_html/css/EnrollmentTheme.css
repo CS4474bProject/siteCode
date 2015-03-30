@@ -25,6 +25,7 @@
 }
 #courses th, #courses td {
     min-width: 75px;
+    text-align: center;
 }
 .name, .date {
     min-width: 150px !important;
