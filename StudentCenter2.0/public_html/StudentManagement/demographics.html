@@ -73,13 +73,16 @@ and open the template in the editor.
             <div id="demographicsInput">
             <fieldset>
                 <legend>Update Your Info</legend>
-                <table border="0">
-                    <tr>
-                        <td align="center"><input type="image" src="http://cs4474.muscedere.ca/images/demographics.png" alt="browse" onclick="parent.location='http://cs4474.muscedere.ca/StudentManagement/demographics.html'"/><br/>My Demographics</td>
-                        <td align="center"><input type="image" src="http://cs4474.muscedere.ca/images/academics.png" alt="enrollment" onclick="parent.location='http://cs4474.muscedere.ca/StudentManagement/academics.html'"/><br/>My Academics</td>
-                        <td align="center"><input type="image" src="http://cs4474.muscedere.ca/images/contact.png" alt="schedule" onclick="parent.location='http://cs4474.muscedere.ca/StudentManagement/contactInfo.html'"/><br/>My Contact Info</td>
-                    </tr>
-                </table>
+                First Name:<input type="text" name="fname"/>
+                <br/>
+                Last Name:<input type="text" name="lname"/>
+                <br/>
+                Date Of Birth:<input type="date" name="DOB"/>
+                <br/>
+                Sex:&nbsp;<input type="radio" name="gender" value="male"> Male&nbsp;<input type="radio" name="gender" value="female"> Female
+                <br/>
+                <br/>
+                
             </fieldset>
             </div>
     </body>
