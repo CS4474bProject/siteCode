@@ -79,7 +79,7 @@ function notLoggedIn(){
         $('div.error').html(errorMessage);
     } else if (status === '1'){
         errorMessage = 'You have successfully logged out!<br/>' +
-                       'Thanks for using Student Center.';
+                       'Thank-you for using Student Center.<br><br>';
                
         //Displays the message.
         $('div.error').html(errorMessage);
