@@ -81,8 +81,8 @@ and open the template in the editor.
     }
     
     #demographicsInput{
-        margin-left: 200px;
-        margin-right:200px;
+        margin-left: auto;
+        margin-right:auto;
         display:table;
         text-align: center;
     }
