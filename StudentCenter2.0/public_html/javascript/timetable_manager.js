@@ -48,7 +48,8 @@ function populateCourses(data){
     for (i = 0; i < data.length; i++){
         element = data[i];
         
-        if (element['CourseNum'] === data[i-1]['CourseNum']){
+        //Checks if last course was the same.
+        if (i > 0 && element['CourseNum'] === data[i-1]['CourseNum']){
             $( '#' + element['CourseNum'] + 'Date' ).append('<br>' + element['DayOfWeek'] + ', ' + 
                     element['StartTime'] + ' - ' + element['EndTime']);
             continue;
