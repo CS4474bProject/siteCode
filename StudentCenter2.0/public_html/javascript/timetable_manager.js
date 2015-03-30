@@ -121,12 +121,12 @@ function generateButtons(data){
         
         //Checks if the last course was also a time.
         if (lastNum === element['CourseNum']){
-            $( '#' + element['CourseNum'] + "Button" ).attr('onClick', $( '#' + lastNum ).attr('onClick') +
+            $( '#' + element['CourseNum'] + "inButton" ).attr('onClick', $( '#' + lastNum ).attr('onClick') +
                     'addCourse("' + element['CourseName'] + '","' + element['Subject'] + '", "' + element['CourseCode'] + '", "SSC-2028", ' + element['Semester'] + ', "' + divID + '", "' + element['DayOfWeek'] + '", ' + duration + ');');
         } else {
             $( '#' + element['CourseNum'] + "Button" ).html(
                     '<button type="button" id="' + element['CourseNum'] +
-                    '" onclick=\'addCourse("' + element['CourseName'] + '","' + element['Subject'] + '", "' + element['CourseCode'] + '", "SSC-2028", ' + element['Semester'] + ', "' + divID + '", "' + element['DayOfWeek'] + '", ' + duration + ');\'>' +
+                    'inButton" onclick=\'addCourse("' + element['CourseName'] + '","' + element['Subject'] + '", "' + element['CourseCode'] + '", "SSC-2028", ' + element['Semester'] + ', "' + divID + '", "' + element['DayOfWeek'] + '", ' + duration + ');\'>' +
                     'Enroll</button>');
             lastNum = element['CourseNum'];
         }
