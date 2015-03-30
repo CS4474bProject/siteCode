@@ -19,7 +19,7 @@ function searchForCourses(){
         sql += " WHERE Subject = \"" + $('#SubjectName').find(":selected").text() + "\"";
     }
     sql = " LIKE \"" + $('#CourseName').val(); + "%\";";
-    
+    alert(sql);
     //Runs the SQL.
     runSQL(sql, populateCourses);
 }
