@@ -6,13 +6,11 @@ body {
 }
 
 #timetable {
-    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    display:table;
     text-align: center;
     color: black;
-    width: 60vw;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
     background: white;
 }
 
