@@ -139,19 +139,26 @@ and open the template in the editor.
                 $("#divContainer").ecoScroll({
                 itemWidth: 200,
                 itemHeight: 100,
-                rangeX : [-10,10],
+                rangeX : [1,10],
                 rangeY : [-10,10],
                 axis : "x",
                 snap : true,
                 onShow:function(oParam)
                     {
-                    if (oParam.bNew)
-                        if (oParam.x===1 | oParam.x===-1){
-                            oParam.$e.append("<b>Monday</b><br/>");
+                   
+                        switch (oParam.x){
+                            case 1:{
+                                 oParam.$e.append("<b>Monday</b><br/>"); 
+                                 break;
+                            };
+                            
+                            case 2:{
+                                 oParam.$e.append("<b>Tuesday</b><br/>"); 
+                                 break;
+                            }
                         }
-                        if (oParam.x===2 | oParam.x===-2){
-                            oParam.$e.append("<b>Tuesday</b><br/>");
-                        }
+                        
+                        
                     }
                 });       
         </script>
