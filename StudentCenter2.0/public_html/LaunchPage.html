@@ -16,6 +16,29 @@ and open the template in the editor.
         <script src="javascript/tooltip_show.js"></script>
         <script src="javascript/loader.js"></script>
         
+         <style>
+            html, body {
+                height: 100%;
+                width: 100%;
+                margin-top:50px;
+            }
+            #divContainer {
+                margin: 10px auto;
+                position: relative;
+                width: 90%; 
+                height: 400px;                
+                border: 2px #000 solid;
+                overflow: hidden;
+            }
+            .eCell {
+                position: absolute;
+                border: 1px blue solid;
+                -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+                -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+                box-sizing: border-box; 
+            }
+        </style>
+        
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         
         <script>
@@ -43,24 +66,6 @@ and open the template in the editor.
     </head>
     <body>
         <script>isLoggedIn(window.location.pathname);</script>
-        
-        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-  <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
-  <script src="javascript/bootstrap.min.js"></script>
-  <script src="javascript/jquery.eco-scroll.js"></script>        
-	<script>            
-	$(function(){  
-
-    // Slider
-    $("#divSlider").ecoScroll({
-      itemWidth: 300,
-      itemHeight: 300,
-      rangeX : [-10,10],
-      rangeY : [-10,10],
-      axis : "x",
-      snap : true
-    });       
- </script>
         <div id="ImageHeader"></div>
         <hr>
         <div id="TextHeader">Welcome,
@@ -74,18 +79,25 @@ and open the template in the editor.
         </div>
         <hr>
         <br/>
-        <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div id="divSlider">
-                    <div class="wrapper">
-                        Hello
-                    </div>       
-                    <div class="wrapper"> Hello 2</div>
-                </div>
-            </div>       
+        <div id="divContainer">
+            <div class="wrapper">                                
+            </div>        
         </div> 
-        </div>
+        <script src="javascript/bootstrap.min.js"></script>
+        <script src="javascript/jquery.eco-scroll.js"></script>        
+	<script>            
+                $(function(){  
+
+                // Slider
+                $("#divContainer").ecoScroll({
+                itemWidth: 300,
+                itemHeight: 300,
+                rangeX : [-10,10],
+                rangeY : [-10,10],
+                axis : "x",
+                snap : true
+                });       
+        </script>
         <div id="MainActions">
             <fieldset>
                 <legend>What Do You Want To Do Today?</legend>
