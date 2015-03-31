@@ -146,10 +146,12 @@ and open the template in the editor.
                 onShow:function(oParam)
                     {
                     if (oParam.bNew)
-                        if (oParam.x===1){
+                        if (oParam.x===1 | oParam.x===-1){
                             oParam.$e.append("<b>Monday</b><br/>");
                         }
-                        
+                        if (oParam.x===2 | oParam.x===-2){
+                            oParam.$e.append("<b>Tuesday</b><br/>");
+                        }
                     }
                 });       
         </script>
