@@ -142,7 +142,12 @@ and open the template in the editor.
                 rangeX : [-10,10],
                 rangeY : [-10,10],
                 axis : "x",
-                snap : true
+                snap : true,
+                onShow:function(oParam)
+                    {
+                    if (oParam.bNew)
+                        oParam.$e.append("Hello");
+                    }
                 });       
         </script>
         <br/>
