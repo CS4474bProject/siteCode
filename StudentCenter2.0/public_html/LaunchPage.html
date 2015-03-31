@@ -145,6 +145,7 @@ and open the template in the editor.
                 snap : true,
                 onShow:function(oParam)
                     {
+                       if(oParam.bNew){
                    
                         switch (oParam.x){
                             case 1:{
@@ -157,6 +158,7 @@ and open the template in the editor.
                                  break;
                             }
                         }
+                    }
                         
                         
                     }
