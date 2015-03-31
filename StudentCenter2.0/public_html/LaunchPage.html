@@ -43,6 +43,24 @@ and open the template in the editor.
     </head>
     <body>
         <script>isLoggedIn(window.location.pathname);</script>
+        
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+  <script src="javascript/bootstrap.min.js"></script>
+  <script src="javascript/jquery.eco-scroll.js"></script>        
+	<script>            
+	$(function(){  
+
+    // Slider
+    $("#divSlider").ecoScroll({
+      itemWidth: 300,
+      itemHeight: 300,
+      rangeX : [-10,10],
+      rangeY : [-10,10],
+      axis : "x",
+      snap : true
+    });       
+ </script>
         <div id="ImageHeader"></div>
         <hr>
         <div id="TextHeader">Welcome,
@@ -56,7 +74,16 @@ and open the template in the editor.
         </div>
         <hr>
         <br/>
-        
+        <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="divSlider">
+                    <div class="wrapper">                                
+                    </div>        
+                </div>
+            </div>       
+        </div> 
+        </div>
         <div id="MainActions">
             <fieldset>
                 <legend>What Do You Want To Do Today?</legend>
