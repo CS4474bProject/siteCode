@@ -174,7 +174,7 @@ function generateButtons(courseNum){
             element['Subject'] + '", "' + 
             element['CourseCode'] + '", "SSC-2028", ' + 
             element['Semester'] + ', "' + divID + '", "' + 
-            element['DayOfWeek'] + '", ' + element['Length'] + ');');
+            element['DayOfWeek'][i] + '", ' + element['Length'][i] + ');');
    }
 }
 
