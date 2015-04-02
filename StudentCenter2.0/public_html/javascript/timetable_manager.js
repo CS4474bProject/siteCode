@@ -1,3 +1,6 @@
+//The courses array.
+var courses = {};
+
 $(function(){
       $("#timetable").load("timetable.html"); 
 });
@@ -42,6 +45,9 @@ function searchForCourses(){
 }
 
 function populateCourses(data){
+    //Clears the courses array.
+    courses = {};
+    
     //Creates the table.
     subjectTable = $( '#courses' );
     subjectTable.html('<tr>' +
@@ -68,8 +74,20 @@ function populateCourses(data){
         if (i > 0 && element['CourseNum'] === data[i-1]['CourseNum']){
             $( '#' + element['CourseNum'] + 'Date' ).append('<br>' + element['DayOfWeek'] + ', ' + 
                     element['StartTime'] + ' - ' + element['EndTime']);
+            
+            //Adds in the two time elements.
+            courses[element['CourseNum']]['StartTime'].push(element['StartTime']);
+            courses[element['CourseNum']]['EndTime'].push(element['EndTime']);
+            courses[element['CourseNum']]['DayOfWeek'].push(element['DayOfWeek']);
+         
             continue;
-        }           
+        } else {
+            //Creates a new array for the course.
+            courses[element['CourseNum']] = {};
+            courses[element['CourseNum']]['StartTime'] = new Array;
+            courses[element['CourseNum']]['EndTime'] = new Array;
+            courses[element['CourseNum']]['DayOfWeek'] = new Array;
+        }
         
         subjectTable.append('<tr>' + 
                 '<td>' + element['CourseCode'] + '</td>' +
@@ -79,10 +97,21 @@ function populateCourses(data){
                     element['StartTime'] + ' - ' + element['EndTime'] + '</td>' +
                 '<td id="' + element['CourseNum'] + 'Button"></td>' +
                 '</tr>');
+        
+        //Pushes all the data.
+        courses[element['CourseNum']]['CourseCode'] = element['CourseCode'];
+        courses[element['CourseNum']]['CourseName'] = element['CourseCode'];
+        courses[element['CourseNum']]['Subject'] = element['Subject'];
+        courses[element['CourseNum']]['StartTime'].push(element['StartTime']);
+        courses[element['CourseNum']]['EndTime'].push(element['EndTime']);
+        courses[element['CourseNum']]['DayOfWeek'].push(element['DayOfWeek']);
+        
+        //Generates its enroll button.
+        $( '#' + element['CourseNum'] + "Button" ).html(
+                    '<button type="button" id="' + element['CourseNum'] +
+                    'inButton" onclick=\'setupDialog("' + element['CourseNum'] + '">' +  
+                    'Enroll</button>');
     }
-    
-    //Generates the buttons.
-    generateButtons(data);
 }
 
 function receiveSubjects(data){
@@ -158,11 +187,12 @@ function setupDialog(name, subCode, code, classroom, semester, startTime, day, l
     
     $( '#dialog' ).dialog({ modal: true, width: 700 });
     $( '#dialog' ).prev(".ui-dialog-titlebar").css("background","#633e9c");
+    
+    //Generates the buttons.
+    //generateButtons(data);
 }
 
 function addCourse(name, subCode, code, classroom, semester, startTime, day, len){
-    setupDialog(name, subCode, code, classroom, semester, startTime, day, len);
-    
     //First, we get the first time element.
     elementCode = '#';
     if (semester === 2) elementCode += 2;
