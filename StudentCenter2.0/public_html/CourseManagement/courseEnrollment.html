@@ -39,7 +39,19 @@ and open the template in the editor.
     </head>
     <body onload="loadCourseData();">
         <script>isLoggedIn(window.location.pathname);</script>
-        <div id="dialog" title=""></div>
+        <div id="dialog" title="">
+            <h3>Confirm Enrollment Details:</h3>
+            <p>Please confirm the details of this course before choosing to enroll. If 
+                you are not satisfied, press 'Cancel' to not save changes.</p>
+            <table id='modal-table'>
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                    <th>Subject</th>
+                    <th>Date</th>
+                </tr>
+            </table>
+        </div>
         
         <div id="ImageHeader"></div>
         <hr/>

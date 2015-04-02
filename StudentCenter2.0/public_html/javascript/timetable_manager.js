@@ -152,14 +152,11 @@ function generateButtons(data){
 function setupDialog(name, subCode, code, classroom, semester, startTime, day, len){
     //Sets the dialog up.
     $( '#dialog' ).attr("title", "Adding Course: " + subCode + " " + code);
-    $.when($( '#dialog' ).load("sample_enroll_form.html")).done(function() {
-        alert ($('#dialog').html());
-        $( '#modal-table tr:last' ).after("<tr><td>" +
+    $( '#modal-table tr:last' ).after("<tr><td>" +
             code + "</td><td>" + name + "</td><td>" + subCode + "</td><td>" + 
             "Date goes here"+ "</td></tr>");
     
-        $( '#dialog' ).dialog({ modal: true }, { width: 460 });
-    });
+    $( '#dialog' ).dialog({ modal: true }, { width: 460 });
 }
 
 function addCourse(name, subCode, code, classroom, semester, startTime, day, len){
