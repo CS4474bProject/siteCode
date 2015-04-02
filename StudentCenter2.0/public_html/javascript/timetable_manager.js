@@ -100,7 +100,7 @@ function populateCourses(data){
         
         //Pushes all the data.
         courses[element['CourseNum']]['CourseCode'] = element['CourseCode'];
-        courses[element['CourseNum']]['CourseName'] = element['CourseCode'];
+        courses[element['CourseNum']]['CourseName'] = element['CourseName'];
         courses[element['CourseNum']]['Subject'] = element['Subject'];
         courses[element['CourseNum']]['StartTime'].push(element['StartTime']);
         courses[element['CourseNum']]['EndTime'].push(element['EndTime']);
