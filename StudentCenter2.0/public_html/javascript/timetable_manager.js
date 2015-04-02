@@ -142,7 +142,7 @@ function generateButtons(data){
         } else {
             $( '#' + element['CourseNum'] + "Button" ).html(
                     '<button type="button" id="' + element['CourseNum'] +
-                    'inButton" onclick=\'addCourse("' + element['CourseName'] + '","' + element['Subject'] + '", "' + element['CourseCode'] + '", "SSC-2028", ' + element['Semester'] + ', "' + divID + '", "' + element['DayOfWeek'] + '", ' + duration + ');\'>' +
+                    'inButton" onclick=\'setupDialog("' + element['CourseName'] + '","' + element['Subject'] + '", "' + element['CourseCode'] + '", "SSC-2028", ' + element['Semester'] + ', "' + divID + '", "' + element['DayOfWeek'] + '", ' + duration + ');\'>' +
                     'Enroll</button>');
             lastNum = element['CourseNum'];
         }
