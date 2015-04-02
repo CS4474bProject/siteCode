@@ -158,32 +158,23 @@ function getLength(startTime, endTime){
     return duration;
 }
 
-function generateButtons(data){
-    //Generate the buttons.
-    lastNum = 0;
-    for (i = 0; i < data.length; i++){
-        //Gets the last array element.
-        element = data[i];
-        
-        
-        
+function generateButtons(courseNum){
+    //Generate the button.
+    element = courses[courseNum];
+    for (i = 0; i < courses[courseNum]['StartTime'].length; i++){
         //Creates the element name.
-        divID = element['StartTime'].split(':')[0] + 
-                element['StartTime'].split(':')[1].substring(0, 2);
-        if (element['StartTime'].split(':')[1].substring(2, 4) === "pm")
+        divID = element['StartTime'][i].split(':')[0] + 
+                element['StartTime'][i].split(':')[1].substring(0, 2);
+        if (element['StartTime'][i].split(':')[1].substring(2, 4) === "pm")
             divID += "p";
         
         //Checks if the last course was also a time.
-        if (lastNum === element['CourseNum']){
-            $( '#' + element['CourseNum'] + "inButton" ).attr('onClick', $( '#' + element['CourseNum'] + "inButton" ).attr('onClick') +
-                    'addCourse("' + element['CourseName'] + '","' + element['Subject'] + '", "' + element['CourseCode'] + '", "SSC-2028", ' + element['Semester'] + ', "' + divID + '", "' + element['DayOfWeek'] + '", ' + duration + ');');
-        } else {
-            $( '#' + element['CourseNum'] + "Button" ).html(
-                    '<button type="button" id="' + element['CourseNum'] +
-                    'inButton" onclick=\'setupDialog("' + element['CourseName'] + '","' + element['Subject'] + '", "' + element['CourseCode'] + '", "SSC-2028", ' + element['Semester'] + ', "' + divID + '", "' + element['DayOfWeek'] + '", ' + duration + ');\'>' +
-                    'Enroll</button>');
-            lastNum = element['CourseNum'];
-        }
+        $( '#rightFloat' ).attr('onClick', $( '#rightFloat' ).attr('onClick') +
+            'addCourse("' + element['CourseName'] + '","' + 
+            element['Subject'] + '", "' + 
+            element['CourseCode'] + '", "SSC-2028", ' + 
+            element['Semester'] + ', "' + divID + '", "' + 
+            element['DayOfWeek'] + '", ' + element['Length'] + ');');
    }
 }
 
@@ -210,7 +201,7 @@ function setupDialog(courseNum){
     $( '#dialog' ).prev(".ui-dialog-titlebar").css("background","#633e9c");
     
     //Generates the buttons.
-    generateButtons(data);
+    generateButtons(courseNum);
 }
 
 function addCourse(name, subCode, code, classroom, semester, startTime, day, len){
