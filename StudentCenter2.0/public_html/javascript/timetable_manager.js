@@ -188,8 +188,8 @@ function setupDialog(courseNum){
     //Generates the date items.
     for (i = 0; i < courses[courseNum]['StartTime'].length; i++){
         if (i > 0 ) $('#dat_column').append("<br>");
-        $('#dat_column').append(courses[courseNum]['DayOfWeek'] + ", " + 
-                courses[courseNum]['StartTime'] + " - " + courses[courseNum]['EndTime']);
+        $('#dat_column').append(courses[courseNum]['DayOfWeek'][i] + ", " + 
+                courses[courseNum]['StartTime'][i] + " - " + courses[courseNum]['EndTime'][i]);
     }
     
     $( '#dialog' ).dialog({ modal: true, width: 700 });
