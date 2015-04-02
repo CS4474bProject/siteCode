@@ -109,7 +109,7 @@ function populateCourses(data){
         //Generates its enroll button.
         $( '#' + element['CourseNum'] + "Button" ).html(
                     '<button type="button" id="' + element['CourseNum'] +
-                    'inButton" onclick=\'setupDialog("' + element['CourseNum'] + '">' +  
+                    'inButton" onclick=\'setupDialog("' + element['CourseNum'] + ');\'>' +  
                     'Enroll</button>');
     }
 }
