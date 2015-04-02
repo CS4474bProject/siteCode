@@ -30,6 +30,9 @@ body {
 }
 
 //Dialog CSS
+dialogClass .ui-dialog-titlebar {
+    background: #633e9c;
+}
 #leftFloat
 {
     float: left;
