@@ -150,6 +150,10 @@ function generateButtons(data){
 }
 
 function addCourse(name, subCode, code, classroom, semester, startTime, day, len){
+    //Sets the dialog up.
+    $( '#dialog' ).attr("title", "Adding Course");
+    $( '#dialog' ).dialog();
+    
     //First, we get the first time element.
     elementCode = '#';
     if (semester === 2) elementCode += 2;
