@@ -182,8 +182,15 @@ function setupDialog(courseNum){
     //Sets the dialog up.
     $( '#dialog' ).attr("title", "Adding Course: " + courses[courseNum]["Subject"] + " " + courses[courseNum]["CourseCode"]);
     $( '#modal-table tr:last' ).after("<tr><td>" +
-            courses[courseNum]["CourseCode"] + "</td><td class=\"name\">" + courses[courseNum]["CourseName"] + "</td><td>" + courses[courseNum]["Subject"] + "</td><td class=\"date\">" + 
-            "Date goes here"+ "</td></tr>");
+            courses[courseNum]["CourseCode"] + "</td><td class=\"name\">" + courses[courseNum]["CourseName"] + "</td><td>" + courses[courseNum]["Subject"] + "</td><td id=\"dat_column\" class=\"date\">" + 
+            + "</td></tr>");
+    
+    //Generates the date items.
+    for (i = 0; i < courses[courseNum]['StartDate'].length; i++){
+        if (i > 0 ) $('#dat_column').append("<br>");
+        $('#dat_column').append(courses[courseNum]['DayOfWeek'] + ", " + 
+                courses[courseNum]['StartDate'] + " - " + courses[courseNum]['EndDate']);
+    }
     
     $( '#dialog' ).dialog({ modal: true, width: 700 });
     $( '#dialog' ).prev(".ui-dialog-titlebar").css("background","#633e9c");
