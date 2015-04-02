@@ -221,7 +221,7 @@ function addCourse(name, subCode, code, classroom, semester, startTime, day, len
     
     //We delete the rows below.
     index = startCell.index();  
-    for (i = 1; i <= (len / 0.5); i++) { 
+    for (i = 1; i < (len / 0.5); i++) { 
         //Gets the next cell.
         nextCell = $(elementCode).closest('tr').next().children().eq(index);
         
