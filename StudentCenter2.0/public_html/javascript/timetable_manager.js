@@ -157,7 +157,7 @@ function setupDialog(name, subCode, code, classroom, semester, startTime, day, l
     $( '#modal-table' ).html($( '#modal-table' ).html() + "<tr><td>" +
             code + "</td><td>" + name + "</td><td>" + subCode + "</td><td>" + 
             "Date goes here"+ "</td></tr></table>");
-    $( '#dialog' ).dialog({ modal: true }, { width: 460 });
+    //$( '#dialog' ).dialog({ modal: true }, { width: 460 });
 }
 
 function addCourse(name, subCode, code, classroom, semester, startTime, day, len){
