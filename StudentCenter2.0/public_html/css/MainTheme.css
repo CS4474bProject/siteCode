@@ -125,7 +125,12 @@ and open the template in the editor.
     }
 
     #divContainer {
-        cursor: url(https://mail.google.com/mail/images/2/openhand.cur), default !important;
+        cursor: -webkit-grab; 
+        cursor: -moz-grab;
+    }
+    #divContainer:active {
+        cursor: -webkit-grabbing; 
+        cursor: -moz-grabbing;
     }
     
     button {
