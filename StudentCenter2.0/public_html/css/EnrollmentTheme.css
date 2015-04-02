@@ -38,8 +38,12 @@ body {
 
 #rightFloat
 {
-  float: right;
-  width: 100px;
+    float: right;
+    width: 100px;
+}
+#modal-table {
+    margin-left:auto; 
+    margin-right:auto;
 }
 
 //Schedule CSS Theme
