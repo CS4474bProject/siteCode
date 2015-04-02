@@ -180,7 +180,7 @@ function generateButtons(data){
 
 function setupDialog(courseNum){
     //Sets the dialog up.
-    $( '#modal-table tbody' ).empty();
+    $( '#modal-table tr' ).empty();
     $( '#dialog' ).attr("title", "Adding Course: " + courses[courseNum]["Subject"] + " " + courses[courseNum]["CourseCode"]);
     $( '#modal-table tr:last' ).after("<tr><td>" +
             courses[courseNum]["CourseCode"] + "</td><td class=\"name\">" + courses[courseNum]["CourseName"] + "</td><td>" + courses[courseNum]["Subject"] + "</td><td id=\"dat_column\" class=\"date\"></td></tr>");
