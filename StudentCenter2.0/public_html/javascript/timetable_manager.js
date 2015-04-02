@@ -183,6 +183,7 @@ function generateButtons(courseNum){
 
 function setupDialog(courseNum){
     //Sets the dialog up.
+    $( '#rightFloat' ).attr('onClick', "");
     $( '#modal-table' ).html("<tr>" +
                     "<th>Course Code</th>" +
                     "<th>Course Name</th>" +
@@ -207,9 +208,7 @@ function setupDialog(courseNum){
     generateButtons(courseNum);
 }
 
-function addCourse(name, subCode, code, classroom, semester, startTime, day, len){
-    alert('printed');
-    
+function addCourse(name, subCode, code, classroom, semester, startTime, day, len){    
     //First, we get the first time element.
     elementCode = '#';
     if (semester === 2) elementCode += 2;
@@ -228,7 +227,7 @@ function addCourse(name, subCode, code, classroom, semester, startTime, day, len
         nextCell = $(elementCode).closest('tr').next().children().eq(index);
         
         //Removes it.
-        if (i != 0)
+        if (i !== 0)
             $(elementCode).remove();
         
         //Gets important next variables.
