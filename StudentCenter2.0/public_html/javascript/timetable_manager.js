@@ -153,7 +153,7 @@ function setupDialog(name, subCode, code, classroom, semester, startTime, day, l
     //Sets the dialog up.
     $( '#dialog' ).attr("title", "Adding Course: " + subCode + " " + code);
     $( '#dialog' ).load("sample_enroll_form.html");
-    $( '#dialog' ).dialog({ modal: true });
+    $( '#dialog' ).dialog({ modal: true }, { width: 460 });
 }
 
 function addCourse(name, subCode, code, classroom, semester, startTime, day, len){
