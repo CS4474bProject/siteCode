@@ -153,7 +153,7 @@ function setupDialog(name, subCode, code, classroom, semester, startTime, day, l
     //Sets the dialog up.
     $( '#dialog' ).attr("title", "Adding Course: " + subCode + " " + code);
     $( '#modal-table tr:last' ).after("<tr><td>" +
-            code + "</td><td>" + name + "</td><td>" + subCode + "</td><td>" + 
+            code + "</td><td class=\"name\">" + name + "</td><td>" + subCode + "</td><td class=\"date\">" + 
             "Date goes here"+ "</td></tr>");
     
     $( '#dialog' ).dialog({ modal: true }, { width: 700 });
