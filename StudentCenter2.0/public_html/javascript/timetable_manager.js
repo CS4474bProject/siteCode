@@ -176,6 +176,9 @@ function generateButtons(courseNum){
             element['Semester'] + ', "' + divID + '", "' + 
             element['DayOfWeek'][i] + '", ' + element['Length'][i] + ');');
    }
+   
+   $( '#rightFloat' ).attr('onClick', $( '#rightFloat' ).attr('onClick') +
+            "$( '#dialog' ).dialog( 'close' );");
 }
 
 function setupDialog(courseNum){
