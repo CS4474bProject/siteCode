@@ -124,6 +124,10 @@ and open the template in the editor.
         color: red;
     }
 
+    #divContainer {
+        cursor: url(https://mail.google.com/mail/images/2/openhand.cur), default !important;
+    }
+    
     button {
         border: 1px solid #0a3c59;
         background: #633e9c;
