@@ -158,7 +158,6 @@ function setupDialog(name, subCode, code, classroom, semester, startTime, day, l
     
     $( '#dialog' ).dialog({ modal: true, width: 700 });
     $( '#dialog' ).prev(".ui-dialog-titlebar").css("background","#633e9c");
-    $( '#dialog' ).css("background","red");
 }
 
 function addCourse(name, subCode, code, classroom, semester, startTime, day, len){
