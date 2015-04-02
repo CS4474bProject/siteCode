@@ -178,11 +178,11 @@ function generateButtons(data){
    }
 }
 
-function setupDialog(name, subCode, code, classroom, semester, startTime, day, len){
+function setupDialog(courseNum){
     //Sets the dialog up.
-    $( '#dialog' ).attr("title", "Adding Course: " + subCode + " " + code);
+    $( '#dialog' ).attr("title", "Adding Course: " + courses[courseNum]["Subject"] + " " + courses[courseNum]["CourseCode"]);
     $( '#modal-table tr:last' ).after("<tr><td>" +
-            code + "</td><td class=\"name\">" + name + "</td><td>" + subCode + "</td><td class=\"date\">" + 
+            courses[courseNum]["CourseCode"] + "</td><td class=\"name\">" + courses[courseNum]["CourseName"] + "</td><td>" + courses[courseNum]["Subject"] + "</td><td class=\"date\">" + 
             "Date goes here"+ "</td></tr>");
     
     $( '#dialog' ).dialog({ modal: true, width: 700 });
