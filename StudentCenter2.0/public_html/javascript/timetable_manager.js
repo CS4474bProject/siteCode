@@ -79,7 +79,7 @@ function populateCourses(data){
             courses[element['CourseNum']]['StartTime'].push(element['StartTime']);
             courses[element['CourseNum']]['EndTime'].push(element['EndTime']);
             courses[element['CourseNum']]['DayOfWeek'].push(element['DayOfWeek']);
-         
+            courses[element['CourseNum']]['Length'].push(getLength(element['StartTime'], element['EndTime']));
             continue;
         } else {
             //Creates a new array for the course.
@@ -87,6 +87,7 @@ function populateCourses(data){
             courses[element['CourseNum']]['StartTime'] = new Array;
             courses[element['CourseNum']]['EndTime'] = new Array;
             courses[element['CourseNum']]['DayOfWeek'] = new Array;
+            courses[element['CourseNum']]['Length'] = new Array;
         }
         
         subjectTable.append('<tr>' + 
@@ -101,10 +102,12 @@ function populateCourses(data){
         //Pushes all the data.
         courses[element['CourseNum']]['CourseCode'] = element['CourseCode'];
         courses[element['CourseNum']]['CourseName'] = element['CourseName'];
+        courses[element['CourseNum']]['Semester'] = element['Semester'];
         courses[element['CourseNum']]['Subject'] = element['Subject'];
         courses[element['CourseNum']]['StartTime'].push(element['StartTime']);
         courses[element['CourseNum']]['EndTime'].push(element['EndTime']);
         courses[element['CourseNum']]['DayOfWeek'].push(element['DayOfWeek']);
+        courses[element['CourseNum']]['Length'].push(getLength(element['StartTime'], element['EndTime']));
         
         //Generates its enroll button.
         $( '#' + element['CourseNum'] + "Button" ).html(
@@ -126,6 +129,35 @@ function receiveSubjects(data){
     }
 }
 
+function getLength(startTime, endTime){
+    //Manages time elements.
+    end = 0;
+    start = 0;
+    if (endTime.split(':')[1].substring(2, 4) === "pm" &&
+            endTime.split(':')[0] !== '12')
+        end = parseInt(endTime.split(':')[0]) + 12;
+    else
+        end = endTime.split(':')[0];
+    if (startTime.split(':')[1].substring(2, 4) === "pm" &&
+            startTime.split(':')[0] !== '12')
+        start = parseInt(startTime.split(':')[0]) + 12;
+    else
+        start = startTime.split(':')[0];
+
+    startT = new Date(2000, 0, 1, start, 
+        startTime.split(':')[1].substring(0,2));
+    endT = new Date(2000, 0, 1, end, 
+        endTime.split(':')[1].substring(0,2));
+
+    //Gets the difference between the time.
+    diff = endT - startT;
+    duration = Math.floor(diff / 1000 / 60 / 60);
+    diff -= duration * 1000 * 60 * 60;
+    duration += Math.floor(diff / 1000 / 60);
+    
+    return duration;
+}
+
 function generateButtons(data){
     //Generate the buttons.
     lastNum = 0;
@@ -133,30 +165,7 @@ function generateButtons(data){
         //Gets the last array element.
         element = data[i];
         
-        //Manages time elements.
-        end = 0;
-        start = 0;
-        if (element['EndTime'].split(':')[1].substring(2, 4) === "pm" &&
-                element['EndTime'].split(':')[0] !== '12')
-            end = parseInt(element['EndTime'].split(':')[0]) + 12;
-        else
-            end = element['EndTime'].split(':')[0];
-        if (element['StartTime'].split(':')[1].substring(2, 4) === "pm" &&
-                element['StartTime'].split(':')[0] !== '12')
-            start = parseInt(element['StartTime'].split(':')[0]) + 12;
-        else
-            start = element['StartTime'].split(':')[0];
-
-        startTime = new Date(2000, 0, 1, start, 
-            element['StartTime'].split(':')[1].substring(0,2));
-        endTime = new Date(2000, 0, 1, end, 
-            element['EndTime'].split(':')[1].substring(0,2));
         
-        //Gets the difference between the time.
-        diff = endTime - startTime;
-        duration = Math.floor(diff / 1000 / 60 / 60);
-        diff -= duration * 1000 * 60 * 60;
-        duration += Math.floor(diff / 1000 / 60);
         
         //Creates the element name.
         divID = element['StartTime'].split(':')[0] + 
