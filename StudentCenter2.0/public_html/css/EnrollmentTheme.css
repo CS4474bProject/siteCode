@@ -30,11 +30,16 @@ body {
 }
 
 //Dialog CSS
-.button-options{
-    margin-left: auto;
-    margin-right: auto;
-    display:table;
-    width: 100%;
+#leftFloat
+{
+  float: left;
+  width: 100px;
+}
+
+#rightFloat
+{
+  float: right;
+  width: 100px;
 }
 
 //Schedule CSS Theme
