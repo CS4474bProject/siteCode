@@ -156,7 +156,8 @@ function setupDialog(name, subCode, code, classroom, semester, startTime, day, l
             code + "</td><td class=\"name\">" + name + "</td><td>" + subCode + "</td><td class=\"date\">" + 
             "Date goes here"+ "</td></tr>");
     
-    $( '#dialog' ).dialog({ modal: true, width: 700, dialogClass: 'dialogClass' });
+    $( '#dialog' ).dialog({ modal: true, width: 700 });
+    $( '#dialog' ).prev(".ui-dialog-titlebar").css("background","#633e9c");
     $( '#dialog' ).css("background","red");
 }
 
