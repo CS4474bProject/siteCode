@@ -208,6 +208,8 @@ function setupDialog(courseNum){
 }
 
 function addCourse(name, subCode, code, classroom, semester, startTime, day, len){
+    alert('printed');
+    
     //First, we get the first time element.
     elementCode = '#';
     if (semester === 2) elementCode += 2;
