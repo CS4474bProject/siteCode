@@ -32,10 +32,9 @@ body {
 //Dialog CSS
 #leftFloat
 {
-  float: left;
-  width: 100px;
+    float: left;
+    width: 100px;
 }
-
 #rightFloat
 {
     float: right;
@@ -44,6 +43,10 @@ body {
 #modal-table {
     margin-left:auto; 
     margin-right:auto;
+    text-align: center;
+}
+#modal-table td {
+    min-width: 150px;
 }
 
 //Schedule CSS Theme
