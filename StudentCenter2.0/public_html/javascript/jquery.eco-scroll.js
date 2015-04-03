@@ -65,7 +65,7 @@ SOFTWARE.
         onClick: function(oParam) 
         {
 
-        },
+        }
 	};
 
 	function Plugin ( element, options ) 
