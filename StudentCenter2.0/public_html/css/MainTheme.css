@@ -456,6 +456,10 @@ ul{
     float:left;
     top: 127px;
     right: 10px;
+    
+}
+
+button.setting{
     background-image: url("../images/gears20.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
