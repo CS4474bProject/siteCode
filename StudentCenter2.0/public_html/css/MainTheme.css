@@ -445,10 +445,10 @@ ul{
 }
 
 #logout{
-    position: relative;
+    position: absolute;
     float:left;
-    top: 0;
-    right: 10px;
+    top: 200px;
+    left: 10px;
 }
 
 //CSS content for accordion
