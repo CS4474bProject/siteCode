@@ -64,8 +64,10 @@ and open the template in the editor.
     <body>
         <script>isLoggedIn(window.location.pathname);</script>
         <div id="ImageHeader"></div>
-        <hr>
-        <div id="TextHeader">Welcome,
+        
+        <div id="TextHeader">
+            <hr>
+            Welcome,
             <script language=javascript>
                 document.write(getCookie('name'));
             </script>. Today is
@@ -74,8 +76,9 @@ and open the template in the editor.
                 document.write(today.toDateString());
             </script>
             <div id="logout"><button type="button" class="logoutBtn" onclick="logout();">Logout</button></div>
+            <hr>
         </div>
-        <hr>
+        
         <br/>
         <div id="MainActions">
             <fieldset>
