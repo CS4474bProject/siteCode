@@ -469,10 +469,10 @@ input[type="image"].set{
         background: -ms-linear-gradient(top, #cad3d9, #633e9c);
         background: -o-linear-gradient(top, #cad3d9, #633e9c);
         background-image: -ms-linear-gradient(top, #cad3d9 0%, #633e9c 100%);
-        padding: 2px 2px;
-        -webkit-border-radius: 11px;
-        -moz-border-radius: 11px;
-        border-radius: 11px;
+        padding: 1px 1px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
         -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
         -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
         box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
