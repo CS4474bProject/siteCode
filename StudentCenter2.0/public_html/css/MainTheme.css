@@ -456,6 +456,10 @@ ul{
     float:left;
     top: 127px;
     right: 10px;
+    background-image: url("../images/gears40.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 //CSS content for accordion
