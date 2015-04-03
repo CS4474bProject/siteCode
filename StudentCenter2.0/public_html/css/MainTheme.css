@@ -445,7 +445,7 @@ ul{
 }
 
 #logout{
-    position: absolute;
+    position: relative;
     float:left;
     top: 0;
     right: 10px;
