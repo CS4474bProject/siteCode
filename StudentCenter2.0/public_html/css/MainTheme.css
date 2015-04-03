@@ -459,12 +459,5 @@ ul{
     
 }
 
-button.setting{
-    background-image: url("../images/gears20.png");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-}
-
 //CSS content for accordion
 
