@@ -13,8 +13,8 @@ function generatePDF(){
         }
     };
 
-    var source = window.document.getElementById("timetable");
-    pdf.fromHTML(
+    var source = window.document.getElementById("timetable")
+    /*pdf.fromHTML(
         source,
         15,
         15,
@@ -22,6 +22,6 @@ function generatePDF(){
             'width': 180,'elementHandlers': elementHandler
         });
 
-    pdf.output("dataurlnewwindow");
-    alert("triggered");
+    pdf.output("dataurlnewwindow");*/
+    alert(source);
 }
