@@ -46,7 +46,8 @@
 //CSS Print Rule
 @media print {
     //Hide the elements for displaying navigation.
-    #Breadcrumbs{
-        display: none;
+    #Breadcrumbs, #ImageHeader, #TextHeader, #options{
+        display: none !important;
     }
+    
 }
