@@ -29,8 +29,9 @@ body {
     min-width: 150px !important;
 }
 span.checkboxlist {
-   width:100px;
-   display:inline-block;
+    text-align: left;
+    width:50px;
+    display:inline-block;
 }
 
 //Dialog CSS
