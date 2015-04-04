@@ -40,18 +40,23 @@ and open the template in the editor.
         <script>isLoggedIn(window.location.pathname);</script>
         
         <div id="ImageHeader"></div>
-        <hr/>
+        
         <div id="TextHeader">
+            <hr/>
             Student Management - My Contact Info
+            <div id="logout"><button type="button" class="logoutBtn" onclick="logout();">Logout</button></div>
+            <div id="settingBtn"><input type="image" class="set" src="http://cs4474.muscedere.ca/images/gears40.png" alt="settings" onclick=""/></div>
+            <div id="themeBtn"><input type="image" class="set" src="http://cs4474.muscedere.ca/images/dayNight.png" alt="daynight" onclick=""/></div>
+            <hr/>
         </div>
-        <hr/>
+        
         <div id="Breadcrumbs">
         <uL>
-            <li><a href="http://cs4474.muscedere.ca/LaunchPage.html">Launch Page</a></li>
+            <li><a href="http://cs4474.muscedere.ca/LaunchPage.html">Welcome Page</a></li>
             <li><a href="http://cs4474.muscedere.ca/StudentManagement">Student Management</a></li>
             <li><a class="current">My Contact Info</a></li>
         </uL>
-            <div id="logout"><button type="button" class="logoutBtn" onclick="logout();">Logout</button></div>
+            
         </div>
         <div id="TextHeader">
                 Current Details On File
