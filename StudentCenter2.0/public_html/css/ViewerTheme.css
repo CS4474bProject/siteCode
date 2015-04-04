@@ -4,7 +4,7 @@
     width: 100%;
     border: none !important;
 }
-#options-border td {
+.option-table {
    border: none !important;
 }
 
