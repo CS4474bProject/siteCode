@@ -92,10 +92,17 @@ and open the template in the editor.
                            onkeyup='searchForCourses();'
                            placeholder="Enter Course Name or ID" />
                     <br><br>
-                    <div>Filter By Subject</div>
+                    <div>Filter By Subject:</div>
                     <select id="SubjectName" onchange="searchForCourses();">
                         <option>All Subjects</option>
                     </select>
+                    <br><br>
+                    <div>Filter By Day of Week:</div>
+                    <input type="checkbox" name="vehicle" value="Mon">Monday<br>
+                    <input type="checkbox" name="vehicle" value="Tue">Tuesday<br>
+                    <input type="checkbox" name="vehicle" value="Wed">Wednesday<br>
+                    <input type="checkbox" name="vehicle" value="Thurs">Thursday<br>
+                    <input type="checkbox" name="vehicle" value="Fri">Friday<br>
                 </div>
                 <hr>
                 <div id="resultsPanel">
