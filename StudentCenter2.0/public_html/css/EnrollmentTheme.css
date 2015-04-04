@@ -28,6 +28,9 @@ body {
 .name, .date {
     min-width: 150px !important;
 }
+div.checkboxlist {
+   display:inline-block;
+}
 
 //Dialog CSS
 #leftFloat
