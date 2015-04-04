@@ -217,9 +217,6 @@ function addCourse(name, subCode, code, classroom, semester, startTime, day, len
     //Selects the first element.
     startCell = $(elementCode);
     
-    //Merges the new cells together.
-    startCell.attr('rowspan', len / 0.5);
-    
     //We delete the rows below.
     index = startCell.index();  
     for (i = 1; i < (len / 0.5); i++) { 
@@ -227,7 +224,7 @@ function addCourse(name, subCode, code, classroom, semester, startTime, day, len
         nextCell = $(elementCode).closest('tr').next().children().eq(index);
         
         //Removes it.
-        if (i !== 0)
+        if (i !== 1)
             $(elementCode).remove();
         
         //Gets important next variables.
@@ -235,6 +232,9 @@ function addCourse(name, subCode, code, classroom, semester, startTime, day, len
         elementCode = '#' + nextCell.attr('id');
     }
     $(elementCode).remove();
+        
+    //Merges the new cells together.
+    startCell.attr('rowspan', len / 0.5);
     
     //Add in information to table.
     startCell.html('<div class="name">' + subCode +
