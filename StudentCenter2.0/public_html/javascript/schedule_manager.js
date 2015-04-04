@@ -7,14 +7,14 @@ function generatePDF(){
     var pdf = new jsPDF();
  
          
-    /*var elementHandler = {
+    var elementHandler = {
         '#ignorePDF': function (element, renderer) {
             return true;
         }
-    };*/
+    };
 
     var source = window.document.getElementById("timetable")
-    /*pdf.fromHTML(
+    pdf.fromHTML(
         source,
         15,
         15,
@@ -22,6 +22,5 @@ function generatePDF(){
             'width': 180,'elementHandlers': elementHandler
         });
 
-    pdf.output("dataurlnewwindow");*/
-    alert(source);
+    pdf.output("dataurlnewwindow");
 }
