@@ -2,7 +2,10 @@
 
 #options-border{
     width: 100%;
-    
+    border: none !important;
+}
+#options-border, th, td {
+   border: none !important;
 }
 
 #timetable {
@@ -17,20 +20,21 @@
 //Schedule CSS Theme
 #schedule {
     table-layout: fixed;
-    border: 1px solid black;
 }
 #Spacer {
     border-top-style: none !important;
     border-bottom-style: none !important;
 }
+#schedule, th, td {
+   border: 1px solid black;
+}
+
 #schedule th{
-    border: 1px solid black;
     text-align: center;
     font-weight: bold;    
 }
 
 #schedule td{
-    border: 1px solid black;
     text-align: center;
     width: 5.5em;
 }
