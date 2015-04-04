@@ -4,7 +4,7 @@ $(function(){
 
 function generatePDF(){
     //Creates the new PDF object.
-    var pdf = new jsPDF();
+    var pdf = new jsPDF('p', 'in', 'letter');
          
     var elementHandler = {
         '#ignorePDF': function (element, renderer) {
