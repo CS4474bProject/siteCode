@@ -34,7 +34,7 @@ and open the template in the editor.
         </script>
         <link rel="prefetch" href="http://cs4474.muscedere.ca/CourseManagement/" />
         <link rel="prefetch" href="http://cs4474.muscedere.ca/LaunchPage.html" />
-        <LINK REL=StyleSheet HREF="../css/MainTheme.css" TYPE="text/css" MEDIA=screen>
+        <LINK REL=StyleSheet HREF="../css/ViewerTheme.css" TYPE="text/css" MEDIA=screen>
     </head>
     <body>
         <script>isLoggedIn(window.location.pathname);</script>
@@ -58,6 +58,20 @@ and open the template in the editor.
         </uL>
             
         </div>
-        This will be a schedule viewer...
+        <div id="options">
+            <fieldset>
+                <legend>Timetable Options</legend>
+                <table id="options-border">
+                <tr>
+                    <td style="text-align: left">
+                        <button type="button" onclick="">Print Schedule</button>
+                    </td>
+                    <td style="text-align: right">
+                        <button type="button" class="" onclick="">Save to Computer</button>
+                    </td>
+                </tr>
+                </table>
+            </fieldset>
+        </div>
     </body>
 </html>
