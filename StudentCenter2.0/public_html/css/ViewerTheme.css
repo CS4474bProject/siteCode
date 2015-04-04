@@ -4,7 +4,7 @@
     width: 100%;
     border: none !important;
 }
-#options-border, th, td {
+#options-border td {
    border: none !important;
 }
 
