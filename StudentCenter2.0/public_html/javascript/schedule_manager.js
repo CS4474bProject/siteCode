@@ -23,4 +23,5 @@ function generatePDF(){
         });
 
     pdf.output("dataurlnewwindow");
+    alert("triggered");
 }
