@@ -22,16 +22,14 @@
     border-top-style: none !important;
     border-bottom-style: none !important;
 }
-#schedule th, td {
-   border: 1px solid black;
-}
-
 #schedule th{
+    border: 1px solid black;
     text-align: center;
     font-weight: bold;    
 }
 
 #schedule td{
+    border: 1px solid black;
     text-align: center;
     width: 5.5em;
 }
