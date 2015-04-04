@@ -42,12 +42,3 @@
 #schedule td[id^='ID']{
     text-align: right !important;
 }
-
-//CSS Print Rule
-@media print {
-    //Hide the elements for displaying navigation.
-    #Breadcrumbs, #ImageHeader, #TextHeader, #options{
-        display: none !important;
-    }
-    
-}
