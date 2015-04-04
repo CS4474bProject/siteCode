@@ -37,8 +37,8 @@ function searchForCourses(){
     } else {
         sql += " WHERE (";
     }
-    sql += " CourseName LIKE \"" + $('#CourseName').val() + "%\" OR" +
-           " CourseCode LIKE \"" + $('#CourseName').val() + "%\");";
+    sql += " CourseName LIKE \"%" + $('#CourseName').val() + "%\" OR" +
+           " CourseCode LIKE \"%" + $('#CourseName').val() + "%\");";
    
     //Runs the SQL.
     runSQL(sql, populateCourses);
