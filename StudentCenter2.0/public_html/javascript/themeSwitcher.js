@@ -5,12 +5,15 @@
  */
 
 function themeSwitch(){
-    if ( image.className === "dark" ) {
+    
+    var button = $('input[type=image]');
+    
+    if ( button.className === "dark" ) {
         body.className = "lightTheme";
-        image.className = "";
+        button.className = "";
     } else {
         body.className = "darkTheme";
-        image.className = "dark";
+        button.className = "dark";
     }
 }
 
