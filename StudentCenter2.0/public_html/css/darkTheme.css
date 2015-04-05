@@ -4,14 +4,14 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : 9-Mar-2015, 12:51:01 PM
+    Created on : 4-Apr-2015, 10:40:47 PM
     Author     : Spencer
 */
 
-    body {
+body {
          font-family: HelveticaNeue;
          color: white;
-         background-image: url("../images/gray.jpg");
+         background-image: url("../images/darkGray.jpg");
          background-repeat: no-repeat;
          background-attachment: fixed;
          background-position: center;
@@ -490,6 +490,3 @@ ul{
         text-decoration: none;
         vertical-align: middle;
    }
-
-//CSS content for accordion
-

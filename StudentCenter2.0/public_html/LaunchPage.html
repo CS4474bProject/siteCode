@@ -54,7 +54,9 @@ and open the template in the editor.
             });
         </script>
         
-        <LINK REL=StyleSheet HREF="css/MainTheme.css" TYPE="text/css" MEDIA=screen>
+        <LINK REL=StyleSheet HREF="css/MainTheme.css" TYPE="text/css" MEDIA=screen title="default"/>
+        <link rel="alternate stylesheet" type="text/css" href="css/darkTheme.css" title="alternate" />
+        <script type="text/javascript" src="javascript/styleswitcher.js"></script>
         
         <link rel="prefetch" href="http://cs4474.muscedere.ca/CourseManagement" />
         <link rel="prefetch" href="http://cs4474.muscedere.ca/FinancialManagement" />
@@ -78,7 +80,7 @@ and open the template in the editor.
             <div id="logout"><button type="button" class="logoutBtn" onclick="logout();">Logout</button></div>
             <div id="settingBtn"><input type="image" id="set" src="http://cs4474.muscedere.ca/images/gears40.png" alt="settings" onclick=""/></div>
             
-            <div id="themeBtn"><input type="image" id="set" src="http://cs4474.muscedere.ca/images/dayNight.png" alt="daynight" onclick="themeSwitch();"/></div>
+            <div id="themeBtn"><input type="image" id="set" src="http://cs4474.muscedere.ca/images/dayNight.png" alt="daynight" onclick="setActiveStyleSheet('alternate'); return false;"/></div>
             <hr/>
         </div>
         
