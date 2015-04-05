@@ -5,6 +5,12 @@
  */
 
 function themeSwitch(){
-    body.className = "lightSwitch";
+    if ( image.className === "dark" ) {
+        body.className = "lightTheme";
+        image.className = "";
+    } else {
+        body.className = "darkTheme";
+        image.className = "dark";
+    }
 }
 

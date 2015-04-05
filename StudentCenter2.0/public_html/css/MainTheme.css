@@ -22,6 +22,22 @@ and open the template in the editor.
          padding-bottom: 50px;
     }
     
+    .darkTheme{
+        background-image: url("../images/darkGray.jpg");
+        background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-position: center;
+         -webkit-background-size: cover;
+         -moz-background-size: cover;
+         -o-background-size: cover;
+         background-size: cover;
+         padding-bottom: 50px;
+    }
+    
+    .lightTheme{
+        
+    }
+    
     #verticalBar{
         border-left:1px solid rgb(0,0,0);
         height:auto;
@@ -466,7 +482,7 @@ ul{
     right: 60px;
 }
 
-input[type="image"].set{
+#set{
         
         border: 1px solid #0a3c59;
         background: #633e9c;
