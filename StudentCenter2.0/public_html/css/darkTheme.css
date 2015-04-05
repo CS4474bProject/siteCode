@@ -466,6 +466,13 @@ ul{
     right: 60px;
 }
 
+#themeBtn2{
+    position: absolute;
+    float:left;
+    top: 127px;
+    right: 120px;
+}
+
 #set{
         
         border: 1px solid #0a3c59;
