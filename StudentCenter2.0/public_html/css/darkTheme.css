@@ -41,7 +41,7 @@ body {
         font-family: HelveticaNeue-Thin;
         font-size: 24px;
         text-align: center;
-        color: rgb(80,39,132);
+        color: white;
     }
     
     #demographicsContent{
@@ -497,3 +497,21 @@ ul{
         text-decoration: none;
         vertical-align: middle;
    }
+   
+   #divContainer {
+                margin: 10px auto;
+                position: relative;
+                width: 1000px; 
+                height: 100px;                
+                border: 2px rgb(80,39,132) solid;
+                overflow: hidden;
+            }
+            .eCell {
+                color:white;
+                font-family: HelveticaNeue-Light;
+                position: absolute;
+                border: 1px white solid;
+                -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+                -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+                box-sizing: border-box; 
+            }
