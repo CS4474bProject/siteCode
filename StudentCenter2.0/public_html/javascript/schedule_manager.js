@@ -8,7 +8,7 @@ function generatePDF(){
          
     // We'll make our own renderer to skip this editor
     var specialElementHandlers = {
-            '#title': function(element, renderer){
+            '#schedule': function(element, renderer){
                     return true;
             }
     };
