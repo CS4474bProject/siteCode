@@ -230,7 +230,10 @@ function generateButtons(courseNum){
 
 function setupDialog(courseNum){
     //Sets the dialog up.
+    $( '#rightFloat' ).show();
     $( '#rightFloat' ).attr('onClick', "");
+    $( '#dlg-title').html("Confirm Enrollment Details:");
+    $( '#dlg-text' ).html("Please confirm the details of this course before choosing to enroll. If you are not satisfied, press 'Cancel'.");
     $( '#modal-table' ).html("<tr>" +
                     "<th>Course Code</th>" +
                     "<th>Course Name</th>" +
@@ -284,7 +287,7 @@ function addCourse(name, subCode, code, classroom, semester, startTime, day, len
     startCell.attr('rowspan', len / 0.5);
     
     //Add in information to table.
-    startCell.html('<div class="remove"><input type="image" id="set" src="http://cs4474.muscedere.ca/images/remove2.png" alt="remove" onclick="remove();"/></div>' +
+    startCell.html('<div class="remove"><input type="image" id="set" src="http://cs4474.muscedere.ca/images/remove2.png" alt="remove" onclick="removeCourse();"/></div>' +
                    '<div class="name">' + subCode +
                    '</div><div class="code">' + code +
                    '<div class="classroom">' + classroom +
@@ -298,6 +301,16 @@ function addCourse(name, subCode, code, classroom, semester, startTime, day, len
     });
 }
 
-function remove(){
-    alert("REMOVE");
+function removeCourse(){
+    //Sets the dialog up.
+    $( '#rightFloat' ).hide();
+    $( '#hider' ).hide();
+    $( '#modal-table' ).html("");
+    $( '#dlg-title').html("Course Removal:");
+    $( '#dlg-text' ).html("Not implemeted yet.");
+    $( '#dialog' ).attr("title", "Course Removal");
+
+    
+    $( '#dialog' ).dialog({ modal: true, width: 700 });
+    $( '#dialog' ).prev(".ui-dialog-titlebar").css("background","#633e9c");
 }

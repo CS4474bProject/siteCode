@@ -43,11 +43,11 @@ and open the template in the editor.
     <body onload="loadCourseData();">
         <script>isLoggedIn(window.location.pathname);</script>
         <div id="dialog" title="" style="display:none">
-            <h3>Confirm Enrollment Details:</h3>
-            <p>Please confirm the details of this course before choosing to enroll. If 
+            <h3 id="dlg-title">Confirm Enrollment Details:</h3>
+            <p id="dlg-text">Please confirm the details of this course before choosing to enroll. If 
                 you are not satisfied, press 'Cancel'.</p>
             
-            <p>These courses will be added:</p>
+            <p id="hider">These courses will be added:</p>
             <table id='modal-table'>
                 <tr>
                     <th>Course Code</th>
