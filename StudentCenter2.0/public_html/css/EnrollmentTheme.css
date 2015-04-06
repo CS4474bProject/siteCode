@@ -15,6 +15,10 @@ body {
 }
 
 //Enrollment CSS
+#CourseName{
+    width: 50% !important;
+}
+
 #courses {
     margin: 0 auto;    
 }
