@@ -1,5 +1,7 @@
 $(function(){
-      $("#timetable").load("timetable.html"); 
+      $("#timetable").load("timetable.html", function(){
+          alert("HI");
+      });
 });
 //Hard coded courses
 addCourse("Introduction to Computer Science", "CompSci", "1026a", "UCC-28", 1, "200p", "Mon", 2);
