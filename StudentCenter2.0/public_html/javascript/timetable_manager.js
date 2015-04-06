@@ -267,6 +267,13 @@ function addCourse(name, subCode, code, classroom, semester, startTime, day, len
     //Selects the first element.
     startCell = $(elementCode);
     
+    //Checks if the course has been added.
+    var attr = $(elementCode).attr('rowspan');
+    if (typeof attr !== typeof undefined && attr !== false) {
+        //Already added.
+        alert("Course has been already added.");
+        return;
+    }
     //We delete the rows below.
     index = startCell.index();  
     for (i = 1; i < (len / 0.5); i++) { 
