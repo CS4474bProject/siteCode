@@ -151,6 +151,7 @@ function populateCourses(data){
         courses[element['CourseNum']]['CourseName'] = element['CourseName'];
         courses[element['CourseNum']]['Semester'] = element['Semester'];
         courses[element['CourseNum']]['Subject'] = element['Subject'];
+        courses[element['CourseNum']]['Room'] = element['Room'];
         courses[element['CourseNum']]['StartTime'].push(element['StartTime']);
         courses[element['CourseNum']]['EndTime'].push(element['EndTime']);
         courses[element['CourseNum']]['DayOfWeek'].push(element['DayOfWeek']);
@@ -219,7 +220,7 @@ function generateButtons(courseNum){
         $( '#rightFloat' ).attr('onClick', $( '#rightFloat' ).attr('onClick') +
             'addCourse("' + element['CourseName'] + '","' + 
             element['Subject'] + '", "' + 
-            element['CourseCode'] + '", "SSC-2028", ' + 
+            element['CourseCode'] + '","' + element['Room'] + '", ' + 
             element['Semester'] + ', "' + divID + '", "' + 
             element['DayOfWeek'][i] + '", ' + element['Length'][i] + ');');
    }
