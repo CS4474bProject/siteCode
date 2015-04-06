@@ -32,30 +32,30 @@ function searchForCourses(){
     //Gets the days of the week. 
     sql = "SELECT CourseNum From Date WHERE DayOfWeek = ";
     checked = false;
-    if ($('#MonCheck').is(":checked")) {
+    if (!$('#MonCheck').is(":checked")) {
         sql += "\"Mon\" OR DayOfWeek = ";
         checked = true;
     }
-    if ($('#TuesCheck').is(":checked")) {
+    if (!$('#TuesCheck').is(":checked")) {
         sql += "\"Tues\" OR DayOfWeek = ";
         checked = true;
     }
-    if ($('#WedCheck').is(":checked")) {
+    if (!$('#WedCheck').is(":checked")) {
         sql += "\"Wed\" OR DayOfWeek = ";
         checked = true;
     }
-    if ($('#ThursCheck').is(":checked")) {
+    if (!$('#ThursCheck').is(":checked")) {
         sql += "\"Thurs\" OR DayOfWeek = ";
         checked = true;
     }
-    if ($('#FriCheck').is(":checked")) {
+    if (!$('#FriCheck').is(":checked")) {
         sql += "\"Fri\" OR DayOfWeek = ";
         checked = true;
     }
     if (checked)
         sql = sql.substring(0, sql.length - 16);
     else 
-        sql = sql.substring(0, sql.length - 19);
+        sql = "SELECT * FROM Date WHERE DayOfWeek = \"Sat\"";
     sql += ";";
     
     alert(sql);
