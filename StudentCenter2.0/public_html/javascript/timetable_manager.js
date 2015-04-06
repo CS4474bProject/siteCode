@@ -295,7 +295,7 @@ function addCourse(name, subCode, code, classroom, semester, startTime, day, len
     startCell.attr('rowspan', len / 0.5);
     
     //Add in information to table.
-    startCell.html('<div class="remove"><input type="image" title="Remove Course" id="set" src="http://cs4474.muscedere.ca/images/remove2.png" alt="remove" onclick="removeCourse();"/></div>' +
+    startCell.html('<div class="remove"><input type="image" title="Remove Course" class="set" src="http://cs4474.muscedere.ca/images/remove2.png" alt="remove" onclick="removeCourse();"/></div>' +
                    '<div class="name">' + subCode +
                    '</div><div class="code">' + code +
                    '<div class="classroom">' + classroom +
