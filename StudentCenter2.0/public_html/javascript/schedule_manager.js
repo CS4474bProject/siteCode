@@ -3,22 +3,11 @@ $(function(){
 });
 
 function generatePDF(){
-    //Creates the new PDF object.
-    var pdf = new jsPDF('p', 'in', 'letter');
-         
-    // We'll make our own renderer to skip this editor
-    var specialElementHandlers = {
-            '#schedule': function(element, renderer){
-                    return true;
-            }
-    };
+    alert("Not implemented. A PDF would download from here.");
+}
 
-    // All units are in the set measurement for the document
-    // This can be changed to "pt" (points), "mm" (Default), "cm", "in"
-    pdf.fromHTML($('#timetable').get(0), 15, 15, {
-            'width': 170, 
-            'elementHandlers': specialElementHandlers
-    });
-    
-    pdf.output("dataurlnewwindow");
+function print(){
+    alert("Not implemented. If a user presses Ctrl+P, new CSS\n\
+           code would be generated that properly formats the schedule\n\
+           for printing.");
 }

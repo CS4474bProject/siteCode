@@ -1,6 +1,0 @@
-@media print {
-   //Hide the elements for displaying navigation.
-    #Breadcrumbs, #ImageHeader, #TextHeader, #options{
-        display: none !important;
-    }
-}
