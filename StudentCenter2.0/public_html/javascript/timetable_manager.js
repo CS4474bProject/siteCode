@@ -31,16 +31,38 @@ function searchForCourses(){
     
     //Gets the days of the week. 
     sql = "SELECT CourseNum From Date WHERE DayOfWeek = ";
-    if ($('#MonCheck').is(":checked")) sql += "Mon OR DayOfWeek = ";
-    if ($('#TuesCheck').is(":checked")) sql += "Tues OR DayOfWeek = ";
-    if ($('#WedCheck').is(":checked")) sql += "Wed OR DayOfWeek = ";
-    if ($('#ThursCheck').is(":checked")) sql += "Thurs OR DayOfWeek = ";
-    if ($('#FriCheck').is(":checked")) sql += "Fri OR DayOfWeek = ";
-    sql = sql.substring(0, sql.length - 17);
+    checked = false;
+    if (!$('#MonCheck').is(":checked")) {
+        sql += "\"Mon\" OR DayOfWeek = ";
+        checked = true;
+    }
+    if (!$('#TuesCheck').is(":checked")) {
+        sql += "\"Tues\" OR DayOfWeek = ";
+        checked = true;
+    }
+    if (!$('#WedCheck').is(":checked")) {
+        sql += "\"Wed\" OR DayOfWeek = ";
+        checked = true;
+    }
+    if (!$('#ThursCheck').is(":checked")) {
+        sql += "\"Thurs\" OR DayOfWeek = ";
+        checked = true;
+    }
+    if (!$('#FriCheck').is(":checked")) {
+        sql += "\"Fri\" OR DayOfWeek = ";
+        checked = true;
+    }
+    if (checked)
+        sql = sql.substring(0, sql.length - 15);
+    else 
+        sql = sql.substring(0, sql.length - 18);
+    sql += ";";
+    
     alert(sql);
+    runSQL(sql, nextSQL);
 }
 
-function nextSQL(){
+function nextSQL(data){
     subject = $('#SubjectName').find(":selected").text();
     
     //We search for the courses.
@@ -51,8 +73,22 @@ function nextSQL(){
         sql += " WHERE (";
     }
     sql += " CourseName LIKE \"%" + $('#CourseName').val() + "%\" OR" +
-           " CourseCode LIKE \"%" + $('#CourseName').val() + "%\");";
+           " CourseCode LIKE \"%" + $('#CourseName').val() + "%\")";
    
+    if (data.length === 0){
+        sql += ";";
+    } else {
+        sql += " AND (";
+    }
+    for (i = 0; i < data.length; i++){
+        element = data[i];
+        sql += "CourseNum != \"" + element["CourseNum"] + "\" OR ";
+    }
+    if (data.length > 0) { 
+        sql = sql.substr(0, sql.length - 3);
+        sql += ";";
+    }
+    alert(sql);  
     //Runs the SQL.
     runSQL(sql, populateCourses);
 }
