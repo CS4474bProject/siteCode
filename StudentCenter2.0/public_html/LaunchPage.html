@@ -67,18 +67,18 @@ and open the template in the editor.
         <br/>
         <script type="text/javascript">
             function goToPage(){
-                var selected = $('#dropDown1 option:selected');
-                if (selected.length){
+                var selected = document.getElementById("dropDown1");
+                var selText = selected.options[selected.selectedIndex].text;
                     
-                }
+                
             }
         </script>
         <script type="text/javascript">
             function goToPage2(){
-                var selected2 = $('#dropDown2 option:selected');
-                if (selected2.length){
+                var selected2 = document.getElementById("dropDown2");
+                var selText2 = selected2.options[selected2.selectedIndex].text;
                     
-                }
+                
             }
         </script>
         <script type="text/javascript">
@@ -86,17 +86,15 @@ and open the template in the editor.
                 var selected3 = document.getElementById("dropDown3");
                 var selText3 = selected3.options[selected3.selectedIndex].text;
                 
-                    alert(selText3);
-                    if (selected.html() === "Main Page"){
-                       
+                    if (selText3 === "Main Page"){
                         window.location.href='http://cs4474.muscedere.ca/GradeManagement/';
                     }
                     
-                    if (selected.html() === "Transcript"){
+                    if (selText3 === "Transcript"){
                         window.location.href='http://cs4474.muscedere.ca/GradeManagement/transcript.html';
                     }
                     
-                    if (selected.html() === "Grade Report"){
+                    if (selText3 === "Grade Report"){
                         window.location.href='http://cs4474.muscedere.ca/GradeManagement/gradeReporter.html';
                     }
                 
@@ -104,10 +102,10 @@ and open the template in the editor.
         </script>
         <script type="text/javascript">
             function goToPage4(){
-                var selected4 = $('#dropDown4 option:selected');
-                if (selected4.length){
+                var selected4 = document.getElementById("dropDown4");
+                var selText4 = selected4.options[selected4.selectedIndex].text;
                     
-                }
+                
             }
         </script>
         <div id="MainActions">
