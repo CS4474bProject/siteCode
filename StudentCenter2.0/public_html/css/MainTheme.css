@@ -530,19 +530,19 @@ ul{
     width: 50% !important;
     
     ::-webkit-input-placeholder {
-        text-align: center;
+        text-align: center !important;
     }
 
     :-moz-placeholder { /* Firefox 18- */
-       text-align: center;  
+       text-align: center !important;  
     }
 
     ::-moz-placeholder {  /* Firefox 19+ */
-       text-align: center;  
+       text-align: center !important;  
     }
 
     :-ms-input-placeholder {  
-       text-align: center; 
+       text-align: center !important; 
     }
 }
 
