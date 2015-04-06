@@ -16,7 +16,6 @@ function loadCourseData(){
 }
 
 function searchForCourses(){
-    subject = $('#SubjectName').find(":selected").text();
     if ($('#CourseName').val() === "") {
         subjectTable = $( '#courses' );
         subjectTable.html('<tr>' +
@@ -29,6 +28,20 @@ function searchForCourses(){
         $('#results').html("Please search above to see courses.");
         return;
     }
+    
+    //Gets the days of the week. 
+    sql = "SELECT CourseNum From Date WHERE DayOfWeek = ";
+    if ($('#MonCheck').is(":checked")) sql = "Mon OR DayOfWeek = ";
+    if ($('#TuesCheck').is(":checked")) sql = "Tues OR DayOfWeek = ";
+    if ($('#WedCheck').is(":checked")) sql = "Wed OR DayOfWeek = ";
+    if ($('#ThursCheck').is(":checked")) sql = "Thurs OR DayOfWeek = ";
+    if ($('#FriCheck').is(":checked")) sql = "Fri OR DayOfWeek = ";
+    sql = sql.substring(0, sql.length - 17);
+    alert(sql);
+}
+
+function nextSQL(){
+    subject = $('#SubjectName').find(":selected").text();
     
     //We search for the courses.
     sql = "SELECT * FROM Courses INNER JOIN Date ON Courses.CourseNum = Date.CourseNum";
@@ -43,7 +56,6 @@ function searchForCourses(){
     //Runs the SQL.
     runSQL(sql, populateCourses);
 }
-
 function populateCourses(data){
     //Clears the courses array.
     courses = {};
