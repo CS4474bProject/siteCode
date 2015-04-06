@@ -524,7 +524,7 @@ ul{
 .checkbox-grid {
     display: block !important;
     float: left !important ;
-    width: 10% !important;
+    width: 20% !important;
 }
 //CSS content for accordion
 nav ul ul {
@@ -599,11 +599,6 @@ nav ul ul li a {
 nav ul ul li a:hover {
     background: #4b545f;
 }
-
-<<<<<<< HEAD
-
-=======
 nav ul ul ul {
     position: absolute; left: 100%; top:0;
 }
->>>>>>> origin/master
