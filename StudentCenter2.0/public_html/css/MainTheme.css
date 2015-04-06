@@ -521,5 +521,10 @@ ul{
                 box-sizing: border-box; 
             }
 
+.checkbox-grid {
+    display: block !important;
+    float: left !important ;
+    width: 25% !important;
+}
 //CSS content for accordion
 
