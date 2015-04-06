@@ -11,7 +11,7 @@ function authError(data){
                        'Please contact ITS at (519) 661-3800 for help with your account.<br/></br>';
     } else {
         errorMessage = 'Your username and password are not correct.<br/>' +
-                       'Please try again.<br/><br/><a href="">Forgot Password? You idiot!</a>';
+                       'Please try again.<br/><br/>';
     }          
     
     //Displays the message.
