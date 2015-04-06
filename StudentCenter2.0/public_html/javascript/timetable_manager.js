@@ -86,7 +86,7 @@ function nextSQL(data){
     }
     if (data.length > 0) { 
         sql = sql.substr(0, sql.length - 3);
-        sql += ";";
+        sql += ");";
     }
     alert(sql);  
     //Runs the SQL.
