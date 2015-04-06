@@ -521,14 +521,14 @@ ul{
                 box-sizing: border-box; 
             }
 
-<<<<<<< Updated upstream
+
 .checkbox-grid {
     display: block !important;
     float: left !important ;
     width: 35% !important;
 }
 //CSS content for accordion
-=======
+
 nav ul ul {
     display: none;
 }
@@ -605,5 +605,5 @@ nav ul ul li a:hover {
 nav ul ul ul {
     position: absolute; left: 100%; top:0;
 }
->>>>>>> Stashed changes
+
 
