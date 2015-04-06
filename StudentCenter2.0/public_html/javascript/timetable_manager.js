@@ -58,7 +58,6 @@ function searchForCourses(){
         sql = "SELECT * FROM Date WHERE DayOfWeek = \"Sat\"";
     sql += ";";
     
-    alert(sql);
     runSQL(sql, nextSQL);
 }
 
@@ -88,7 +87,7 @@ function nextSQL(data){
         sql = sql.substr(0, sql.length - 5);
         sql += ");";
     }
-    alert(sql);  
+  
     //Runs the SQL.
     runSQL(sql, populateCourses);
 }
