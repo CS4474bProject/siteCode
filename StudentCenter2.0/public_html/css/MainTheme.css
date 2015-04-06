@@ -550,90 +550,61 @@ ul{
 }
 
 //CSS content for accordion
-.clearfix:after {
-    display:block;
-    clear:both;
+ul {
+  text-align: left;
+  display: inline;
+  margin: 0;
+  padding: 15px 4px 17px 0;
+  list-style: none;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
-
-.menu-wrap {
-    width:100%;
-    box-shadow:0px 1px 3px rgba(0,0,0,0.2);
-    background:#3e3436;
+ul li {
+  font: bold 12px/18px sans-serif;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  padding: 15px 20px;
+  background: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
 }
- 
-.menu {
-    width:1000px;
-    margin:0px auto;
+ul li:hover {
+  background: #555;
+  color: #fff;
 }
- 
-.menu li {
-    margin:0px;
-    list-style:none;
-    font-family:HelveticaNeue-Regular;
+ul li ul {
+  padding: 0;
+  position: absolute;
+  top: 48px;
+  left: 0;
+  width: 150px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transiton: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -ms-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  -transition: opacity 0.2s;
 }
- 
-.menu a {
-    transition:all linear 0.15s;
-    color:#919191;
+ul li ul li { 
+  background: #555; 
+  display: block; 
+  color: #fff;
+  text-shadow: 0 -1px 0 #000;
 }
- 
-.menu li:hover > a, .menu .current-item > a {
-    text-decoration:none;
-    color:#be5b70;
-}
- 
-.menu .arrow {
-    font-size:11px;
-    line-height:0%;
-}
- 
-/*----- Top Level -----*/
-.menu > ul > li {
-    float:left;
-    display:inline-block;
-    position:relative;
-    font-size:19px;
-}
- 
-.menu > ul > li > a {
-    padding:10px 40px;
-    display:inline-block;
-    text-shadow:0px 1px 0px rgba(0,0,0,0.4);
-}
- 
-.menu > ul > li:hover > a, .menu > ul > .current-item > a {
-    background:#2e2728;
-}
- 
-/*----- Bottom Level -----*/
-.menu li:hover .sub-menu {
-    z-index:1;
-    opacity:1;
-}
- 
-.sub-menu {
-    width:160%;
-    padding:5px 0px;
-    position:absolute;
-    top:100%;
-    left:0px;
-    z-index:-1;
-    opacity:0;
-    transition:opacity linear 0.15s;
-    box-shadow:0px 2px 3px rgba(0,0,0,0.2);
-    background:#2e2728;
-}
- 
-.sub-menu li {
-    display:block;
-    font-size:16px;
-}
- 
-.sub-menu li a {
-    padding:10px 30px;
-    display:block;
-}
- 
-.sub-menu li a:hover, .sub-menu .current-item a {
-    background:#3e3436;
+ul li ul li:hover { background: #666; }
+ul li:hover ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
 }
