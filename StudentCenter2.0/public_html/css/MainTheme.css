@@ -550,6 +550,11 @@ ul{
 }
 
 //CSS content for accordion
+.clearfix:after {
+    display:block;
+    clear:both;
+}
+
 .menu-wrap {
     width:100%;
     box-shadow:0px 1px 3px rgba(0,0,0,0.2);
@@ -564,7 +569,7 @@ ul{
 .menu li {
     margin:0px;
     list-style:none;
-    font-family:'Ek Mukta';
+    font-family:HelveticaNeue-Regular;
 }
  
 .menu a {
