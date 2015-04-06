@@ -23,6 +23,7 @@ CREATE TABLE Courses(
 	Subject VARCHAR(30) NOT NULL,
 	CourseName VARCHAR(30) NOT NULL,
 	Semester INT NOT NULL,
+	Room VARCHAR(30) NOT NULL,
 	PRIMARY KEY (CourseNum)
 );
 
@@ -51,13 +52,13 @@ INSERT INTO User VALUES
 	("shanley", "Spencer", "Hanley", 0, "pass5");
 
 INSERT INTO Courses VALUES
-	(32445, "1026A", "CompSci", "Introduction to Computer Science", 1),
-	(356, "1027B", "CompSci", "Computer Science Part 2", 2),
-	(8567, "1000A", "PoliSci", "Political Science: An Objective View", 1),
-	(3287, "2100A", "Classics", "Etymology in Greek and Latin", 1),
-	(1234, "3465B", "English", "The Many Faces of Shakespeare", 2),
-	(643, "1001A", "Biology", "Biology: An Introduction", 1),
-	(5322, "4474A", "CompSci", "Human-Computer Interaction", 1);
+	(32445, "1026A", "CompSci", "Introduction to Computer Science", 1, "UCC-38"),
+	(356, "1027B", "CompSci", "Computer Science Part 2", 2, "SCC-2028"),
+	(8567, "1000A", "PoliSci", "Political Science: An Objective View", 1, "MC-10"),
+	(3287, "2100A", "Classics", "Etymology in Greek and Latin", 1, "3M-10"),
+	(1234, "3465B", "English", "The Many Faces of Shakespeare", 2, "SEB-1033"),
+	(643, "1001A", "Biology", "Biology: An Introduction", 1, "SSC-10"),
+	(5322, "4474A", "CompSci", "Human-Computer Interaction", 1, "MC-100");
 	
 INSERT INTO Date VALUES
 	(1, 32445, "Mon", "2:00pm", "3:00pm"),
