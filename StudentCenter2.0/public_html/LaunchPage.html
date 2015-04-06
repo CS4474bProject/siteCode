@@ -83,9 +83,10 @@ and open the template in the editor.
         </script>
         <script type="text/javascript">
             function goToPage3(){
-                var selected3 = $('#dropDown3 option:selected');
-                if (selected3.length){
-                    aleert(selected.html());
+                var selected3 = document.getElementById("dropDown3");
+                var selText3 = selected3.options[selected3.selectedIndex].text;
+                
+                    alert(selText3);
                     if (selected.html() === "Main Page"){
                        
                         window.location.href='http://cs4474.muscedere.ca/GradeManagement/';
@@ -98,7 +99,7 @@ and open the template in the editor.
                     if (selected.html() === "Grade Report"){
                         window.location.href='http://cs4474.muscedere.ca/GradeManagement/gradeReporter.html';
                     }
-                }
+                
             }
         </script>
         <script type="text/javascript">
