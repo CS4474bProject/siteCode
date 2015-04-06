@@ -69,17 +69,7 @@ and open the template in the editor.
         <div id="MainActions">
             <fieldset>
                 <legend>What Do You Want To Do Today?</legend>
-                <button data-ftrans="slide" type="button" 
-                        id="b1" 
-                        onclick="location.href='http://cs4474.muscedere.ca/CourseManagement/'" 
-                        onMouseOver="elementShow('tipSpan', '<i>Course Management:</i><br>\
-                                                             Add, remove, and view courses you can enroll in.<br>\
-                                                             View your special permissions for course enrollment.<br>\n\
-                                                             View your current schedule and University holidays.<br>\n\
-                                                             Your program requirements and current program.');" 
-                        onMouseOut="elementHide('tipSpan')">
-                    Course Management
-                </button>
+                
                 <button data-ftrans="slide" type="button" 
                         id="b2" 
                         onclick="location.href='http://cs4474.muscedere.ca/StudentManagement'" 
@@ -113,6 +103,18 @@ and open the template in the editor.
                 <table>
                     <tr>
                         <td align="center">
+                            <button data-ftrans="slide" type="button" 
+                        id="b1" 
+                        onclick="location.href='http://cs4474.muscedere.ca/CourseManagement/'" 
+                        onMouseOver="elementShow('tipSpan', '<i>Course Management:</i><br>\
+                                                             Add, remove, and view courses you can enroll in.<br>\
+                                                             View your special permissions for course enrollment.<br>\n\
+                                                             View your current schedule and University holidays.<br>\n\
+                                                             Your program requirements and current program.');" 
+                        onMouseOut="elementHide('tipSpan')">
+                    Course Management
+                </button>
+                            <br/>
                             <select>
                                 <option value="Main Page">Main Page</option>
                                 <option value="Browse Courses">Browse Courses</option>
