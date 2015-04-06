@@ -527,7 +527,7 @@ ul{
     width: 20% !important;
 }
 //CSS content for accordion
-nav ul ul {
+nav ul ul a{
     display: none;
 }
 
