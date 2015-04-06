@@ -1,13 +1,12 @@
 $(function(){
-      $("#timetable").load("timetable.html", function(){
-          alert("HI");
+        $("#timetable").load("timetable.html", function(){
+            //Hard coded courses
+            addCourse("Introduction to Computer Science", "CompSci", "1026a", "UCC-28", 1, "200p", "Mon", 2);
+            addCourse("Human-Computer Interaction", "CompSci", "4474b", "MC-35", 2, "100p", "Tues", 3);
+            addCourse("The World of Biology", "Biology", "1000a", "NCB-100", 1, "1000a", "Wed", 1);
+            addCourse("Political Science: Introduction", "PoliSci", "1000b", "UCC-415", 2, "330p", "Mon", 2);
       });
 });
-//Hard coded courses
-addCourse("Introduction to Computer Science", "CompSci", "1026a", "UCC-28", 1, "200p", "Mon", 2);
-addCourse("Human-Computer Interaction", "CompSci", "4474b", "MC-35", 2, "100p", "Tues", 3);
-addCourse("The World of Biology", "Biology", "1000a", "NCB-100", 1, "1000a", "Wed", 1);
-addCourse("Political Science: Introduction", "PoliSci", "1000b", "UCC-415", 2, "330p", "Mon", 2);
 
 function generatePDF(){
     alert("Not implemented. A PDF would download from here.");
