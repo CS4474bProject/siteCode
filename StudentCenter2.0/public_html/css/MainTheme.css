@@ -526,6 +526,10 @@ ul{
     float: left !important ;
     width: 20% !important;
 }
+#CourseName{
+    width: 50% !important;
+}
+
 //CSS content for accordion
 nav ul ul a{
     display: none;
