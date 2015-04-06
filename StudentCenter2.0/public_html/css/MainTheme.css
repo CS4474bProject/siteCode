@@ -22,6 +22,10 @@ and open the template in the editor.
          padding-bottom: 50px;
     }
     
+    #Forgot{
+        color:white;
+    }
+    
     #verticalBar{
         border-left:1px solid rgb(0,0,0);
         height:auto;
