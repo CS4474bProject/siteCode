@@ -82,10 +82,10 @@ function nextSQL(data){
     }
     for (i = 0; i < data.length; i++){
         element = data[i];
-        sql += "CourseNum != " + element["CourseNum"] + " OR ";
+        sql += "CourseNum != " + element["CourseNum"] + " AND ";
     }
     if (data.length > 0) { 
-        sql = sql.substr(0, sql.length - 3);
+        sql = sql.substr(0, sql.length - 5);
         sql += ");";
     }
     alert(sql);  
