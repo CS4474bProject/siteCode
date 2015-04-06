@@ -157,9 +157,10 @@ and open the template in the editor.
         <div id="MainActions">
             <fieldset>
                 <legend>What Do You Want To Do Today?</legend>
-                <!--<table>
+                <table>
                     <tr>
                         <td align="center">
+                            <div class="dropdown">
                             <button data-ftrans="slide" type="button" 
                             id="b1" 
                             onclick="javascript:goToPage();" 
@@ -171,17 +172,14 @@ and open the template in the editor.
                             onMouseOut="elementHide('tipSpan')">
                             Course Management
                             </button>
-                            <br/>
-                            <br/>
-                            Jump to...
-                            <br/>
-                            <select id="dropDown1">
-                                <option value="Main Page">Main Page</option>
-                                <option value="Browse Courses">Browse Courses</option>
-                                <option value="Course Enrollment">Course Enrollment</option>
-                                <option value="View Schedule">View Schedule</option>
-                                <option value="Program Planner">Program Planner</option>
-                            </select>                                              
+                                <ul class="dropdown-menu">
+                                <li><a href="#home">Main Page</a></li>
+                                <li><a href="#about">Browse Courses</a></li>
+                                <li><a href="#contact">Course Enrollment</a></li>
+                                <li><a href="#contact">View Schedule</a></li>
+                                <li><a href="#contact">Program Planner</a></li>
+                                </ul>
+                            </div>                                             
                         </td>  
                         <td align="center">
                             <button data-ftrans="slide" type="button" 
@@ -249,49 +247,8 @@ and open the template in the editor.
                             </select>                                              
                         </td>
                     </tr>
-                </table>-->
-                <div class="nav">
+                </table>
                 
-                    <ul>
-                        <li>
-                            <a href="#">Course Management</a>
-                            <ul class="sub-menu">
-                                <li><a href="#">Main Page</a></li>
-                                <li><a href="#">Browse Courses</a></li>
-                                <li><a href="#">Course Enrollment</a></li>
-                                <li><a href="#">View Schedule</a></li>
-                                <li><a href="#">Program Planner</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Student Management</a>
-                            <ul class="sub-menu">
-                                <li><a href="#">Main Page</a></li>
-                                <li><a href="#">My Academics</a></li>
-                                <li><a href="#">My Identity</a></li>
-                                <li><a href="#">My Contact Info</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Grade Management</a>
-                            <ul class="sub-menu">
-                                <li><a href="#">Main Page</a></li>
-                                <li><a href="#">Grade Report</a></li>
-                                <li><a href="#">Transcript</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#">Financial Management</a>
-                            <ul class="sub-menu">
-                                <li><a href="#">Main Page</a></li>
-                                <li><a href="#">Compensation</a></li>
-                                <li><a href="#">Scholarships & Bursaries</a></li>
-                                <li><a href="#">Tuition Statements</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                
-                </div>
                 
                 <hr>
                 <div id="Tip">
