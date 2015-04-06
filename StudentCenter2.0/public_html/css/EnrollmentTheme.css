@@ -15,7 +15,9 @@ body {
 }
 
 .remove {
-    float: left !important;
+    position: relative;
+    top: 0px;
+    left: 0px;
 }
 //Enrollment CSS
 #courses {
