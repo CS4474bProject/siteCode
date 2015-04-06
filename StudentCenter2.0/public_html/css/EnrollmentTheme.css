@@ -15,9 +15,9 @@ body {
 }
 
 .remove {
-    position: relative;
+    position: absolute;
     top: 0px;
-    left: 0px;
+    right: 0px;
 }
 //Enrollment CSS
 #courses {
@@ -29,6 +29,7 @@ body {
 #courses th, #courses td {
     min-width: 75px;
     text-align: center;
+    position: relative;
 }
 .name, .date {
     min-width: 150px !important;
