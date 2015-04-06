@@ -284,7 +284,8 @@ function addCourse(name, subCode, code, classroom, semester, startTime, day, len
     startCell.attr('rowspan', len / 0.5);
     
     //Add in information to table.
-    startCell.html('<div class="name">' + subCode +
+    startCell.html('<div class="remove"><input type="image" id="set" src="http://cs4474.muscedere.ca/images/remove2.png" alt="remove" onclick="remove();"/></div>' +
+                   '<div class="name">' + subCode +
                    '</div><div class="code">' + code +
                    '<div class="classroom">' + classroom +
                    '</div>');
@@ -295,4 +296,8 @@ function addCourse(name, subCode, code, classroom, semester, startTime, day, len
     $(function() {
             $('#' + startCell.attr('id')).tooltip();
     });
+}
+
+function remove(){
+    alert("REMOVE");
 }
