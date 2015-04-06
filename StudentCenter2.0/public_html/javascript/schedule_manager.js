@@ -7,7 +7,7 @@ function generatePDF(){
 }
 
 function print(){
-    alert("Not implemented. If a user presses Ctrl+P, new CSS\n\
-           code would be generated that properly formats the schedule\n\
-           for printing.");
+    alert("Not implemented. If a user presses Ctrl+P, new CSS" +
+           "code would be generated that properly formats the schedule" + 
+           "for printing.");
 }
