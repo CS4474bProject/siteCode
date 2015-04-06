@@ -86,16 +86,16 @@ and open the template in the editor.
                 var selected3 = $('#dropDown3 option:selected');
                 if (selected3.length){
                     aleert(selected.val());
-                    if (selected.val() == "Main Page"){
+                    if (selected.val() === "Main Page"){
                        
                         parent.location='http://cs4474.muscedere.ca/GradeManagement/';
                     }
                     
-                    if (selected.val() == "Transcript"){
+                    if (selected.val() === "Transcript"){
                         parent.location='http://cs4474.muscedere.ca/GradeManagement/transcript.html';
                     }
                     
-                    if (selected.val() == "Grade Report"){
+                    if (selected.val() === "Grade Report"){
                         parent.location='http://cs4474.muscedere.ca/GradeManagement/gradeReporter.html';
                     }
                 }
