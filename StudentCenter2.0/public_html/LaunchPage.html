@@ -64,8 +64,49 @@ and open the template in the editor.
             <div id="themeBtn2"><input type="image" id="set" src="http://cs4474.muscedere.ca/images/sun.png" alt="daynight" onclick="setActiveStyleSheet('default'); return false;"/></div>
             <hr/>
         </div>
-        
         <br/>
+        <script type="text/javascript">
+            function goToPage(){
+                var selected = $('#dropDown1 option:selected');
+                if (selected.length){
+                    
+                }
+            }
+        </script>
+        <script type="text/javascript">
+            function goToPage2(){
+                var selected2 = $('#dropDown2 option:selected');
+                if (selected2.length){
+                    
+                }
+            }
+        </script>
+        <script type="text/javascript">
+            function goToPage3(){
+                var selected3 = $('#dropDown3 option:selected');
+                if (selected3.length){
+                    if (selected.val() == "Main Page"){
+                        parent.location='http://cs4474.muscedere.ca/GradeManagement/';
+                    }
+                    
+                    if (selected.val() == "Transcript"){
+                        parent.location='http://cs4474.muscedere.ca/GradeManagement/transcript.html';
+                    }
+                    
+                    if (selected.val() == "Grade Report"){
+                        parent.location='http://cs4474.muscedere.ca/GradeManagement/gradeReporter.html';
+                    }
+                }
+            }
+        </script>
+        <script type="text/javascript">
+            function goToPage4(){
+                var selected4 = $('#dropDown4 option:selected');
+                if (selected4.length){
+                    
+                }
+            }
+        </script>
         <div id="MainActions">
             <fieldset>
                 <legend>What Do You Want To Do Today?</legend>
@@ -74,7 +115,7 @@ and open the template in the editor.
                         <td align="center">
                             <button data-ftrans="slide" type="button" 
                             id="b1" 
-                            onclick="location.href='http://cs4474.muscedere.ca/CourseManagement/'" 
+                            onclick="javascript:goToPage();" 
                             onMouseOver="elementShow('tipSpan', '<i>Course Management:</i><br>\
                                                              Add, remove, and view courses you can enroll in.<br>\
                                                              View your special permissions for course enrollment.<br>\n\
@@ -85,7 +126,7 @@ and open the template in the editor.
                             </button>
                             <br/>
                             <br/>
-                            <select>
+                            <select id="dropDown1">
                                 <option value="Main Page">Main Page</option>
                                 <option value="Browse Courses">Browse Courses</option>
                                 <option value="Course Enrollment">Course Enrollment</option>
@@ -96,7 +137,7 @@ and open the template in the editor.
                         <td align="center">
                             <button data-ftrans="slide" type="button" 
                             id="b2" 
-                            onclick="location.href='http://cs4474.muscedere.ca/StudentManagement'" 
+                            onclick="javascript:goToPage2();" 
                             onMouseOver="elementShow('tipSpan', '<i>Student Management:</i><br>\
                                                              View and edit your contact information.<br>\
                                                              View and edit demographic information.<br>\n\
@@ -106,7 +147,7 @@ and open the template in the editor.
                             </button>
                             <br/>
                             <br/>
-                            <select>
+                            <select id="dropDown2">
                                 <option value="Main Page">Main Page</option>
                                 <option value="My Identity">My Identity</option>
                                 <option value="My Academics">My Academics</option>
@@ -116,7 +157,7 @@ and open the template in the editor.
                         <td align="center">
                             <button data-ftrans="slide" type="button" 
                             id="b3" 
-                            onclick="location.href='http://cs4474.muscedere.ca/GradeManagement'" 
+                            onclick="javascript:goToPage3();" 
                             onMouseOver="elementShow('tipSpan', '<i>Grade Management:</i><br>\
                                                              View and print grade reports for your courses.<br>\
                                                              Request official transcripts.<br>\n\
@@ -126,7 +167,7 @@ and open the template in the editor.
                             </button>
                             <br/>
                             <br/>
-                            <select>
+                            <select id="dropDown3">
                                 <option value="Main Page">Main Page</option>
                                 <option value="Transcript">Transcript</option>
                                 <option value="Grade Report">Grade Report</option>
@@ -135,7 +176,7 @@ and open the template in the editor.
                         <td align="center">
                             <button data-ftrans="slide" type="button" 
                             id="b4" 
-                            onclick="location.href='http://cs4474.muscedere.ca/FinancialManagement'" 
+                            onclick="javascript:goToPage4();" 
                             onMouseOver="elementShow('tipSpan', '<i>Financial Management:</i><br>\
                                                              View your financial statements.<br>\
                                                              Your scholarships and bursaries.<br>\n\
@@ -145,7 +186,7 @@ and open the template in the editor.
                             </button>
                             <br/>
                             <br/>
-                            <select>
+                            <select id="dropDown4">
                                 <option value="Main Page">Main Page</option>
                                 <option value="Compensation">Compensation</option>
                                 <option value="My Statements">My Statements</option>
