@@ -360,7 +360,7 @@ and open the template in the editor.
    
    input[type="text"]{
        width: 200px;
-       float:left;
+       float:right;
    }
    
 
