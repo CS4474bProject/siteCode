@@ -103,16 +103,18 @@ and open the template in the editor.
                     <br><br>
                     <div>Filter By Day of Week:</div>
                     <div>
-                        <input type="checkbox" name="dow" value="Mon" onchange="searchForCourses();" checked>
-                            <span class="checkboxlist">Monday</span>
-                        <input type="checkbox" name="dow" value="Tue" onchange="searchForCourses();" checked>
-                            <span class="checkboxlist">Tuesday</span>
-                        <input type="checkbox" name="dow" value="Wed" onchange="searchForCourses();" checked>
-                        <span class="checkboxlist">Wednesday</span><br>
-                        <input type="checkbox" name="dow" value="Thurs" onchange="searchForCourses();" checked>
-                            <span class="checkboxlist">Thursday</span>
-                        <input type="checkbox" name="dow" value="Fri" onchange="searchForCourses();" checked>
-                            <span class="checkboxlist">Friday</span>
+                        <ul class="checkbox-grid">
+                            <li><input type="checkbox" name="dow1" value="Mon" onchange="searchForCourses();" checked />
+                                <label for="dow1">Monday</label></li>
+                            <li><input type="checkbox" name="dow2" value="Tue" onchange="searchForCourses();" checked />
+                                <label for="dow2">Tuesday</label></li>
+                            <li><input type="checkbox" name="dow3" value="Wed" onchange="searchForCourses();" checked />
+                                <label for="dow3">Wednesday</label></li>
+                            <li><input type="checkbox" name="dow4" value="Thurs" onchange="searchForCourses();" checked />
+                                <label for="dow4">Thursday</label></li>
+                            <li><input type="checkbox" name="dow5" value="Fri" onchange="searchForCourses();" checked />
+                                <label for="dow5">Friday</label></li>
+                        </ul>
                     </div>
                 </div>
                 <hr>

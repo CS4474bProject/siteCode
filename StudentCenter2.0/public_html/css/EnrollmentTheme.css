@@ -55,6 +55,11 @@ span.checkboxlist {
 }
 
 //Schedule CSS Theme
+.checkbox-grid li {
+    display: block;
+    float: left;
+    width: 25%;
+}
 #schedule {
     table-layout: fixed;
 }
