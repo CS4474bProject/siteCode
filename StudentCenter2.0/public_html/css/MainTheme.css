@@ -550,77 +550,85 @@ ul{
 }
 
 //CSS content for accordion
-nav ul ul a{
-    display: none;
+.menu-wrap {
+    width:100%;
+    box-shadow:0px 1px 3px rgba(0,0,0,0.2);
+    background:#3e3436;
 }
-
-nav ul li:hover > ul {
-    display: block;
+ 
+.menu {
+    width:1000px;
+    margin:0px auto;
 }
-
-nav ul {
-        border: 1px solid #0a3c59;
-        background: #633e9c;
-        background: -webkit-gradient(linear, left top, left bottom, from(#cad3d9), to(#633e9c));
-        background: -webkit-linear-gradient(top, #cad3d9, #633e9c);
-        background: -moz-linear-gradient(top, #cad3d9, #633e9c);
-        background: -ms-linear-gradient(top, #cad3d9, #633e9c);
-        background: -o-linear-gradient(top, #cad3d9, #633e9c);
-        background-image: -ms-linear-gradient(top, #cad3d9 0%, #633e9c 100%); 
-        -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
-        -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
-        box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
-        text-shadow: #7ea4bd 0 1px 0;
-        padding: 0 20px;
-        border-radius: 10px;  
-        list-style: none;
-        position: relative;
-        display: inline-table;
+ 
+.menu li {
+    margin:0px;
+    list-style:none;
+    font-family:'Ek Mukta';
 }
-
-nav ul:after {
-    content: ""; 
-    clear: both; 
-    display: block;
+ 
+.menu a {
+    transition:all linear 0.15s;
+    color:#919191;
 }
-
-nav ul li {
-    float: left;
+ 
+.menu li:hover > a, .menu .current-item > a {
+    text-decoration:none;
+    color:#be5b70;
 }
-
-nav ul li:hover {
-    background: #4b545f;
-    background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
-    background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
-    background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);
+ 
+.menu .arrow {
+    font-size:11px;
+    line-height:0%;
 }
-
-nav ul li:hover a {
-    color: #fff;
+ 
+/*----- Top Level -----*/
+.menu > ul > li {
+    float:left;
+    display:inline-block;
+    position:relative;
+    font-size:19px;
 }
-	
-nav ul li a {
-    display: block; padding: 25px 40px;
-    color: #757575; text-decoration: none;
+ 
+.menu > ul > li > a {
+    padding:10px 40px;
+    display:inline-block;
+    text-shadow:0px 1px 0px rgba(0,0,0,0.4);
 }
-
-nav ul ul {
-    background: #5f6975; border-radius: 0px; padding: 0;
-    position: absolute; top: 100%;
+ 
+.menu > ul > li:hover > a, .menu > ul > .current-item > a {
+    background:#2e2728;
 }
-
-nav ul ul li {
-    float: none; 
-    border-top: 1px solid #6b727c;
-    border-bottom: 1px solid #575f6a;
-    position: relative;
+ 
+/*----- Bottom Level -----*/
+.menu li:hover .sub-menu {
+    z-index:1;
+    opacity:1;
 }
-
-nav ul ul li a {
-    padding: 15px 40px;
-    color: #fff;
-}	
-
-nav ul ul li a:hover {
-    background: #4b545f;
+ 
+.sub-menu {
+    width:160%;
+    padding:5px 0px;
+    position:absolute;
+    top:100%;
+    left:0px;
+    z-index:-1;
+    opacity:0;
+    transition:opacity linear 0.15s;
+    box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+    background:#2e2728;
+}
+ 
+.sub-menu li {
+    display:block;
+    font-size:16px;
+}
+ 
+.sub-menu li a {
+    padding:10px 30px;
+    display:block;
+}
+ 
+.sub-menu li a:hover, .sub-menu .current-item a {
+    background:#3e3436;
 }
