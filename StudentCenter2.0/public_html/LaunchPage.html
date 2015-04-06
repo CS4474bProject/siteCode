@@ -85,17 +85,17 @@ and open the template in the editor.
             function goToPage3(){
                 var selected3 = $('#dropDown3 option:selected');
                 if (selected3.length){
-                    aleert(selected.val());
-                    if (selected.val() === "Main Page"){
+                    aleert(selected.html());
+                    if (selected.html() === "Main Page"){
                        
                         parent.location='http://cs4474.muscedere.ca/GradeManagement/';
                     }
                     
-                    if (selected.val() === "Transcript"){
+                    if (selected.html() === "Transcript"){
                         parent.location='http://cs4474.muscedere.ca/GradeManagement/transcript.html';
                     }
                     
-                    if (selected.val() === "Grade Report"){
+                    if (selected.html() === "Grade Report"){
                         parent.location='http://cs4474.muscedere.ca/GradeManagement/gradeReporter.html';
                     }
                 }
