@@ -526,6 +526,9 @@ ul{
     float: left !important ;
     width: 20% !important;
 }
+#SubjectName{
+    width: 50% !important;
+}
 #CourseName{
     width: 50% !important;
     
