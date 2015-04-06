@@ -575,12 +575,7 @@ ul{
 
 /** Button Styles **/
 .dropdown button {
-    background: #FF6223;
-    color: #FFFFFF;
-    border: none;
-    margin: 0;
-    padding: 0.4em 0.8em;
-    font-size: 1em;
+    
 }
 
 /** List Item Styles **/
